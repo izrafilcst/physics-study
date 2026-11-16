@@ -1,0 +1,132 @@
+
+<!-- ======================= SÍNTESE ======================= -->
+<section class="wrap" id="sintese" aria-labelledby="sintese-tit" style="margin-top:3rem">
+  <h2 id="sintese-tit">Síntese: que superfície gaussiana eu uso?</h2>
+  <p>Leia de cima para baixo e pare na primeira pergunta cuja resposta é "sim".</p>
+  <ol class="fluxo">
+    <li><p class="pergunta">Pedem o fluxo por um <b>pedaço</b> de superfície (uma face, uma tampa)?</p>
+      <p class="sim"><b>Sim:</b> feche a superfície, aplique a lei de Gauss no todo e reparta por simetria, se os pedaços forem iguais e igualmente posicionados em relação à carga. (Degrau 2; P5.)</p></li>
+    <li><p class="pergunta">Há <b>metal</b> no problema (barra, casca, cavidade num condutor)?</p>
+      <p class="sim"><b>Sim:</b> E = 0 dentro do metal. Uma gaussiana dentro do metal dá as cargas induzidas: superfície interna = −(carga dentro da cavidade); externa = total − interna. Depois, siga para a simetria certa. (Degrau 6; P29.)</p></li>
+    <li><p class="pergunta">A carga tem <b>simetria esférica</b> (esfera, cascas, ρ que só depende de r)?</p>
+      <p class="sim"><b>Sim:</b> esfera gaussiana de raio r pelo ponto. q_env = ρ × volume de material dentro (ρ uniforme) ou \(\int_0^r\rho\,4\pi r'^2dr'\) (ρ variável). (Degraus 3 e 4; P52, P53.)</p></li>
+    <li><p class="pergunta">A carga tem <b>simetria cilíndrica</b> (fio, tubo, cilindro longo)?</p>
+      <p class="sim"><b>Sim:</b> lata coaxial de raio r e altura h; fluxo só na parede, E·2πrh. q_env = λh ou ρ × volume de material dentro. (Degrau 5; P24, P76, P29.)</p></li>
+    <li><p class="pergunta">A carga tem <b>simetria plana</b> (placa grande)?</p>
+      <p class="sim"><b>Sim:</b> latinha atravessando a placa: E = σ/(2ε₀) para folha isolante; E = σ/ε₀ logo fora de um condutor. (Degrau 7; P39.)</p></li>
+    <li><p class="pergunta">Nenhuma simetria?</p>
+      <p class="sim">A lei de Gauss continua valendo, mas não dá o campo: volte à superposição e às integrais do Cap. 22.</p></li>
+  </ol>
+
+  <h3>Equações do capítulo: quando usar e quando não usar</h3>
+  <div class="tabela-rola">
+  <table class="ficha cartoes">
+    <thead><tr><th>Equação</th><th>Use quando…</th><th>Não use quando…</th></tr></thead>
+    <tbody>
+      <tr><td data-r="Equação">\(\Phi = EA\cos\theta\)</td><td data-r="Use quando">campo uniforme e superfície plana</td><td data-r="Não use quando">o campo varia ou a superfície é curva (use simetria ou integre)</td></tr>
+      <tr><td data-r="Equação">\(\varepsilon_0\Phi = q_{env}\)</td><td data-r="Use quando">qualquer superfície <b>fechada</b></td><td data-r="Não use quando">a superfície é aberta (face, tampa); há vidro, óleo ou plástico dentro (Cap. 25)</td></tr>
+      <tr><td data-r="Equação">\(E = \dfrac{q}{4\pi\varepsilon_0r^2}\)</td><td data-r="Use quando">fora de qualquer distribuição esférica (q = carga total)</td><td data-r="Não use quando">dentro da distribuição (use q_env)</td></tr>
+      <tr><td data-r="Equação">\(E = \dfrac{\rho r}{3\varepsilon_0}\)</td><td data-r="Use quando">dentro de uma esfera maciça com ρ uniforme</td><td data-r="Não use quando">casca grossa (tire a cavidade) ou ρ variável (some cascas)</td></tr>
+      <tr><td data-r="Equação">\(E = 0\)</td><td data-r="Use quando">dentro de uma casca fina ou de um tubo fino; no metal de um condutor em equilíbrio</td><td data-r="Não use quando">a cavidade tem carga dentro</td></tr>
+      <tr><td data-r="Equação">\(E = \dfrac{\lambda}{2\pi\varepsilon_0 r}\)</td><td data-r="Use quando">fora de um fio ou cilindro longo (λ = carga por metro dentro da lata)</td><td data-r="Não use quando">perto das pontas; dentro de um cilindro com carga no volume</td></tr>
+      <tr><td data-r="Equação">\(E = \dfrac{\rho r}{2\varepsilon_0}\)</td><td data-r="Use quando">dentro de um cilindro maciço com ρ uniforme</td><td data-r="Não use quando">fora do cilindro (aí é ρR²/(2ε₀r))</td></tr>
+      <tr><td data-r="Equação">\(E = \dfrac{\sigma}{2\varepsilon_0}\)</td><td data-r="Use quando">perto de uma folha isolante grande, longe das bordas</td><td data-r="Não use quando">junto a um condutor; longe da placa (distância comparável ao tamanho)</td></tr>
+      <tr><td data-r="Equação">\(E = \dfrac{\sigma}{\varepsilon_0}\)</td><td data-r="Use quando">logo fora da superfície de um condutor</td><td data-r="Não use quando">folha isolante (aí é σ/2ε₀)</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<!-- ======================= REVISÃO ======================= -->
+<section class="wrap" id="revisao" aria-labelledby="revisao-tit" style="margin-top:3rem;padding-bottom:3rem">
+  <h2 id="revisao-tit">Revisão intercalada</h2>
+  <p>Sete perguntas misturando os degraus, fora de ordem de propósito: na prova, ninguém avisa de que degrau é a questão. Marque a confiança antes de conferir.</p>
+
+  <div class="quiz" id="rev-1" data-conf="1">
+    <p class="enun">1. Uma carga pontual está dentro de uma esfera gaussiana. Você dobra o raio da esfera. O fluxo total:</p>
+    <div class="alts">
+      <button class="alt" type="button" data-fb="O campo cai para 1/4, mas a área fica 4 vezes maior. O fluxo só depende da carga dentro.">cai para 1/4</button>
+      <button class="alt" type="button" data-fb="A carga envolvida é a mesma: o fluxo também.">dobra</button>
+      <button class="alt" type="button" data-ok="1" data-fb="Isso: Φ = q_env/ε₀, e q_env não mudou. (Degrau 2)">não muda</button>
+      <button class="alt" type="button" data-fb="O fluxo não depende do tamanho da superfície, só da carga dentro.">cai pela metade</button>
+    </div>
+  </div>
+  <div class="quiz" id="rev-2" data-conf="1">
+    <p class="enun">2. A 3 cm de um fio longo carregado, E = 600 N/C. A 6 cm, E vale:</p>
+    <div class="alts">
+      <button class="alt" type="button" data-fb="Isso seria 1/r², de carga pontual. Para fio, 1/r.">150 N/C</button>
+      <button class="alt" type="button" data-ok="1" data-fb="Isso: E ∝ 1/r para fio; o dobro da distância, metade do campo. (Degrau 5)">300 N/C</button>
+      <button class="alt" type="button" data-fb="Constante é de placa. O fio enfraquece com a distância.">600 N/C</button>
+      <button class="alt" type="button" data-fb="Afastar-se nunca aumenta o campo de um fio.">1 200 N/C</button>
+    </div>
+  </div>
+  <div class="quiz" id="rev-3" data-conf="1">
+    <p class="enun">3. Uma partícula de +2 µC está na cavidade de um condutor cuja carga total é −5 µC. A carga da superfície externa do condutor é:</p>
+    <div class="alts">
+      <button class="alt" type="button" data-fb="A superfície interna fica com −2 µC; sobra o resto para fora.">−5 µC</button>
+      <button class="alt" type="button" data-fb="Confira o sinal da interna: ela cancela a partícula, então é −2 µC. Externa = −5 − (−2).">−7 µC</button>
+      <button class="alt" type="button" data-fb="+2 µC seria se o condutor fosse neutro.">+2 µC</button>
+      <button class="alt" type="button" data-ok="1" data-fb="Isso: interna = −2 µC; externa = −5 − (−2) = −3 µC. (Degrau 6)">−3 µC</button>
+    </div>
+  </div>
+  <div class="quiz" id="rev-4" data-conf="1">
+    <p class="enun">4. Uma folha isolante grande tem σ = 8,85 nC/m². Perto dela, E vale:</p>
+    <div class="alts">
+      <button class="alt" type="button" data-ok="1" data-fb="Isso: σ/(2ε₀) = 8,85 × 10⁻⁹/(1,77 × 10⁻¹¹) = 500 N/C. (Degrau 7)">500 N/C</button>
+      <button class="alt" type="button" data-fb="1 000 N/C = σ/ε₀, que vale junto a um condutor.">1 000 N/C</button>
+      <button class="alt" type="button" data-fb="Dividiu por 4ε₀? Para folha isolante, é σ/(2ε₀).">250 N/C</button>
+      <button class="alt" type="button" data-fb="Perto de uma placa grande, o campo não depende da distância.">depende da distância</button>
+    </div>
+  </div>
+  <div class="quiz" id="rev-5" data-conf="1">
+    <p class="enun">5. Numa esfera de raio R com ρ ∝ r, que fração da carga total fica dentro de r = R/2?</p>
+    <div class="alts">
+      <button class="alt" type="button" data-fb="Metade do raio está longe de ser metade da carga: o volume cresce com r³, e aqui ρ ainda cresce com r.">1/2</button>
+      <button class="alt" type="button" data-fb="1/8 é o caso uniforme. Com ρ ∝ r, o miolo é menos denso.">1/8</button>
+      <button class="alt" type="button" data-fb="q_env ∝ ∫r·r²dr ∝ r⁴: (1/2)⁴.">1/4</button>
+      <button class="alt" type="button" data-ok="1" data-fb="Isso: q_env ∝ r⁴, então (1/2)⁴ = 1/16, cerca de 6 %. (Degrau 4)">1/16</button>
+    </div>
+  </div>
+  <div class="quiz" id="rev-6" data-conf="1">
+    <p class="enun">6. Um campo uniforme de 200 N/C atravessa um quadrado de 10 cm de lado cuja normal faz 60° com o campo. O fluxo é:</p>
+    <div class="alts">
+      <button class="alt" type="button" data-fb="Isso seria com θ = 0 (de frente).">2,0 N·m²/C</button>
+      <button class="alt" type="button" data-fb="Você usou sen 60°. Com o ângulo da normal, é cosseno.">1,7 N·m²/C</button>
+      <button class="alt" type="button" data-ok="1" data-fb="Isso: 200 × 0,010 × cos 60° = 1,0 N·m²/C. (Degrau 1)">1,0 N·m²/C</button>
+      <button class="alt" type="button" data-fb="Zero só se a normal fosse perpendicular ao campo (90°).">0</button>
+    </div>
+  </div>
+  <div class="quiz" id="rev-7" data-conf="1">
+    <p class="enun">7. Numa esfera maciça com carga uniforme, de raio R, quanto vale E(2R)/E(R)?</p>
+    <div class="alts">
+      <button class="alt" type="button" data-fb="1/2 seria dentro (E ∝ r) ou para um fio. Fora da esfera, 1/r².">1/2</button>
+      <button class="alt" type="button" data-ok="1" data-fb="Isso: fora, a esfera é uma carga pontual; o dobro da distância, um quarto do campo. (Degrau 3)">1/4</button>
+      <button class="alt" type="button" data-fb="Dentro o campo cresce com r, mas 2R já é fora.">2</button>
+      <button class="alt" type="button" data-fb="O campo fora de uma esfera cai com a distância.">1</button>
+    </div>
+  </div>
+
+  <h3>Onde você estava confiante e errou</h3>
+  <div id="calibracao" class="calib" aria-live="polite"><p class="pequeno">Ainda não há respostas com confiança marcada.</p></div>
+
+  <h3>Plano de revisão</h3>
+  <p>Espaçar a revisão fixa mais que estudar tudo de uma vez. Os problemas abaixo são ímpares (têm gabarito) e não estão neste guia; cada sessão mistura degraus.</p>
+  <div class="tabela-rola">
+  <table class="ficha cartoes">
+    <thead><tr><th>Quando</th><th>O que fazer</th><th>Degraus</th></tr></thead>
+    <tbody>
+      <tr><td data-r="Quando">Hoje (10 min)</td><td data-r="O que fazer">Numa folha, sem olhar, refaça o exemplo da esfera do Problema 78 (Degrau 3) e o da mulher na tempestade (Degrau 5). Depois confira.</td><td data-r="Degraus">3, 5</td></tr>
+      <tr><td data-r="Quando">+1 dia</td><td data-r="O que fazer">Problemas 13, 17 e 45 do livro.</td><td data-r="Degraus">2, 3, 6</td></tr>
+      <tr><td data-r="Quando">+3 dias</td><td data-r="O que fazer">Problemas 19, 27, 47 e 77.</td><td data-r="Degraus">3, 5, 6</td></tr>
+      <tr><td data-r="Quando">+7 dias</td><td data-r="O que fazer">Problemas 23, 43, 57, 63 e 81, e uma questão deste guia que você só resolveu com ajuda de nível 3 ou mais.</td><td data-r="Degraus">3 a 7</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <details>
+    <summary>Gabarito do livro para o plano de revisão</summary>
+    <p>P13: 3,54 µC. P17: (a) 37 µC; (b) 4,1 × 10⁶ N·m²/C. P45: (a) 2,50 × 10⁴ N/C; (b) 1,35 × 10⁴ N/C. P19: (a) 4,5 × 10⁻⁷ C/m²; (b) 5,1 × 10⁴ N/C. P27: 3,8 × 10⁻⁸ C/m². P47: −7,5 nC. P77: (a) +4,0 µC; (b) −4,0 µC. P23: (a) 0,32 µC; (b) 0,14 µC. P43: (a) 0; (b) 1,31 µN/C; (c) 3,08 µN/C; (d) 3,08 µN/C. P57: (a) 0; (b) 2,88 × 10⁴ N/C; (c) 200 N/C. P63: −1,04 nC. P81: (a) 0,25R; (b) 2,0R.</p>
+  </details>
+
+  <p class="zerar">Seu progresso fica salvo só neste navegador. <button class="btn sec" type="button" id="btn-zerar">Apagar meu progresso</button></p>
+</section>
+</main>

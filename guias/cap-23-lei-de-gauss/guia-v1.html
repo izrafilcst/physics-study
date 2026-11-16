@@ -1,0 +1,1451 @@
+
+<!-- ======================= VISÃO GERAL ======================= -->
+<section class="wrap" id="visao" aria-labelledby="visao-tit" style="margin-top:2.5rem">
+  <h2 id="visao-tit">O resto do capítulo em 2 minutos</h2>
+  <p class="pequeno">Nenhuma das suas questões usa estes tópicos. Leia para saber que existem e onde estão no livro.</p>
+  <div class="tabela-rola">
+  <table class="ficha cartoes">
+    <thead><tr><th>Tópico</th><th>A ideia em uma frase</th><th>No livro</th></tr></thead>
+    <tbody>
+      <tr><td data-r="Tópico"><b>Fluxo de campo não uniforme</b></td><td data-r="A ideia">Se o campo muda de ponto a ponto numa face plana (ex.: \(\vec E = 3{,}0x\,\hat\imath\)), mas a face é perpendicular a x, o x é o mesmo em toda a face e sai da integral. Os Problemas 9 a 11 treinam isso com cubos.</td><td data-r="No livro">Exemplos 23.02 e 23.04</td></tr>
+      <tr><td data-r="Tópico"><b>Duas placas isolantes</b></td><td data-r="A ideia">As cargas não se mexem: calcule σ/(2ε₀) de cada placa e some com sinais, região por região. Com 6,8 e −4,3 µC/m²: 1,4 × 10⁵ N/C fora e 6,3 × 10⁵ N/C entre elas.</td><td data-r="No livro">Exemplo 23.07</td></tr>
+      <tr><td data-r="Tópico"><b>Duas placas condutoras</b></td><td data-r="A ideia">Aproximadas, as cargas de sinais opostos se atraem e vão todas para as faces de dentro: entre as placas E = σ/ε₀; fora, zero. É o capacitor do Cap. 25.</td><td data-r="No livro">Fig. 23-18, Eq. 23-14</td></tr>
+      <tr><td data-r="Tópico"><b>Campo junto a um condutor</b></td><td data-r="A ideia">Logo fora da superfície de um condutor, \(E = \sigma/\varepsilon_0\), perpendicular à superfície. Onde a superfície é mais pontuda, σ é maior: é por isso que para-raios são pontudos.</td><td data-r="No livro">Eq. 23-11</td></tr>
+      <tr><td data-r="Tópico"><b>Gauss e Coulomb</b></td><td data-r="A ideia">As duas leis dizem a mesma coisa sobre cargas paradas; uma sai da outra (Eq. 23-10). Gauss é mais cômoda com simetria; Coulomb, sem ela.</td><td data-r="No livro">Módulo 23-2</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<!-- ======================= QUESTÕES ======================= -->
+<section class="wrap" id="questoes" aria-labelledby="questoes-tit" style="margin-top:3rem">
+  <h2 id="questoes-tit">As questões</h2>
+  <p>Na ordem da mais fácil para a mais difícil. Tente sozinho primeiro; a ajuda só abre se você pedir, um nível por vez. Ímpares têm gabarito do livro; pares têm "resposta calculada pelo guia, sem gabarito oficial".</p>
+  <div class="constantes">
+    <b>Constantes (as do livro)</b>
+    <ul>
+      <li>ε₀ = 8,85 × 10⁻¹² C²/(N·m²)</li>
+      <li>k = 1/(4πε₀) = 8,99 × 10⁹ N·m²/C²</li>
+      <li>e = 1,602 × 10⁻¹⁹ C</li>
+      <li>g = 9,8 m/s²</li>
+      <li>1 mg = 10⁻⁶ kg; 1 pC = 10⁻¹² C; 1 fC = 10⁻¹⁵ C</li>
+      <li>1 mN/C = 10⁻³ N/C</li>
+    </ul>
+    <p class="pequeno" style="margin:.2rem 0 0">Como digitar: vírgula ou ponto; potências como <code>3,01e-9</code>, <code>3,01×10^-9</code> ou <code>3,01×10⁻⁹</code>; vale <code>pi</code>, <code>π</code>, <code>√3</code> e frações. A unidade já está indicada ao lado do campo.</p>
+  </div>
+
+  <!-- ===== P5 ===== -->
+  <article class="questao" id="P5" data-q="P5" aria-labelledby="P5-tit">
+    <div class="q-cab"><h3 id="P5-tit">Problema 5</h3><span class="meta">nível · no livro; Degrau 2</span></div>
+    <div class="q-corpo">
+      <p class="usa">Usa: lei de Gauss numa superfície fechada; repartir o fluxo por simetria.</p>
+      <div class="lado">
+        <p class="enunciado">Na Fig. 23-33, um próton está a uma distância d/2 do centro de um quadrado de aresta d (na reta perpendicular ao quadrado que passa pelo centro dele). Qual é o módulo do fluxo elétrico através do quadrado? (<i>Sugestão:</i> pense no quadrado como uma das faces de um cubo de aresta d.)</p>
+        <figure class="fig">
+          <svg viewBox="0 0 300 190" role="img" aria-label="Figura 23-33: um quadrado de aresta d visto em perspectiva, deitado. Um próton fica acima do centro do quadrado, a uma distância d/2.">
+            <polygon points="50,160 190,160 250,115 110,115" style="fill:#7fc3e8;fill-opacity:.45;stroke:var(--tinta);stroke-width:1.4"/>
+            <line class="fino" x1="150" y1="137.5" x2="150" y2="48"/>
+            <use href="#qp-p" x="150" y="40"/>
+            <line class="cota" x1="166" y1="48" x2="166" y2="137.5"/><text x="172" y="98" class="t-s">d/2</text>
+            <line class="cota" x1="50" y1="176" x2="190" y2="176"/><text x="114" y="188" class="t-s">d</text>
+            <line class="cota" x1="205" y1="165" x2="265" y2="120"/><text x="240" y="160" class="t-s">d</text>
+          </svg>
+          <figcaption>Figura 23-33 (reconstruída a partir do PDF).</figcaption>
+        </figure>
+      </div>
+      <div class="num" id="P5-a" data-q="P5" data-conf="1" data-rot="|Φ| pelo quadrado =" data-unid="N·m²/C" data-resp="3.017e-9" data-erros='[[1.81e-8,"Esse é o fluxo pelo cubo inteiro (e/ε₀). O quadrado é só uma das faces."],[9.051e-9,"e/(2ε₀) seria meia esfera. Quantas faces iguais tem o cubo?"],[4.525e-9,"O cubo tem 6 faces, não 4, todas na mesma posição em relação ao próton."],[5.761e-9,"Você multiplicou o campo no centro do quadrado pela área d². Mas o campo muda de ponto a ponto e chega inclinado nas bordas: E·A só vale para campo uniforme e de frente."]]'></div>
+
+      <div class="ajuda" data-q="P5">
+        <p class="roteiro">Antes de pedir ajuda: já desenhou o quadrado e o próton? Já listou os dados (repare: d não tem valor) e a incógnita? Já sabe de que degrau é?</p>
+        <section class="nivel" data-questao="P5" data-nivel="1" data-titulo="Dica 1: onde olhar" hidden>
+          <h4>Dica 1: onde olhar</h4>
+          <p>Degrau 2. A lei de Gauss só vale para superfícies <b>fechadas</b>, e o quadrado é aberto. Releia "Truque da simetria: repartir o fluxo" e o exemplo da metade da esfera.</p>
+        </section>
+        <section class="nivel" data-questao="P5" data-nivel="2" data-titulo="Dica 2: plano" hidden>
+          <h4>Dica 2: plano</h4>
+          <div class="lado">
+            <ol>
+              <li>Imagine um cubo de aresta d com o próton no centro. O quadrado vira uma das faces.</li>
+              <li>Ache o fluxo pelo cubo inteiro com a lei de Gauss.</li>
+              <li>Verifique que as 6 faces são iguais e estão na mesma posição em relação ao próton. Reparta.</li>
+            </ol>
+            <figure class="fig">
+              <svg viewBox="0 0 250 190" role="img" aria-label="Um cubo em perspectiva com o próton no centro. A face de cima, destacada, é o quadrado do problema.">
+                <polygon points="60,70 110,30 210,30 160,70" style="fill:var(--gauss);fill-opacity:.25;stroke:var(--gauss);stroke-width:2"/>
+                <polygon points="60,70 160,70 160,170 60,170" style="fill:none;stroke:var(--tinta);stroke-width:1.4"/>
+                <polygon points="160,70 210,30 210,130 160,170" style="fill:none;stroke:var(--tinta);stroke-width:1.4"/>
+                <polyline points="60,170 110,130 210,130" class="fino"/><line x1="110" y1="30" x2="110" y2="130" class="fino"/>
+                <use href="#qp-p" x="135" y="100"/>
+                <text x="214" y="28" class="t-g t-s">o quadrado</text>
+              </svg>
+              <figcaption>O cubo imaginário: o próton fica a d/2 de cada face.</figcaption>
+            </figure>
+          </div>
+        </section>
+        <section class="nivel" data-questao="P5" data-nivel="3" data-titulo="Dica 3: primeiro passo" hidden>
+          <h4>Dica 3: primeiro passo</h4>
+          <p>\(\Phi_{cubo} = \dfrac{q_{env}}{\varepsilon_0} = \dfrac{e}{\varepsilon_0}\) e \(\Phi_{quadrado} = \dfrac{\Phi_{cubo}}{6}\). Repare que d não aparece em lugar nenhum.</p>
+        </section>
+        <section class="nivel" data-questao="P5" data-nivel="4" data-titulo="Resolução comentada" hidden>
+          <h4>Resolução comentada</h4>
+          <p class="passo"><b>Entender</b> Próton, q = e = 1,602 × 10⁻¹⁹ C, na reta que passa pelo centro do quadrado, a d/2 dele. Incógnita: |Φ| pelo quadrado. O valor de d não é dado: suspeite que a resposta não depende dele.</p>
+          <p class="passo"><b>Modelar</b> O quadrado é aberto: a lei de Gauss não se aplica direto. Fecho a superfície com um cubo imaginário de aresta d centrado no próton. Isso funciona porque o centro de um cubo de aresta d fica exatamente a d/2 de cada face.</p>
+          <p class="passo"><b>Resolver em símbolos</b> \(\Phi_{cubo} = e/\varepsilon_0\). As 6 faces são equivalentes, então \(\Phi_{quadrado} = \dfrac{e}{6\varepsilon_0}\).</p>
+          <details class="porque-passo"><summary>Por que as 6 faces recebem o mesmo fluxo?</summary><p>Gire o cubo em torno do próton de modo que uma face ocupe o lugar da outra: nada muda, nem o cubo nem o campo do próton. Então o fluxo de uma face é igual ao de qualquer outra.</p></details>
+          <p class="passo"><b>Calcular</b> \(\Phi = \dfrac{1{,}602\times10^{-19}}{6\,(8{,}85\times10^{-12})} = 3{,}02\times10^{-9}\) N·m²/C.</p>
+          <p class="passo"><b>Verificar</b> Unidade: C ÷ (C²/(N·m²)) = N·m²/C. Não depender de d faz sentido: um quadrado maior, mais longe, "vê" a mesma fração do espaço em volta do próton. O fluxo é positivo (sai do cubo). <b>E se</b> o próton estivesse a d/4 do quadrado? Ele não seria mais o centro de um cubo com esse quadrado como face: o truque falha e o fluxo passaria de 1/6, com integral para calcular. E se fosse um elétron: mesmo módulo, fluxo negativo.</p>
+        </section>
+        <section class="nivel" data-questao="P5" data-nivel="5" data-titulo="Resposta" hidden>
+          <h4>Resposta</h4>
+          <p>|Φ| = 3,01 × 10⁻⁹ N·m²/C (gabarito do livro: 3,01 nN·m²/C).</p>
+        </section>
+        <div class="reflexao" hidden><label for="ref-P5"><b>Que passo você não teria visto sozinho?</b></label><textarea id="ref-P5" data-ref="P5"></textarea></div>
+      </div>
+    </div>
+  </article>
+
+  <!-- ===== P24 ===== -->
+  <article class="questao" id="P24" data-q="P24" aria-labelledby="P24-tit">
+    <div class="q-cab"><h3 id="P24-tit">Problema 24</h3><span class="meta">nível · no livro; Degrau 5</span></div>
+    <div class="q-corpo">
+      <p class="usa">Usa: lata gaussiana; carga envolvida de um tubo fino; campo de fio; gráfico E(r).</p>
+      <div class="lado">
+        <p class="enunciado">A Fig. 23-40 mostra uma seção de um tubo longo, de metal, de paredes finas, com raio R = 3,00 cm e carga por unidade de comprimento λ = 2,00 × 10⁻⁸ C/m. Determine o módulo E do campo elétrico a uma distância radial (a) r = R/2,00 e (b) r = 2,00R. (c) Faça um gráfico de E em função de r para 0 ≤ r ≤ 2,00R.</p>
+        <figure class="fig">
+          <svg viewBox="0 0 300 190" role="img" aria-label="Figura 23-40: um trecho de tubo metálico longo, de parede fina, visto em perspectiva, com cargas positivas na superfície. O raio R vai do eixo até a parede.">
+            <line x1="10" y1="95" x2="290" y2="95" class="fino"/>
+            <path d="M 70 40 L 230 40 A 22 55 0 0 1 230 150 L 70 150" style="fill:var(--metal);fill-opacity:.55;stroke:var(--tinta);stroke-width:1.4"/>
+            <ellipse cx="70" cy="95" rx="22" ry="55" style="fill:var(--papel-2);stroke:var(--tinta);stroke-width:1.4"/>
+            <line class="cota" x1="70" y1="95" x2="70" y2="40"/><text x="56" y="72" class="t-s">R</text>
+            <text x="110" y="62" class="sinal-p">+</text><text x="150" y="58" class="sinal-p">+</text><text x="190" y="62" class="sinal-p">+</text><text x="130" y="134" class="sinal-p">+</text><text x="170" y="136" class="sinal-p">+</text><text x="210" y="132" class="sinal-p">+</text><text x="230" y="100" class="sinal-p">+</text>
+            <text x="250" y="178" class="t-2">eixo</text>
+          </svg>
+          <figcaption>Figura 23-40 (reconstruída a partir do PDF).</figcaption>
+        </figure>
+      </div>
+      <div class="num" id="P24-a" data-q="P24" data-conf="1" data-abs="1" data-rot="(a) E em r = R/2 =" data-unid="N/C" data-resp="0" data-erros='[[23980,"Você usou a fórmula do fio dentro do tubo. Uma lata de raio R/2 envolve alguma carga?"],[5995,"Esse é o valor em 2R. Em R/2 a lata está dentro do tubo."]]'></div>
+      <div class="num" id="P24-b" data-q="P24" data-conf="1" data-rot="(b) E em r = 2R =" data-unid="N/C" data-resp="5995" data-mostra="Resposta calculada pelo guia, sem gabarito oficial." data-erros='[[11990,"Você usou r = R. O ponto está em 2R = 6,00 cm."],[49950,"Isso é kλ/r², a fórmula de carga pontual. Para tubo ou fio: λ/(2πε₀r)."],[18830,"Faltou o π: E = λ/(2πε₀r)."]]'></div>
+      <div class="quiz" id="P24-c" data-q="P24" data-conf="1">
+        <p class="enun">(c) Qual descrição bate com o gráfico de E(r), de 0 a 2R?</p>
+        <div class="alts">
+          <button class="alt" type="button" data-fb="Isso é o cilindro maciço (Problema 76). No tubo fino, não há carga entre 0 e R.">Cresce em linha reta de 0 (no eixo) até R e depois cai como 1/r.</button>
+          <button class="alt" type="button" data-ok="1" data-fb="Isso: dentro, a lata não envolve carga; na parede, o campo salta; fora, é o campo de um fio no eixo, que cai com 1/r.">Zero de 0 até R; em R salta para cerca de 1,2 × 10⁴ N/C e depois cai como 1/r, valendo a metade (6,0 × 10³ N/C) em 2R.</button>
+          <button class="alt" type="button" data-fb="1/r² é de esfera. Com a lata, a parede cresce com r: 1/r.">Zero de 0 até R; depois cai como 1/r², valendo um quarto do pico em 2R.</button>
+          <button class="alt" type="button" data-fb="Seria assim se a carga estivesse no eixo (um fio). Aqui ela está na parede, em r = R.">Cai como 1/r desde o eixo, muito grande perto de r = 0.</button>
+        </div>
+        <figure class="fig" data-oculto>
+          <svg viewBox="0 0 320 200" role="img" aria-label="Gráfico de E em função de r para o tubo: zero de 0 a R; salto vertical em R até 1,2 vezes 10 elevado a 4 N/C; depois uma curva que cai como 1/r até 6,0 vezes 10 elevado a 3 N/C em 2R.">
+            <line class="eixo-s" x1="40" y1="170" x2="310" y2="170"/><line class="eixo-s" x1="40" y1="170" x2="40" y2="12"/>
+            <line x1="40" y1="170" x2="170" y2="170" class="curva"/>
+            <line x1="170" y1="170" x2="170" y2="30" class="fino" style="stroke:var(--tinta)"/>
+            <path d="M 170.0 30.0 L 174.3 34.5 L 178.7 38.8 L 183.0 42.7 L 187.3 46.5 L 191.7 50.0 L 196.0 53.3 L 200.3 56.5 L 204.7 59.5 L 209.0 62.3 L 213.3 65.0 L 217.7 67.6 L 222.0 70.0 L 226.3 72.3 L 230.7 74.5 L 235.0 76.7 L 239.3 78.7 L 243.7 80.6 L 248.0 82.5 L 252.3 84.3 L 256.7 86.0 L 261.0 87.6 L 265.3 89.2 L 269.7 90.8 L 274.0 92.2 L 278.3 93.6 L 282.7 95.0 L 287.0 96.3 L 291.3 97.6 L 295.7 98.8 L 300.0 100.0" class="curva"/>
+            <line x1="40" y1="30" x2="170" y2="30" class="fino"/><line x1="40" y1="100" x2="300" y2="100" class="fino"/>
+            <text x="2" y="34" class="t-2">1,2·10⁴</text><text x="2" y="104" class="t-2">6,0·10³</text>
+            <text x="102" y="186" class="t-2">R/2</text><text x="166" y="186" class="t-2">R</text><text x="292" y="186" class="t-2">2R</text>
+            <text x="270" y="164" class="t-2">r</text><text x="46" y="20" class="t-2">E (N/C)</text>
+          </svg>
+          <figcaption>O gráfico de E(r) do tubo.</figcaption>
+        </figure>
+      </div>
+
+      <div class="ajuda" data-q="P24">
+        <p class="roteiro">Antes de pedir ajuda: já desenhou o tubo em corte (vista de frente)? Já marcou onde está a carga e onde ficam os pontos R/2 e 2R? Já sabe de que degrau é?</p>
+        <section class="nivel" data-questao="P24" data-nivel="1" data-titulo="Dica 1: onde olhar" hidden>
+          <h4>Dica 1: onde olhar</h4>
+          <p>Degrau 5: a lata gaussiana e o "tubo de parede fina". O raciocínio é o mesmo da casca esférica do Degrau 3.</p>
+        </section>
+        <section class="nivel" data-questao="P24" data-nivel="2" data-titulo="Dica 2: plano" hidden>
+          <h4>Dica 2: plano</h4>
+          <div class="lado">
+            <ol>
+              <li>Onde está a carga? (Só na parede, em r = R.)</li>
+              <li>Para cada ponto, desenhe uma lata coaxial passando por ele.</li>
+              <li>Para cada lata, veja que carga fica dentro.</li>
+              <li>Aplique \(\varepsilon_0E\cdot2\pi rh = q_{env}\).</li>
+              <li>Para o gráfico: junte as duas regiões e veja o que acontece em r = R.</li>
+            </ol>
+            <figure class="fig">
+              <svg viewBox="0 0 220 220" role="img" aria-label="Corte do tubo: um círculo de raio R com cargas positivas. Duas latas gaussianas em corte, tracejadas: uma de raio R/2, dentro do tubo, e outra de raio 2R, fora.">
+                <circle cx="110" cy="110" r="50" style="fill:none;stroke:var(--pos);stroke-width:4"/>
+                <circle cx="110" cy="110" r="25" class="gauss-l"/><circle cx="110" cy="110" r="100" class="gauss-l"/>
+                <use href="#pt" x="110" y="110"/>
+                <text x="138" y="114" class="t-g t-s">R/2</text><text x="160" y="40" class="t-g t-s">2R</text><text x="112" y="56" class="t-p t-s">R</text>
+              </svg>
+              <figcaption>Corte do tubo com as duas latas (vistas de frente).</figcaption>
+            </figure>
+          </div>
+        </section>
+        <section class="nivel" data-questao="P24" data-nivel="3" data-titulo="Dica 3: primeiro passo" hidden>
+          <h4>Dica 3: primeiro passo</h4>
+          <p>Lata de raio R/2: quanto de parede do tubo fica dentro dela? Lata de raio 2R e altura h: \(q_{env} = \lambda h\), então \(\varepsilon_0E\,(2\pi\cdot2R\cdot h) = \lambda h\).</p>
+        </section>
+        <section class="nivel" data-questao="P24" data-nivel="4" data-titulo="Resolução comentada" hidden>
+          <h4>Resolução comentada</h4>
+          <p class="passo"><b>Entender</b> λ = 2,00 × 10⁻⁸ C/m; R = 0,0300 m. Pontos: r = 0,0150 m (dentro) e r = 0,0600 m (fora).</p>
+          <p class="passo"><b>Modelar</b> Tubo longo: simetria cilíndrica, campo radial. A carga fica só na parede fina, em r = R (num metal, a carga vai para a superfície; e a parede é fina). Lata coaxial de raio r.</p>
+          <p class="passo"><b>Resolver em símbolos</b> (a) r &lt; R: a lata não envolve nada, q_env = 0 → E = 0. (b) r &gt; R: \(q_{env} = \lambda h\) → \(E = \dfrac{\lambda}{2\pi\varepsilon_0 r}\).</p>
+          <details class="porque-passo"><summary>Por que dentro dá zero, se o tubo está "cercando" o ponto?</summary><p>Porque a lata de raio R/2 não contém carga, então o fluxo por ela é zero. E, por simetria, o campo teria o mesmo módulo em toda a parede da lata e seria radial: fluxo zero só é possível com E = 0. Os empurrões da parede do tubo, vindos de todos os lados, se cancelam.</p></details>
+          <p class="passo"><b>Calcular</b> (b) \(E = \dfrac{2{,}00\times10^{-8}}{2\pi(8{,}85\times10^{-12})(0{,}0600)} = 5{,}99\times10^3\) N/C. (c) De 0 a R: zero. Logo fora da parede (r = R): \(1{,}20\times10^4\) N/C. Depois cai com 1/r, até 5,99 × 10³ em 2R.</p>
+          <figure class="fig">
+            <svg viewBox="0 0 320 200" role="img" aria-label="Gráfico de E em função de r para o tubo: zero de 0 a R; salto vertical em R até 1,2 vezes 10 elevado a 4 N/C; depois uma curva que cai como 1/r até 6,0 vezes 10 elevado a 3 N/C em 2R.">
+              <line class="eixo-s" x1="40" y1="170" x2="310" y2="170"/><line class="eixo-s" x1="40" y1="170" x2="40" y2="12"/>
+              <line x1="40" y1="170" x2="170" y2="170" class="curva"/>
+              <line x1="170" y1="170" x2="170" y2="30" class="fino" style="stroke:var(--tinta)"/>
+              <path d="M 170.0 30.0 L 178.7 38.8 L 187.3 46.5 L 196.0 53.3 L 204.7 59.5 L 213.3 65.0 L 222.0 70.0 L 230.7 74.5 L 239.3 78.7 L 248.0 82.5 L 256.7 86.0 L 265.3 89.2 L 274.0 92.2 L 282.7 95.0 L 291.3 97.6 L 300.0 100.0" class="curva"/>
+              <line x1="40" y1="30" x2="170" y2="30" class="fino"/><line x1="40" y1="100" x2="300" y2="100" class="fino"/>
+              <text x="2" y="34" class="t-2">1,2·10⁴</text><text x="2" y="104" class="t-2">6,0·10³</text>
+              <text x="102" y="186" class="t-2">R/2</text><text x="166" y="186" class="t-2">R</text><text x="292" y="186" class="t-2">2R</text>
+              <text x="270" y="164" class="t-2">r</text><text x="46" y="20" class="t-2">E (N/C)</text>
+            </svg>
+            <figcaption>E(r) do tubo: zero dentro, salto na parede, 1/r fora.</figcaption>
+          </figure>
+          <p class="passo"><b>Verificar</b> Unidade: (C/m) ÷ (C²/(N·m²) · m) = N/C. O salto em R acontece porque a carga está numa superfície sem espessura. Fora, o tubo é igual a um fio no eixo com a mesma λ. <b>E se</b> o tubo fosse um cilindro maciço com a mesma λ (Problema 76)? Fora, nada muda; dentro, E cresceria em linha reta até o mesmo valor em R.</p>
+        </section>
+        <section class="nivel" data-questao="P24" data-nivel="5" data-titulo="Resposta" hidden>
+          <h4>Resposta</h4>
+          <p>(a) E = 0. (b) E = 5,99 × 10³ N/C. (c) Zero até R, salto para 1,20 × 10⁴ N/C em R, depois cai com 1/r. Respostas calculadas pelo guia, sem gabarito oficial (problema par).</p>
+        </section>
+        <div class="reflexao" hidden><label for="ref-P24"><b>Que passo você não teria visto sozinho?</b></label><textarea id="ref-P24" data-ref="P24"></textarea></div>
+      </div>
+    </div>
+  </article>
+
+  <!-- ===== P52 ===== -->
+  <article class="questao" id="P52" data-q="P52" aria-labelledby="P52-tit">
+    <div class="q-cab"><h3 id="P52-tit">Problema 52</h3><span class="meta">nível ·· no livro; Degrau 3</span></div>
+    <div class="q-corpo">
+      <p class="usa">Usa: esfera gaussiana; carga envolvida de uma casca grossa com ρ uniforme; três regiões.</p>
+      <div class="lado">
+        <p class="enunciado">A Fig. 23-57 mostra uma casca esférica com uma densidade volumétrica de carga uniforme ρ = 1,84 nC/m³, raio interno a = 10,0 cm e raio externo b = 2,00a. Determine o módulo do campo elétrico (a) em r = 0, (b) em r = a/2,00, (c) em r = a, (d) em r = 1,50a, (e) em r = b e (f) em r = 3,00b.</p>
+        <figure class="fig">
+          <svg viewBox="0 0 220 210" role="img" aria-label="Figura 23-57: corte de uma casca esférica grossa. O material entre os raios a e b tem cargas positivas espalhadas; o miolo, de raio a, é vazio.">
+            <circle cx="105" cy="105" r="96" class="cheio-p"/><circle cx="105" cy="105" r="48" class="vazio"/>
+            <g class="sinal-p"><text x="105" y="30">+</text><text x="75" y="36">+</text><text x="135" y="36">+</text><text x="45" y="62">+</text><text x="165" y="62">+</text><text x="30" y="100">+</text><text x="180" y="100">+</text><text x="34" y="140">+</text><text x="176" y="140">+</text><text x="55" y="172">+</text><text x="155" y="172">+</text><text x="85" y="192">+</text><text x="125" y="192">+</text><text x="60" y="110">+</text><text x="150" y="110">+</text></g>
+            <line class="cota" x1="105" y1="105" x2="139" y2="71"/><text x="124" y="98" class="t-s">a</text>
+            <line class="cota" x1="105" y1="105" x2="105" y2="201"/><text x="110" y="164" class="t-s">b</text>
+          </svg>
+          <figcaption>Figura 23-57 (reconstruída a partir do PDF).</figcaption>
+        </figure>
+      </div>
+      <div class="quiz" id="P52-abc" data-q="P52" data-conf="1">
+        <p class="enun">(a), (b) e (c): em r = 0, r = a/2 e r = a, o campo é:</p>
+        <div class="alts">
+          <button class="alt" type="button" data-ok="1" data-fb="Isso: esferas gaussianas de raio 0, a/2 ou a não envolvem material da casca (o material começa em a). q_env = 0 → E = 0.">zero nos três pontos</button>
+          <button class="alt" type="button" data-fb="Crescer exigiria carga dentro da gaussiana. Entre 0 e a não há carga.">zero no centro e crescendo até r = a</button>
+          <button class="alt" type="button" data-fb="Dentro da cavidade, a carga está toda do lado de fora da gaussiana.">o mesmo valor nos três, diferente de zero</button>
+          <button class="alt" type="button" data-fb="Não há carga no centro para o campo explodir ali.">muito grande no centro e menor em a</button>
+        </div>
+      </div>
+      <div class="num" id="P52-d" data-q="P52" data-conf="1" data-rot="(d) E em r = 1,50a =" data-unid="N/C" data-resp="7.315" data-mostra="Resposta calculada pelo guia, sem gabarito oficial." data-erros='[[10.39,"Você usou ρr/(3ε₀), que é da esfera maciça. Tire a cavidade: q_env = ρ(4/3)π(r³ − a³)."],[21.56,"Você pôs a casca inteira (b³ − a³) dentro da gaussiana. Em 1,5a, só o material entre a e 1,5a está dentro."]]'></div>
+      <div class="num" id="P52-e" data-q="P52" data-conf="1" data-rot="(e) E em r = b =" data-unid="N/C" data-resp="12.13" data-mostra="Resposta calculada pelo guia, sem gabarito oficial." data-erros='[[13.86,"Faltou tirar a cavidade: q_env = ρ(4/3)π(b³ − a³)."]]'></div>
+      <div class="num" id="P52-f" data-q="P52" data-conf="1" data-rot="(f) E em r = 3,00b =" data-unid="N/C" data-resp="1.348" data-mostra="Resposta calculada pelo guia, sem gabarito oficial." data-erros='[[1.54,"Faltou tirar a cavidade."],[5.39,"3,00b = 60,0 cm. Você usou 3a?"],[12.13,"Esse é o valor em b. Em 3b a carga envolvida é a mesma, mas r² é 9 vezes maior."]]'></div>
+
+      <div class="ajuda" data-q="P52">
+        <p class="roteiro">Antes de pedir ajuda: já desenhou a casca em corte e marcou os seis pontos? Já separou em quais regiões eles caem? Já sabe de que degrau é?</p>
+        <section class="nivel" data-questao="P52" data-nivel="1" data-titulo="Dica 1: onde olhar" hidden>
+          <h4>Dica 1: onde olhar</h4>
+          <p>Degrau 3: a receita com esfera gaussiana, a regra "q_env = ρ × volume de material dentro da gaussiana" e a pergunta 3 do checkpoint.</p>
+        </section>
+        <section class="nivel" data-questao="P52" data-nivel="2" data-titulo="Dica 2: plano" hidden>
+          <h4>Dica 2: plano</h4>
+          <div class="lado">
+            <ol>
+              <li>Separe três regiões: cavidade (r &lt; a), material (a &lt; r &lt; b) e fora (r &gt; b).</li>
+              <li>Para cada ponto, uma esfera gaussiana de raio r.</li>
+              <li>Ache q_env em cada região.</li>
+              <li>\(E = \dfrac{q_{env}}{4\pi\varepsilon_0 r^2}\).</li>
+            </ol>
+            <figure class="fig">
+              <svg viewBox="0 0 270 270" role="img" aria-label="Casca grossa em corte, com raios a e b, e duas esferas gaussianas tracejadas: uma em 1,5a, dentro do material, e outra em 3b, bem fora.">
+                <circle cx="135" cy="135" r="40" class="cheio-p"/><circle cx="135" cy="135" r="20" class="vazio"/>
+                <circle cx="135" cy="135" r="30" class="gauss-l"/><circle cx="135" cy="135" r="120" class="gauss-l"/>
+                <text x="168" y="118" class="t-g t-s">1,5a</text><text x="210" y="40" class="t-g t-s">3b</text>
+                <text x="129" y="139" class="t-2">a</text><text x="160" y="170" class="t-p t-s">b</text>
+              </svg>
+              <figcaption>Uma gaussiana dentro do material e outra fora.</figcaption>
+            </figure>
+          </div>
+        </section>
+        <section class="nivel" data-questao="P52" data-nivel="3" data-titulo="Dica 3: primeiro passo" hidden>
+          <h4>Dica 3: primeiro passo</h4>
+          <p>No material: \(\varepsilon_0E\cdot4\pi r^2 = \rho\cdot\tfrac43\pi(r^3 - a^3)\). Fora: o mesmo, com b no lugar de r dentro do parêntese.</p>
+        </section>
+        <section class="nivel" data-questao="P52" data-nivel="4" data-titulo="Resolução comentada" hidden>
+          <h4>Resolução comentada</h4>
+          <p class="passo"><b>Entender</b> ρ = 1,84 × 10⁻⁹ C/m³; a = 0,100 m; b = 0,200 m. Pontos: 0, 0,050, 0,100 (cavidade e borda), 0,150 e 0,200 m (material) e 0,600 m (fora).</p>
+          <p class="passo"><b>Modelar</b> Simetria esférica → esfera gaussiana de raio r. ρ uniforme no material; a cavidade não tem carga.</p>
+          <p class="passo"><b>Resolver em símbolos</b> r ≤ a: q_env = 0 → E = 0. a ≤ r ≤ b: \(E = \dfrac{\rho(r^3 - a^3)}{3\varepsilon_0 r^2}\). r ≥ b: \(E = \dfrac{\rho(b^3 - a^3)}{3\varepsilon_0 r^2}\).</p>
+          <details class="porque-passo"><summary>De onde vem o 3ε₀?</summary><p>\(\varepsilon_0E\,4\pi r^2 = \rho\,\tfrac43\pi(r^3-a^3)\). Dividindo os dois lados por \(4\pi r^2\varepsilon_0\): o 4π cancela com o 4π de \(\tfrac43\pi\) e sobra o 3 embaixo.</p></details>
+          <p class="passo"><b>Calcular</b> (a), (b), (c): 0. (d) \(\dfrac{1{,}84\times10^{-9}(0{,}150^3 - 0{,}100^3)}{3(8{,}85\times10^{-12})(0{,}150)^2} = 7{,}32\) N/C. (e) Com r = 0,200: 12,1 N/C. (f) Com r = 0,600 (e b no parêntese): 1,35 N/C.</p>
+          <p class="passo"><b>Verificar</b> (f) = (e)/9, como manda o 1/r² fora (r triplicou). Carga total: \(\rho\tfrac43\pi(b^3-a^3) = 5{,}40\times10^{-11}\) C; \(kQ/(0{,}600)^2 = 1{,}35\) N/C, bate. O campo é contínuo em a (zero dos dois lados) e em b. <b>E se</b> não houvesse cavidade (a = 0)? Em b, daria ρb/(3ε₀) = 13,9 N/C: um pouco mais, porque haveria mais carga.</p>
+        </section>
+        <section class="nivel" data-questao="P52" data-nivel="5" data-titulo="Resposta" hidden>
+          <h4>Resposta</h4>
+          <p>(a) 0; (b) 0; (c) 0; (d) 7,32 N/C; (e) 12,1 N/C; (f) 1,35 N/C. Respostas calculadas pelo guia, sem gabarito oficial (problema par).</p>
+        </section>
+        <div class="reflexao" hidden><label for="ref-P52"><b>Que passo você não teria visto sozinho?</b></label><textarea id="ref-P52" data-ref="P52"></textarea></div>
+      </div>
+    </div>
+  </article>
+
+  <!-- ===== P76 ===== -->
+  <article class="questao" id="P76" data-q="P76" aria-labelledby="P76-tit">
+    <div class="q-cab"><h3 id="P76-tit">Problema 76</h3><span class="meta">Problemas Adicionais; Degrau 5</span></div>
+    <div class="q-corpo">
+      <p class="usa">Usa: lata gaussiana dentro e fora; carga envolvida = ρ × volume.</p>
+      <div class="lado">
+        <p class="enunciado">Um cilindro muito longo, de raio R, possui uma distribuição volumétrica de carga uniforme. (a) Mostre que, a uma distância r &lt; R do eixo do cilindro, \(E = \dfrac{\rho r}{2\varepsilon_0}\), em que ρ é a densidade volumétrica de carga. (b) Escreva uma expressão para E do lado de fora do cilindro. <span class="pequeno">(A equação de (a) se perdeu na conversão do livro; é esta.)</span></p>
+        <figure class="fig">
+          <svg viewBox="0 0 220 180" role="img" aria-label="Esquema do guia: um cilindro maciço longo, em perspectiva, com carga espalhada no volume e raio R.">
+            <path d="M 50 40 L 170 40 A 20 50 0 0 1 170 140 L 50 140" class="cheio-p"/>
+            <ellipse cx="50" cy="90" rx="20" ry="50" class="cheio-p" style="fill-opacity:.3"/>
+            <line class="cota" x1="50" y1="90" x2="50" y2="40"/><text x="36" y="68" class="t-s">R</text>
+            <g class="sinal-p"><text x="90" y="70">+</text><text x="130" y="64">+</text><text x="110" y="96">+</text><text x="150" y="100">+</text><text x="85" y="122">+</text><text x="135" y="128">+</text></g>
+            <text x="120" y="166" class="t-2" style="text-anchor:middle">ρ uniforme no volume</text>
+          </svg>
+          <figcaption>Esquema do guia (o livro não tem figura).</figcaption>
+        </figure>
+      </div>
+      <p class="formato">A resposta é uma expressão. Escreva-a no papel e confira com os valores-teste: <b>ρ = 1,00 µC/m³, R = 2,00 cm</b>.</p>
+      <div class="num" id="P76-a" data-q="P76" data-conf="1" data-rot="(a) teste: E em r = 1,50 cm =" data-unid="N/C" data-resp="847.5" data-mostra="847 N/C = (1,00 × 10⁻⁶)(0,0150)/(2 × 8,85 × 10⁻¹²). Calculada pelo guia." data-erros='[[565,"Você usou ρr/(3ε₀), da esfera. Na lata, a área é 2πrh e o volume πr²h: sai 2ε₀."],[1695,"Faltou o 2: E = ρr/(2ε₀)."]]'></div>
+      <div class="quiz" id="P76-b" data-q="P76" data-conf="1">
+        <p class="enun">(b) Do lado de fora (r &gt; R), E =</p>
+        <div class="alts">
+          <button class="alt" type="button" data-fb="Essa é a de dentro. Fora, a lata envolve o cilindro inteiro: o volume com carga é πR²h, não πr²h.">\(\dfrac{\rho r}{2\varepsilon_0}\)</button>
+          <button class="alt" type="button" data-fb="1/r² é de esfera. Com a lata, a parede cresce com r: 1/r.">\(\dfrac{\rho R^2}{2\varepsilon_0 r^2}\)</button>
+          <button class="alt" type="button" data-ok="1" data-fb="Isso: ε₀E·2πrh = ρπR²h. É o campo de um fio com λ = ρπR².">\(\dfrac{\rho R^2}{2\varepsilon_0 r}\)</button>
+          <button class="alt" type="button" data-fb="Seria constante fora; mas a mesma carga se espalha numa parede cada vez maior.">\(\dfrac{\rho R}{2\varepsilon_0}\)</button>
+        </div>
+      </div>
+      <div class="num" id="P76-c" data-q="P76" data-conf="1" data-rot="(b) teste: E em r = 5,00 cm =" data-unid="N/C" data-resp="452" data-mostra="452 N/C = (1,00 × 10⁻⁶)(0,0200)²/(2 × 8,85 × 10⁻¹² × 0,0500). Calculada pelo guia." data-erros='[[2825,"Você usou a fórmula de dentro (ρr/2ε₀) fora do cilindro."],[9040,"1/r² é de esfera. Fora de um cilindro, 1/r."]]'></div>
+
+      <div class="ajuda" data-q="P76">
+        <p class="roteiro">Antes de pedir ajuda: já desenhou o cilindro em corte, com um ponto dentro e outro fora? Já sabe de que degrau é?</p>
+        <section class="nivel" data-questao="P76" data-nivel="1" data-titulo="Dica 1: onde olhar" hidden>
+          <h4>Dica 1: onde olhar</h4>
+          <p>Degrau 5: a receita com a lata e a linha "cilindro maciço com ρ uniforme". O passo 4 usa a regra do Degrau 3 (ρ × volume dentro da gaussiana).</p>
+        </section>
+        <section class="nivel" data-questao="P76" data-nivel="2" data-titulo="Dica 2: plano" hidden>
+          <h4>Dica 2: plano</h4>
+          <div class="lado">
+            <ol>
+              <li>Simetria: campo radial, igual a uma mesma distância do eixo.</li>
+              <li>Uma lata de raio r e altura h: uma vez com r &lt; R, outra com r &gt; R.</li>
+              <li>Fluxo: E·2πrh nos dois casos (tampas: zero).</li>
+              <li>q_env: ρ × volume de material dentro da lata.</li>
+              <li>Iguale e isole E.</li>
+            </ol>
+            <figure class="fig">
+              <svg viewBox="0 0 220 220" role="img" aria-label="Corte do cilindro maciço de raio R, com duas latas gaussianas tracejadas: uma de raio r menor que R e outra de raio r maior que R.">
+                <circle cx="110" cy="110" r="60" class="cheio-p"/>
+                <circle cx="110" cy="110" r="35" class="gauss-l"/><circle cx="110" cy="110" r="95" class="gauss-l"/>
+                <text x="140" y="96" class="t-g t-s">r &lt; R</text><text x="170" y="40" class="t-g t-s">r &gt; R</text><text x="112" y="176" class="t-p t-s">R</text>
+              </svg>
+              <figcaption>As duas latas, vistas de frente.</figcaption>
+            </figure>
+          </div>
+        </section>
+        <section class="nivel" data-questao="P76" data-nivel="3" data-titulo="Dica 3: primeiro passo" hidden>
+          <h4>Dica 3: primeiro passo</h4>
+          <p>Dentro: \(q_{env} = \rho\cdot\pi r^2h\). Fora: \(q_{env} = \rho\cdot\pi R^2h\). Nos dois: \(\varepsilon_0E\cdot2\pi rh = q_{env}\).</p>
+        </section>
+        <section class="nivel" data-questao="P76" data-nivel="4" data-titulo="Resolução comentada" hidden>
+          <h4>Resolução comentada</h4>
+          <p class="passo"><b>Entender</b> Cilindro longo, raio R, ρ uniforme. Incógnita: E(r) dentro e fora.</p>
+          <p class="passo"><b>Modelar</b> Simetria cilíndrica → lata coaxial de raio r e altura h. Hipótese: longe das pontas.</p>
+          <p class="passo"><b>Resolver em símbolos</b> (a) \(\varepsilon_0E\cdot2\pi rh = \rho\pi r^2h\) → \(E = \dfrac{\rho r}{2\varepsilon_0}\). (b) \(\varepsilon_0E\cdot2\pi rh = \rho\pi R^2h\) → \(E = \dfrac{\rho R^2}{2\varepsilon_0 r}\).</p>
+          <details class="porque-passo"><summary>Por que fora fica R² e não r²?</summary><p>Porque fora a lata já envolve o cilindro inteiro: o material com carga vai só até R. Aumentar a lata além de R só acrescenta ar, sem carga.</p></details>
+          <p class="passo"><b>Calcular</b> Valores-teste: (a) r = 0,0150 m: 847 N/C. (b) r = 0,0500 m: 452 N/C.</p>
+          <p class="passo"><b>Verificar</b> Em r = R, as duas expressões dão ρR/(2ε₀) = 1 130 N/C: o campo é contínuo. Fora, com λ = ρπR², vira λ/(2πε₀r), o fio. Comparação com a esfera, ρr/(3ε₀): o 3 vira 2 porque volume/área = r/3 na esfera e r/2 na lata. <b>E se</b> o cilindro fosse oco, com raio interno a? No material: \(E = \rho(r^2 - a^2)/(2\varepsilon_0 r)\).</p>
+        </section>
+        <section class="nivel" data-questao="P76" data-nivel="5" data-titulo="Resposta" hidden>
+          <h4>Resposta</h4>
+          <p>(a) \(E = \rho r/(2\varepsilon_0)\) (mostrado acima). (b) \(E = \rho R^2/(2\varepsilon_0 r)\). Valores-teste: 847 N/C e 452 N/C. Sem gabarito oficial (problema par).</p>
+        </section>
+        <div class="reflexao" hidden><label for="ref-P76"><b>Que passo você não teria visto sozinho?</b></label><textarea id="ref-P76" data-ref="P76"></textarea></div>
+      </div>
+    </div>
+  </article>
+
+  <!-- ===== P29 ===== -->
+  <article class="questao" id="P29" data-q="P29" aria-labelledby="P29-tit">
+    <div class="q-cab"><h3 id="P29-tit">Problema 29</h3><span class="meta">nível ·· no livro; Degraus 5 e 6</span></div>
+    <div class="q-corpo">
+      <p class="usa">Usa: lata gaussiana com λ = Q/L; sinal de q_env → sentido; cargas induzidas num condutor.</p>
+      <div class="lado">
+        <p class="enunciado">A Fig. 23-42 é uma seção de uma barra condutora de raio R₁ = 1,30 mm e comprimento L = 11,00 m no interior de uma casca coaxial, de paredes finas, de raio R₂ = 10,0R₁ e mesmo comprimento L. A carga da barra é Q₁ = +3,40 × 10⁻¹² C; a carga da casca é Q₂ = −2,00Q₁. Determine (a) o módulo E e (b) a direção (para dentro ou para fora) do campo elétrico a uma distância radial r = 2,00R₂. Determine (c) E e (d) a direção do campo elétrico para r = 5,00R₁. Determine a carga (e) na superfície interna e (f) na superfície externa da casca.</p>
+        <figure class="fig">
+          <svg viewBox="0 0 260 220" role="img" aria-label="Figura 23-42 em corte: uma barra condutora fina no centro, de raio R1 e carga Q1, dentro de uma casca coaxial de raio R2 igual a 10 R1 e carga Q2. O comprimento L é perpendicular ao papel.">
+            <circle cx="120" cy="110" r="90" style="fill:none;stroke:var(--metal);stroke-width:7"/>
+            <circle cx="120" cy="110" r="90" style="fill:none;stroke:var(--neg);stroke-width:1.5"/>
+            <circle cx="120" cy="110" r="9" class="metal" style="stroke:var(--pos);stroke-width:2"/>
+            <line class="cota" x1="120" y1="110" x2="120" y2="101"/><text x="126" y="98" class="t-s">R₁</text>
+            <line class="cota" x1="120" y1="110" x2="56.4" y2="173.6"/><text x="74" y="148" class="t-s">R₂</text>
+            <text x="96" y="132" class="t-p t-s">Q₁</text><text x="196" y="40" class="t-n t-s">Q₂</text>
+            <text x="130" y="214" class="t-2" style="text-anchor:middle">L = 11,00 m, para dentro do papel</text>
+          </svg>
+          <figcaption>Figura 23-42 em corte (reconstruída a partir do PDF, que a mostra em perspectiva).</figcaption>
+        </figure>
+      </div>
+      <div class="num" id="P29-a" data-q="P29" data-conf="1" data-rot="(a) E em r = 2,00R₂ =" data-unid="N/C" data-resp="0.2138" data-erros='[[0.4276,"Você usou só Q₂, ou r = R₂ em vez de 2R₂. Em 2R₂ a lata envolve a barra e a casca."],[0.6414,"Você somou os módulos. Com sinais: Q₁ + Q₂ = Q₁ − 2Q₁ = −Q₁."],[2.352,"Faltou dividir por L: é λ = Q/L que entra em E = λ/(2πε₀r)."]]'></div>
+      <div class="quiz" id="P29-b" data-q="P29" data-conf="1">
+        <p class="enun">(b) A direção do campo em r = 2,00R₂ é:</p>
+        <div class="alts">
+          <button class="alt" type="button" data-fb="Some as cargas dentro da lata com sinais: Q₁ + Q₂ = −3,40 × 10⁻¹² C.">para fora (longe do eixo)</button>
+          <button class="alt" type="button" data-ok="1" data-fb="Isso: q_env = Q₁ + Q₂ = −Q₁ &lt; 0, então o campo aponta para o eixo (gabarito: para dentro).">para dentro (para o eixo)</button>
+        </div>
+      </div>
+      <div class="num" id="P29-c" data-q="P29" data-conf="1" data-rot="(c) E em r = 5,00R₁ =" data-unid="N/C" data-resp="0.8552" data-erros='[[0.08552,"5,00R₁ = 6,50 mm. Você usou 5R₂?"],[9.407,"Faltou dividir por L: λ = Q₁/L."]]'></div>
+      <div class="quiz" id="P29-d" data-q="P29" data-conf="1">
+        <p class="enun">(d) A direção do campo em r = 5,00R₁ é:</p>
+        <div class="alts">
+          <button class="alt" type="button" data-ok="1" data-fb="Isso: em 5R₁ a casca (em 10R₁) fica fora da lata. Só a barra, positiva, conta (gabarito: para fora).">para fora (longe do eixo)</button>
+          <button class="alt" type="button" data-fb="A casca negativa está em 10R₁, fora da lata de raio 5R₁. Ela não conta aqui.">para dentro (para o eixo)</button>
+        </div>
+      </div>
+      <div class="num" id="P29-e" data-q="P29" data-conf="1" data-sinal="1" data-rot="(e) carga na superfície interna da casca =" data-unid="C" data-resp="-3.40e-12" data-erros='[[-6.8e-12,"Essa é a carga total da casca. Ela se divide entre as superfícies interna e externa."],[0,"Gaussiana dentro do metal da casca: E = 0, então barra + superfície interna somam zero."]]'></div>
+      <div class="num" id="P29-f" data-q="P29" data-conf="1" data-sinal="1" data-rot="(f) carga na superfície externa da casca =" data-unid="C" data-resp="-3.40e-12" data-erros='[[-1.02e-11,"Externa = total da casca − interna = −6,80 − (−3,40) pC."],[3.4e-12,"Confira o sinal: −6,80 − (−3,40) = −3,40 pC."]]'></div>
+
+      <div class="ajuda" data-q="P29">
+        <p class="roteiro">Antes de pedir ajuda: já desenhou o corte com a barra, a casca e os dois pontos (5R₁ e 2R₂)? Já converteu as cargas em λ? Já sabe de que degraus é?</p>
+        <section class="nivel" data-questao="P29" data-nivel="1" data-titulo="Dica 1: onde olhar" hidden>
+          <h4>Dica 1: onde olhar</h4>
+          <p>Degrau 5 (lata gaussiana, λ = Q/L, o sinal de q_env dá o sentido; o exemplo com lacunas das duas cascas coaxiais) e Degrau 6 (cargas induzidas num condutor).</p>
+        </section>
+        <section class="nivel" data-questao="P29" data-nivel="2" data-titulo="Dica 2: plano" hidden>
+          <h4>Dica 2: plano</h4>
+          <div class="lado">
+            <ol>
+              <li>Converta as cargas em carga por metro: λ = Q/L.</li>
+              <li>Para cada ponto, uma lata coaxial passando por ele. Que objetos ficam dentro?</li>
+              <li>\(E = |\lambda_{env}|/(2\pi\varepsilon_0 r)\); sentido pelo sinal de λ_env.</li>
+              <li>(e): uma gaussiana dentro do metal da casca (E = 0 ali).</li>
+              <li>(f): conservação da carga da casca.</li>
+            </ol>
+            <figure class="fig">
+              <svg viewBox="0 0 260 260" role="img" aria-label="Corte com a barra no centro e a casca de raio R2. Duas latas gaussianas tracejadas: uma de raio 5R1, entre a barra e a casca, e outra de raio 2R2, fora de tudo.">
+                <circle cx="130" cy="130" r="60" style="fill:none;stroke:var(--neg);stroke-width:4"/>
+                <circle cx="130" cy="130" r="6" class="metal" style="stroke:var(--pos);stroke-width:2"/>
+                <circle cx="130" cy="130" r="30" class="gauss-l"/><circle cx="130" cy="130" r="120" class="gauss-l"/>
+                <text x="160" y="120" class="t-g t-s">5R₁</text><text x="214" y="40" class="t-g t-s">2R₂</text><text x="186" y="170" class="t-n t-s">R₂</text>
+              </svg>
+              <figcaption>Uma lata entre a barra e a casca; outra fora de tudo.</figcaption>
+            </figure>
+          </div>
+        </section>
+        <section class="nivel" data-questao="P29" data-nivel="3" data-titulo="Dica 3: primeiro passo" hidden>
+          <h4>Dica 3: primeiro passo</h4>
+          <p>(a) Em 2R₂: \(q_{env} = Q_1 + Q_2 = -Q_1\), então \(\lambda_{env} = -Q_1/L\). (c) Em 5R₁: \(\lambda_{env} = +Q_1/L\). (e) Gaussiana dentro do metal da casca: \(Q_1 + q_{int} = 0\).</p>
+        </section>
+        <section class="nivel" data-questao="P29" data-nivel="4" data-titulo="Resolução comentada" hidden>
+          <h4>Resolução comentada</h4>
+          <p class="passo"><b>Entender</b> Q₁ = +3,40 × 10⁻¹² C; Q₂ = −6,80 × 10⁻¹² C; L = 11,00 m; R₁ = 1,30 mm; R₂ = 13,0 mm. Pontos: 2R₂ = 26,0 mm (fora de tudo) e 5R₁ = 6,50 mm (entre a barra e a casca).</p>
+          <p class="passo"><b>Modelar</b> L = 11 m é quase mil vezes R₂: cilindros "infinitos". Lata coaxial. Em equilíbrio, E = 0 no metal da casca.</p>
+          <p class="passo"><b>Resolver em símbolos</b> (a), (b): \(E = \dfrac{|Q_1+Q_2|/L}{2\pi\varepsilon_0(2R_2)}\), para dentro (q_env &lt; 0). (c), (d): \(E = \dfrac{Q_1/L}{2\pi\varepsilon_0(5R_1)}\), para fora. (e) \(q_{int} = -Q_1\). (f) \(q_{ext} = Q_2 - q_{int} = Q_2 + Q_1\).</p>
+          <details class="porque-passo"><summary>Por que a parede interna da casca fica com −Q₁?</summary><p>Uma gaussiana dentro do metal da casca tem E = 0 em toda parte, então Φ = 0 e q_env = 0. Dentro dela estão a barra (Q₁) e a superfície interna. Para somar zero, a interna tem −Q₁. É a regra da cavidade do Degrau 6.</p></details>
+          <p class="passo"><b>Calcular</b> λ₁ = 3,40 × 10⁻¹²/11,00 = 3,09 × 10⁻¹³ C/m. (a) \(E = \dfrac{3{,}09\times10^{-13}}{2\pi(8{,}85\times10^{-12})(0{,}0260)} = 0{,}214\) N/C; (b) para dentro. (c) \(E = \dfrac{3{,}09\times10^{-13}}{2\pi(8{,}85\times10^{-12})(0{,}00650)} = 0{,}855\) N/C; (d) para fora. (e) −3,40 × 10⁻¹² C. (f) −6,80 − (−3,40) = −3,40 × 10⁻¹² C.</p>
+          <p class="passo"><b>Verificar</b> |λ_env| é o mesmo nos dois pontos, então (c)/(a) = (2R₂)/(5R₁) = 26,0/6,50 = 4: 0,855/0,214 = 4,0. Bate. Total da casca: −3,40 − 3,40 = −6,80 pC = Q₂. <b>E se</b> Q₂ fosse −Q₁? Fora, E = 0 e a superfície externa ficaria sem carga: é por isso que um cabo coaxial não "vaza" campo para fora.</p>
+        </section>
+        <section class="nivel" data-questao="P29" data-nivel="5" data-titulo="Resposta" hidden>
+          <h4>Resposta</h4>
+          <p>(a) 0,214 N/C; (b) para dentro; (c) 0,855 N/C; (d) para fora; (e) −3,40 × 10⁻¹² C; (f) −3,40 × 10⁻¹² C (gabarito do livro).</p>
+        </section>
+        <div class="reflexao" hidden><label for="ref-P29"><b>Que passo você não teria visto sozinho?</b></label><textarea id="ref-P29" data-ref="P29"></textarea></div>
+      </div>
+    </div>
+  </article>
+
+  <!-- ===== P39 ===== -->
+  <article class="questao" id="P39" data-q="P39" aria-labelledby="P39-tit">
+    <div class="q-cab"><h3 id="P39-tit">Problema 39</h3><span class="meta">nível ·· no livro; Degrau 7</span></div>
+    <div class="q-corpo">
+      <p class="usa">Usa: campo de placa isolante; equilíbrio de uma bolinha no fio; sinal da carga.</p>
+      <div class="lado">
+        <p class="enunciado">Na Fig. 23-49, uma pequena esfera isolante, de massa m = 1,0 mg e carga q = 2,0 × 10⁻⁸ C (distribuída uniformemente em todo o volume), está pendurada em um fio isolante que faz um ângulo θ = 30° com uma placa vertical, isolante, uniformemente carregada (vista em seção reta). Considerando a força gravitacional a que a esfera está submetida e supondo que a placa possui uma grande extensão, calcule a densidade superficial de carga σ da placa.</p>
+        <figure class="fig">
+          <svg viewBox="0 0 220 220" role="img" aria-label="Figura 23-49: uma placa vertical com cargas positivas, à esquerda. Um fio preso no alto da placa desce inclinado para a direita, fazendo o ângulo theta com a placa. Na ponta, uma pequena esfera de massa m e carga q.">
+            <rect x="50" y="10" width="14" height="200" class="placa-p"/>
+            <g class="sinal-p"><text x="57" y="30">+</text><text x="57" y="70">+</text><text x="57" y="110">+</text><text x="57" y="150">+</text><text x="57" y="190">+</text></g>
+            <text x="36" y="24" class="t-p t-s">σ</text>
+            <line class="fino" x1="64" y1="40" x2="64" y2="190"/>
+            <line x1="64" y1="40" x2="139" y2="169.9" style="stroke:var(--tinta);stroke-width:1.5;stroke-dasharray:3 2"/>
+            <circle cx="139" cy="169.9" r="8" style="fill:#9fb7d6;stroke:var(--tinta);stroke-width:1.2"/>
+            <path d="M 64 80 A 40 40 0 0 0 84 74.6" class="fino" style="stroke-dasharray:none"/><text x="68" y="96" class="t-s">θ</text>
+            <text x="150" y="192" class="t-s">m, q</text>
+          </svg>
+          <figcaption>Figura 23-49 (reconstruída a partir do PDF).</figcaption>
+        </figure>
+      </div>
+      <div class="num" id="P39-a" data-q="P39" data-conf="1" data-sinal="1" data-rot="σ (com sinal) =" data-unid="C/m²" data-resp="5.007e-9" data-erros='[[2.504e-9,"Você usou E = σ/ε₀, que é junto a um condutor. A placa é isolante: E = σ/(2ε₀)."],[4.336e-9,"Você usou sen θ. Escreva as duas equações (vertical e horizontal) e divida: sai tan θ."],[7.511e-9,"Você usou cos θ. Divida T sen θ = qE por T cos θ = mg: sai tan θ."],[1.502e-8,"Você usou tan 60°. Os 30° são com a placa, que é vertical: é o ângulo com a vertical."],[5.007e-6,"1,0 mg = 1,0 × 10⁻⁶ kg (mili de grama)."],[-5.007e-9,"A esfera é empurrada para longe da placa: elas se repelem. Com q positiva, σ é positiva."]]'></div>
+
+      <div class="ajuda" data-q="P39">
+        <p class="roteiro">Antes de pedir ajuda: já desenhou as forças na esfera? Já listou os dados (em SI) e a incógnita? Já sabe de que degrau é?</p>
+        <section class="nivel" data-questao="P39" data-nivel="1" data-titulo="Dica 1: onde olhar" hidden>
+          <h4>Dica 1: onde olhar</h4>
+          <p>Degrau 7 (campo de uma placa isolante) e o item 5 do aquecimento (bolinha no fio, do Cap. 21).</p>
+        </section>
+        <section class="nivel" data-questao="P39" data-nivel="2" data-titulo="Dica 2: plano" hidden>
+          <h4>Dica 2: plano</h4>
+          <div class="lado">
+            <ol>
+              <li>Desenhe as três forças na esfera: peso, tração e força elétrica (horizontal, para longe da placa).</li>
+              <li>Equilíbrio: soma das componentes verticais = 0; das horizontais = 0.</li>
+              <li>Força elétrica = qE, com E da placa.</li>
+              <li>Isole σ.</li>
+            </ol>
+            <figure class="fig">
+              <svg viewBox="0 0 220 200" role="img" aria-label="Diagrama de forças da esfera: a tração ao longo do fio, para cima e para a esquerda; o peso para baixo; a força elétrica horizontal, para a direita.">
+                <circle cx="110" cy="110" r="10" style="fill:#9fb7d6;stroke:var(--tinta);stroke-width:1.2"/>
+                <line class="vk" x1="110" y1="110" x2="62" y2="27"/><text x="44" y="24" class="t-s">T</text>
+                <line class="vk" x1="110" y1="110" x2="110" y2="190"/><text x="116" y="186" class="t-s">mg</text>
+                <line class="vk" x1="110" y1="110" x2="166" y2="110"/><text x="170" y="114" class="t-s">F = qE</text>
+                <line class="fino" x1="110" y1="110" x2="110" y2="30"/>
+                <path d="M 110 70 A 40 40 0 0 0 90 75.4" class="fino" style="stroke-dasharray:none"/><text x="96" y="64" class="t-s">θ</text>
+              </svg>
+              <figcaption>O diagrama esperado (sem números).</figcaption>
+            </figure>
+          </div>
+        </section>
+        <section class="nivel" data-questao="P39" data-nivel="3" data-titulo="Dica 3: primeiro passo" hidden>
+          <h4>Dica 3: primeiro passo</h4>
+          <p>\(T\cos\theta = mg\) e \(T\sin\theta = qE\), então \(qE = mg\tan\theta\). E \(E = \dfrac{\sigma}{2\varepsilon_0}\).</p>
+        </section>
+        <section class="nivel" data-questao="P39" data-nivel="4" data-titulo="Resolução comentada" hidden>
+          <h4>Resolução comentada</h4>
+          <p class="passo"><b>Entender</b> m = 1,0 × 10⁻⁶ kg; q = 2,0 × 10⁻⁸ C; θ = 30° com a placa, que é vertical: 30° com a vertical. Incógnita: σ (com sinal).</p>
+          <p class="passo"><b>Modelar</b> Esfera pequena, perto de uma placa grande: campo uniforme \(E = \sigma/(2\varepsilon_0)\), horizontal. Hipóteses: a placa é bem maior que a distância até a esfera; a placa é isolante, então a esfera não mexe nas cargas dela.</p>
+          <p class="passo"><b>Resolver em símbolos</b> \(q\dfrac{\sigma}{2\varepsilon_0} = mg\tan\theta\) → \(\sigma = \dfrac{2\varepsilon_0 mg\tan\theta}{q}\).</p>
+          <details class="porque-passo"><summary>Por que não importa a carga estar espalhada pelo volume da esfera?</summary><p>Porque o campo da placa é uniforme: cada pedaço da esfera sente a mesma força por coulomb, e a soma é qE, como numa partícula. O enunciado diz isso para você não se preocupar.</p></details>
+          <p class="passo"><b>Calcular</b> \(\sigma = \dfrac{2(8{,}85\times10^{-12})(1{,}0\times10^{-6})(9{,}8)\tan30^\circ}{2{,}0\times10^{-8}} = 5{,}0\times10^{-9}\) C/m². Sinal: a esfera é empurrada para longe da placa (repulsão), então σ tem o mesmo sinal de q: positiva.</p>
+          <p class="passo"><b>Verificar</b> Unidade: C²/(N·m²) × kg × m/s² ÷ C = C/m². O campo da placa sai 283 N/C, fraco, coerente com uma esfera de 1 mg e um ângulo moderado. Caso-limite: θ → 0 dá σ → 0. <b>E se</b> fosse uma placa condutora com a mesma σ na face? Bastaria a metade: 2,5 nC/m².</p>
+        </section>
+        <section class="nivel" data-questao="P39" data-nivel="5" data-titulo="Resposta" hidden>
+          <h4>Resposta</h4>
+          <p>σ = +5,0 × 10⁻⁹ C/m² (gabarito do livro: 5,0 nC/m²).</p>
+        </section>
+        <div class="reflexao" hidden><label for="ref-P39"><b>Que passo você não teria visto sozinho?</b></label><textarea id="ref-P39" data-ref="P39"></textarea></div>
+      </div>
+    </div>
+  </article>
+
+  <!-- ===== P53 ===== -->
+  <article class="questao" id="P53" data-q="P53" aria-labelledby="P53-tit">
+    <div class="q-cab"><h3 id="P53-tit">Problema 53</h3><span class="meta">nível ··· no livro; Degrau 4</span></div>
+    <div class="q-corpo">
+      <p class="usa">Usa: somar cascas com ρ(r); esfera gaussiana; gráfico E(r).</p>
+      <div class="lado">
+        <p class="enunciado">Uma esfera isolante, de raio R = 5,60 cm, possui uma distribuição de carga não uniforme ρ = (14,1 pC/m³)r/R, em que r é a distância do centro da esfera. (a) Determine a carga da esfera. (b) Determine o módulo E do campo elétrico em r = 0, (c) em r = R/2,00 e (d) em r = R. (e) Faça um gráfico de E em função de r.</p>
+        <figure class="fig">
+          <svg viewBox="0 0 220 200" role="img" aria-label="Esquema do guia: esfera em corte, mais clara no centro e mais escura na borda, porque ρ cresce em linha reta de zero no centro até 14,1 pC por metro cúbico na superfície.">
+            <circle cx="100" cy="100" r="80" style="fill:var(--pos);fill-opacity:.38;stroke:var(--tinta);stroke-width:1.2"/>
+            <circle cx="100" cy="100" r="60" style="fill:var(--papel-3);fill-opacity:.3"/>
+            <circle cx="100" cy="100" r="40" style="fill:var(--papel-3);fill-opacity:.4"/>
+            <circle cx="100" cy="100" r="20" style="fill:var(--papel-3);fill-opacity:.6"/>
+            <line class="cota" x1="100" y1="100" x2="180" y2="100"/><text x="136" y="94" class="t-s">R</text>
+            <text x="76" y="196" class="t-2">ρ: 0 no centro → 14,1 pC/m³ na borda</text>
+          </svg>
+          <figcaption>Esquema do guia (o livro não tem figura).</figcaption>
+        </figure>
+      </div>
+      <div class="num" id="P53-a" data-q="P53" data-conf="1" data-rot="(a) carga da esfera q =" data-unid="C" data-resp="7.779e-15" data-erros='[[1.037e-14,"Você usou ρ da borda × volume, como se ρ fosse uniforme. ρ muda com r: some as cascas."],[5.186e-15,"ρ médio (ρs/2) × volume não funciona: há mais volume perto da borda, onde ρ é maior. Some as cascas."],[6.19e-16,"Faltou o 4π da área da casca: dV = 4πr² dr."]]'></div>
+      <div class="num" id="P53-b" data-q="P53" data-conf="1" data-abs="0.001" data-rot="(b) E em r = 0 =" data-unid="mN/C" data-resp="0"></div>
+      <div class="num" id="P53-c" data-q="P53" data-conf="1" data-rot="(c) E em r = R/2 =" data-unid="mN/C" data-resp="5.576" data-erros='[[7.435,"Você usou ρ(R/2)·r/(3ε₀), como se a esfera fosse uniforme com a densidade do meio. Some as cascas: q_env = πρs r⁴/R."],[11.15,"Você usou kq r/R³, da esfera uniforme. Aqui q_env cresce com r⁴, não com r³."],[0.005576,"Esse número está em N/C; o campo pede mN/C."]]'></div>
+      <div class="num" id="P53-d" data-q="P53" data-conf="1" data-rot="(d) E em r = R =" data-unid="mN/C" data-resp="22.31" data-erros='[[29.74,"Você usou ρs R/(3ε₀), da esfera uniforme. Com ρ ∝ r, o fator é 4, não 3."],[0.02231,"Esse número está em N/C; o campo pede mN/C."]]'></div>
+      <div class="quiz" id="P53-e" data-q="P53" data-conf="1">
+        <p class="enun">(e) Qual descrição bate com o gráfico de E(r)?</p>
+        <div class="alts">
+          <button class="alt" type="button" data-fb="Reta é da esfera uniforme. Aqui, dentro, E = ρs r²/(4ε₀R): uma parábola.">Cresce em linha reta até R e cai como 1/r² depois.</button>
+          <button class="alt" type="button" data-ok="1" data-fb="Isso: dentro, q_env ∝ r⁴ e E ∝ r⁴/r² = r²; fora, carga pontual. Em R os dois lados dão 22,3 mN/C: sem salto.">Cresce como r² (uma parábola) até R e depois cai como 1/r², sem salto em R.</button>
+          <button class="alt" type="button" data-fb="Fora da esfera a carga envolvida não cresce mais, e a área cresce com r²: o campo cai.">Cresce como r² até R e depois fica constante.</button>
+          <button class="alt" type="button" data-fb="E = q_env/(4πε₀r²) com q_env ∝ r⁴ dá r², não r³.">Cresce como r³ até R e depois cai como 1/r².</button>
+        </div>
+        <figure class="fig" data-oculto>
+          <svg viewBox="0 0 320 200" role="img" aria-label="Gráfico de E em função de r: parábola subindo de zero no centro até 22,3 mN/C em r = R, depois curva caindo como 1 sobre r ao quadrado, chegando a um quarto do pico em 2R.">
+            <line class="eixo-s" x1="40" y1="170" x2="310" y2="170"/><line class="eixo-s" x1="40" y1="170" x2="40" y2="12"/>
+            <path d="M 40.0 170.0 L 53.0 168.6 L 66.0 164.4 L 79.0 157.4 L 92.0 147.6 L 105.0 135.0 L 118.0 119.6 L 131.0 101.4 L 144.0 80.4 L 157.0 56.6 L 170.0 30.0 L 183.0 54.3 L 196.0 72.8 L 209.0 87.2 L 222.0 98.6 L 235.0 107.8 L 248.0 115.3 L 261.0 121.6 L 274.0 126.8 L 287.0 131.2 L 300.0 135.0" class="curva"/>
+            <line x1="40" y1="30" x2="170" y2="30" class="fino"/><line x1="170" y1="30" x2="170" y2="170" class="fino"/>
+            <text x="2" y="34" class="t-2">22,3</text><text x="166" y="186" class="t-2">R</text><text x="292" y="186" class="t-2">2R</text>
+            <text x="100" y="186" class="t-2">R/2</text><text x="46" y="20" class="t-2">E (mN/C)</text>
+          </svg>
+          <figcaption>E(r) da esfera do Problema 53.</figcaption>
+        </figure>
+      </div>
+
+      <div class="ajuda" data-q="P53">
+        <p class="roteiro">Antes de pedir ajuda: já escreveu ρ em função de r e viu que ela não é constante? Já listou os dados em SI? Já sabe de que degrau é?</p>
+        <section class="nivel" data-questao="P53" data-nivel="1" data-titulo="Dica 1: onde olhar" hidden>
+          <h4>Dica 1: onde olhar</h4>
+          <p>Degrau 4: cascas de cebola e o exemplo resolvido com ρ = Cr².</p>
+        </section>
+        <section class="nivel" data-questao="P53" data-nivel="2" data-titulo="Dica 2: plano" hidden>
+          <h4>Dica 2: plano</h4>
+          <div class="lado">
+            <ol>
+              <li>Carga de uma casca fina: dq = ρ(r′)·4πr′² dr′.</li>
+              <li>Some de 0 até R para (a), e de 0 até r para ter q_env(r).</li>
+              <li>\(E = q_{env}(r)/(4\pi\varepsilon_0r^2)\) para (b), (c) e (d).</li>
+              <li>Para o gráfico: dentro, veja como E depende de r; fora, é carga pontual.</li>
+            </ol>
+            <figure class="fig">
+              <svg viewBox="0 0 200 200" role="img" aria-label="Esfera com uma casca fina de raio r prime e espessura d r prime destacada, dentro de uma esfera gaussiana de raio r.">
+                <circle cx="100" cy="100" r="85" style="fill:var(--pos);fill-opacity:.2;stroke:var(--tinta);stroke-width:1.2"/>
+                <circle cx="100" cy="100" r="35" style="fill:none;stroke:var(--res);stroke-width:7;opacity:.7"/>
+                <circle cx="100" cy="100" r="60" class="gauss-l"/>
+                <text x="128" y="96" class="t-r t-s">r′</text><text x="150" y="58" class="t-g t-s">r</text><text x="160" y="170" class="t-s">R</text>
+              </svg>
+              <figcaption>Cascas de raio r′ somadas até a gaussiana de raio r.</figcaption>
+            </figure>
+          </div>
+        </section>
+        <section class="nivel" data-questao="P53" data-nivel="3" data-titulo="Dica 3: primeiro passo" hidden>
+          <h4>Dica 3: primeiro passo</h4>
+          <p>Com \(\rho_s = 14{,}1\) pC/m³: \(q_{env}(r) = \displaystyle\int_0^r \rho_s\frac{r'}{R}\,4\pi r'^2\,dr'\).</p>
+        </section>
+        <section class="nivel" data-questao="P53" data-nivel="4" data-titulo="Resolução comentada" hidden>
+          <h4>Resolução comentada</h4>
+          <p class="passo"><b>Entender</b> R = 0,0560 m; \(\rho = \rho_s r/R\) com ρs = 14,1 × 10⁻¹² C/m³: zero no centro, ρs na borda. Incógnitas: q, E(0), E(R/2), E(R) e o gráfico.</p>
+          <p class="passo"><b>Modelar</b> Simetria esférica com ρ variável → cascas finas; depois, esfera gaussiana de raio r.</p>
+          <p class="passo"><b>Resolver em símbolos</b> \(q_{env}(r) = \dfrac{4\pi\rho_s}{R}\displaystyle\int_0^r r'^3dr' = \dfrac{\pi\rho_s r^4}{R}\). (a) \(q = q_{env}(R) = \pi\rho_s R^3\). Dentro: \(E = \dfrac{\pi\rho_s r^4/R}{4\pi\varepsilon_0r^2} = \dfrac{\rho_s r^2}{4\varepsilon_0R}\). (b) 0. (c) \(\dfrac{\rho_s R}{16\varepsilon_0}\). (d) \(\dfrac{\rho_s R}{4\varepsilon_0}\).</p>
+          <details class="porque-passo"><summary>Por que r′³ dentro da integral?</summary><p>Um r′ vem da densidade (ρs r′/R) e dois vêm da área da casca (4πr′²): r′ × r′² = r′³. Integrando: r⁴/4, e o 4 cancela com o 4π.</p></details>
+          <p class="passo"><b>Calcular</b> (a) \(q = \pi(14{,}1\times10^{-12})(0{,}0560)^3 = 7{,}78\times10^{-15}\) C. (c) \(\dfrac{(14{,}1\times10^{-12})(0{,}0560)}{16(8{,}85\times10^{-12})} = 5{,}58\times10^{-3}\) N/C. (d) \(2{,}23\times10^{-2}\) N/C. (e) Dentro, parábola (E ∝ r²) até 22,3 mN/C em R; fora, 1/r².</p>
+          <figure class="fig">
+            <svg viewBox="0 0 320 200" role="img" aria-label="Gráfico de E em função de r: parábola subindo de zero no centro até 22,3 mN/C em r = R, depois curva caindo como 1 sobre r ao quadrado, chegando a um quarto do pico em 2R.">
+              <line class="eixo-s" x1="40" y1="170" x2="310" y2="170"/><line class="eixo-s" x1="40" y1="170" x2="40" y2="12"/>
+              <path d="M 40.0 170.0 L 53.0 168.6 L 66.0 164.4 L 79.0 157.4 L 92.0 147.6 L 105.0 135.0 L 118.0 119.6 L 131.0 101.4 L 144.0 80.4 L 157.0 56.6 L 170.0 30.0 L 183.0 54.3 L 196.0 72.8 L 209.0 87.2 L 222.0 98.6 L 235.0 107.8 L 248.0 115.3 L 261.0 121.6 L 274.0 126.8 L 287.0 131.2 L 300.0 135.0" class="curva"/>
+              <line x1="40" y1="30" x2="170" y2="30" class="fino"/><line x1="170" y1="30" x2="170" y2="170" class="fino"/>
+              <line x1="40" y1="135" x2="105" y2="135" class="fino"/>
+              <text x="2" y="34" class="t-2">22,3</text><text x="6" y="139" class="t-2">5,6</text><text x="166" y="186" class="t-2">R</text><text x="292" y="186" class="t-2">2R</text>
+              <text x="100" y="186" class="t-2">R/2</text><text x="46" y="20" class="t-2">E (mN/C)</text>
+            </svg>
+            <figcaption>E(r): parábola dentro, 1/r² fora, contínuo em R.</figcaption>
+          </figure>
+          <p class="passo"><b>Verificar</b> Em R, deve ser o campo de uma carga pontual: \(kq/R^2 = (8{,}99\times10^9)(7{,}78\times10^{-15})/(0{,}0560)^2 = 22{,}3\) mN/C. Bate. (c)/(d) = 1/4, como manda E ∝ r². <b>E se</b> a mesma carga fosse uniforme? E(R) seria igual (22,3 mN/C), mas E(R/2) seria 11,2 mN/C, o dobro: a esfera uniforme tem mais carga no miolo.</p>
+        </section>
+        <section class="nivel" data-questao="P53" data-nivel="5" data-titulo="Resposta" hidden>
+          <h4>Resposta</h4>
+          <p>(a) 7,78 × 10⁻¹⁵ C; (b) 0; (c) 5,58 mN/C; (d) 22,3 mN/C (gabarito do livro). (e) Parábola até R, depois 1/r².</p>
+        </section>
+        <div class="reflexao" hidden><label for="ref-P53"><b>Que passo você não teria visto sozinho?</b></label><textarea id="ref-P53" data-ref="P53"></textarea></div>
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- ======================= SÍNTESE ======================= -->
+<section class="wrap" id="sintese" aria-labelledby="sintese-tit" style="margin-top:3rem">
+  <h2 id="sintese-tit">Síntese: que superfície gaussiana eu uso?</h2>
+  <p>Leia de cima para baixo e pare na primeira pergunta cuja resposta é "sim".</p>
+  <ol class="fluxo">
+    <li><p class="pergunta">Pedem o fluxo por um <b>pedaço</b> de superfície (uma face, uma tampa)?</p>
+      <p class="sim"><b>Sim:</b> feche a superfície, aplique a lei de Gauss no todo e reparta por simetria, se os pedaços forem iguais e igualmente posicionados em relação à carga. (Degrau 2; P5.)</p></li>
+    <li><p class="pergunta">Há <b>metal</b> no problema (barra, casca, cavidade num condutor)?</p>
+      <p class="sim"><b>Sim:</b> E = 0 dentro do metal. Uma gaussiana dentro do metal dá as cargas induzidas: superfície interna = −(carga dentro da cavidade); externa = total − interna. Depois, siga para a simetria certa. (Degrau 6; P29.)</p></li>
+    <li><p class="pergunta">A carga tem <b>simetria esférica</b> (esfera, cascas, ρ que só depende de r)?</p>
+      <p class="sim"><b>Sim:</b> esfera gaussiana de raio r pelo ponto. q_env = ρ × volume de material dentro (ρ uniforme) ou \(\int_0^r\rho\,4\pi r'^2dr'\) (ρ variável). (Degraus 3 e 4; P52, P53.)</p></li>
+    <li><p class="pergunta">A carga tem <b>simetria cilíndrica</b> (fio, tubo, cilindro longo)?</p>
+      <p class="sim"><b>Sim:</b> lata coaxial de raio r e altura h; fluxo só na parede, E·2πrh. q_env = λh ou ρ × volume de material dentro. (Degrau 5; P24, P76, P29.)</p></li>
+    <li><p class="pergunta">A carga tem <b>simetria plana</b> (placa grande)?</p>
+      <p class="sim"><b>Sim:</b> latinha atravessando a placa: E = σ/(2ε₀) para folha isolante; E = σ/ε₀ logo fora de um condutor. (Degrau 7; P39.)</p></li>
+    <li><p class="pergunta">Nenhuma simetria?</p>
+      <p class="sim">A lei de Gauss continua valendo, mas não dá o campo: volte à superposição e às integrais do Cap. 22.</p></li>
+  </ol>
+
+  <h3>Equações do capítulo: quando usar e quando não usar</h3>
+  <div class="tabela-rola">
+  <table class="ficha cartoes">
+    <thead><tr><th>Equação</th><th>Use quando…</th><th>Não use quando…</th></tr></thead>
+    <tbody>
+      <tr><td data-r="Equação">\(\Phi = EA\cos\theta\)</td><td data-r="Use quando">campo uniforme e superfície plana</td><td data-r="Não use quando">o campo varia ou a superfície é curva (use simetria ou integre)</td></tr>
+      <tr><td data-r="Equação">\(\varepsilon_0\Phi = q_{env}\)</td><td data-r="Use quando">qualquer superfície <b>fechada</b></td><td data-r="Não use quando">a superfície é aberta (face, tampa); há vidro, óleo ou plástico dentro (Cap. 25)</td></tr>
+      <tr><td data-r="Equação">\(E = \dfrac{q}{4\pi\varepsilon_0r^2}\)</td><td data-r="Use quando">fora de qualquer distribuição esférica (q = carga total)</td><td data-r="Não use quando">dentro da distribuição (use q_env)</td></tr>
+      <tr><td data-r="Equação">\(E = \dfrac{\rho r}{3\varepsilon_0}\)</td><td data-r="Use quando">dentro de uma esfera maciça com ρ uniforme</td><td data-r="Não use quando">casca grossa (tire a cavidade) ou ρ variável (some cascas)</td></tr>
+      <tr><td data-r="Equação">\(E = 0\)</td><td data-r="Use quando">dentro de uma casca fina ou de um tubo fino; no metal de um condutor em equilíbrio</td><td data-r="Não use quando">a cavidade tem carga dentro</td></tr>
+      <tr><td data-r="Equação">\(E = \dfrac{\lambda}{2\pi\varepsilon_0 r}\)</td><td data-r="Use quando">fora de um fio ou cilindro longo (λ = carga por metro dentro da lata)</td><td data-r="Não use quando">perto das pontas; dentro de um cilindro com carga no volume</td></tr>
+      <tr><td data-r="Equação">\(E = \dfrac{\rho r}{2\varepsilon_0}\)</td><td data-r="Use quando">dentro de um cilindro maciço com ρ uniforme</td><td data-r="Não use quando">fora do cilindro (aí é ρR²/(2ε₀r))</td></tr>
+      <tr><td data-r="Equação">\(E = \dfrac{\sigma}{2\varepsilon_0}\)</td><td data-r="Use quando">perto de uma folha isolante grande, longe das bordas</td><td data-r="Não use quando">junto a um condutor; longe da placa (distância comparável ao tamanho)</td></tr>
+      <tr><td data-r="Equação">\(E = \dfrac{\sigma}{\varepsilon_0}\)</td><td data-r="Use quando">logo fora da superfície de um condutor</td><td data-r="Não use quando">folha isolante (aí é σ/2ε₀)</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<!-- ======================= REVISÃO ======================= -->
+<section class="wrap" id="revisao" aria-labelledby="revisao-tit" style="margin-top:3rem;padding-bottom:3rem">
+  <h2 id="revisao-tit">Revisão intercalada</h2>
+  <p>Sete perguntas misturando os degraus, fora de ordem de propósito: na prova, ninguém avisa de que degrau é a questão. Marque a confiança antes de conferir.</p>
+
+  <div class="quiz" id="rev-1" data-conf="1">
+    <p class="enun">1. Uma carga pontual está dentro de uma esfera gaussiana. Você dobra o raio da esfera. O fluxo total:</p>
+    <div class="alts">
+      <button class="alt" type="button" data-fb="O campo cai para 1/4, mas a área fica 4 vezes maior. O fluxo só depende da carga dentro.">cai para 1/4</button>
+      <button class="alt" type="button" data-fb="A carga envolvida é a mesma: o fluxo também.">dobra</button>
+      <button class="alt" type="button" data-ok="1" data-fb="Isso: Φ = q_env/ε₀, e q_env não mudou. (Degrau 2)">não muda</button>
+      <button class="alt" type="button" data-fb="O fluxo não depende do tamanho da superfície, só da carga dentro.">cai pela metade</button>
+    </div>
+  </div>
+  <div class="quiz" id="rev-2" data-conf="1">
+    <p class="enun">2. A 3 cm de um fio longo carregado, E = 600 N/C. A 6 cm, E vale:</p>
+    <div class="alts">
+      <button class="alt" type="button" data-fb="Isso seria 1/r², de carga pontual. Para fio, 1/r.">150 N/C</button>
+      <button class="alt" type="button" data-ok="1" data-fb="Isso: E ∝ 1/r para fio; o dobro da distância, metade do campo. (Degrau 5)">300 N/C</button>
+      <button class="alt" type="button" data-fb="Constante é de placa. O fio enfraquece com a distância.">600 N/C</button>
+      <button class="alt" type="button" data-fb="Afastar-se nunca aumenta o campo de um fio.">1 200 N/C</button>
+    </div>
+  </div>
+  <div class="quiz" id="rev-3" data-conf="1">
+    <p class="enun">3. Uma partícula de +2 µC está na cavidade de um condutor cuja carga total é −5 µC. A carga da superfície externa do condutor é:</p>
+    <div class="alts">
+      <button class="alt" type="button" data-fb="A superfície interna fica com −2 µC; sobra o resto para fora.">−5 µC</button>
+      <button class="alt" type="button" data-fb="Confira o sinal da interna: ela cancela a partícula, então é −2 µC. Externa = −5 − (−2).">−7 µC</button>
+      <button class="alt" type="button" data-fb="+2 µC seria se o condutor fosse neutro.">+2 µC</button>
+      <button class="alt" type="button" data-ok="1" data-fb="Isso: interna = −2 µC; externa = −5 − (−2) = −3 µC. (Degrau 6)">−3 µC</button>
+    </div>
+  </div>
+  <div class="quiz" id="rev-4" data-conf="1">
+    <p class="enun">4. Uma folha isolante grande tem σ = 8,85 nC/m². Perto dela, E vale:</p>
+    <div class="alts">
+      <button class="alt" type="button" data-ok="1" data-fb="Isso: σ/(2ε₀) = 8,85 × 10⁻⁹/(1,77 × 10⁻¹¹) = 500 N/C. (Degrau 7)">500 N/C</button>
+      <button class="alt" type="button" data-fb="1 000 N/C = σ/ε₀, que vale junto a um condutor.">1 000 N/C</button>
+      <button class="alt" type="button" data-fb="Dividiu por 4ε₀? Para folha isolante, é σ/(2ε₀).">250 N/C</button>
+      <button class="alt" type="button" data-fb="Perto de uma placa grande, o campo não depende da distância.">depende da distância</button>
+    </div>
+  </div>
+  <div class="quiz" id="rev-5" data-conf="1">
+    <p class="enun">5. Numa esfera de raio R com ρ ∝ r, que fração da carga total fica dentro de r = R/2?</p>
+    <div class="alts">
+      <button class="alt" type="button" data-fb="Metade do raio está longe de ser metade da carga: o volume cresce com r³, e aqui ρ ainda cresce com r.">1/2</button>
+      <button class="alt" type="button" data-fb="1/8 é o caso uniforme. Com ρ ∝ r, o miolo é menos denso.">1/8</button>
+      <button class="alt" type="button" data-fb="q_env ∝ ∫r·r²dr ∝ r⁴: (1/2)⁴.">1/4</button>
+      <button class="alt" type="button" data-ok="1" data-fb="Isso: q_env ∝ r⁴, então (1/2)⁴ = 1/16, cerca de 6 %. (Degrau 4)">1/16</button>
+    </div>
+  </div>
+  <div class="quiz" id="rev-6" data-conf="1">
+    <p class="enun">6. Um campo uniforme de 200 N/C atravessa um quadrado de 10 cm de lado cuja normal faz 60° com o campo. O fluxo é:</p>
+    <div class="alts">
+      <button class="alt" type="button" data-fb="Isso seria com θ = 0 (de frente).">2,0 N·m²/C</button>
+      <button class="alt" type="button" data-fb="Você usou sen 60°. Com o ângulo da normal, é cosseno.">1,7 N·m²/C</button>
+      <button class="alt" type="button" data-ok="1" data-fb="Isso: 200 × 0,010 × cos 60° = 1,0 N·m²/C. (Degrau 1)">1,0 N·m²/C</button>
+      <button class="alt" type="button" data-fb="Zero só se a normal fosse perpendicular ao campo (90°).">0</button>
+    </div>
+  </div>
+  <div class="quiz" id="rev-7" data-conf="1">
+    <p class="enun">7. Numa esfera maciça com carga uniforme, de raio R, quanto vale E(2R)/E(R)?</p>
+    <div class="alts">
+      <button class="alt" type="button" data-fb="1/2 seria dentro (E ∝ r) ou para um fio. Fora da esfera, 1/r².">1/2</button>
+      <button class="alt" type="button" data-ok="1" data-fb="Isso: fora, a esfera é uma carga pontual; o dobro da distância, um quarto do campo. (Degrau 3)">1/4</button>
+      <button class="alt" type="button" data-fb="Dentro o campo cresce com r, mas 2R já é fora.">2</button>
+      <button class="alt" type="button" data-fb="O campo fora de uma esfera cai com a distância.">1</button>
+    </div>
+  </div>
+
+  <h3>Onde você estava confiante e errou</h3>
+  <div id="calibracao" class="calib" aria-live="polite"><p class="pequeno">Ainda não há respostas com confiança marcada.</p></div>
+
+  <h3>Plano de revisão</h3>
+  <p>Espaçar a revisão fixa mais que estudar tudo de uma vez. Os problemas abaixo são ímpares (têm gabarito) e não estão neste guia; cada sessão mistura degraus.</p>
+  <div class="tabela-rola">
+  <table class="ficha cartoes">
+    <thead><tr><th>Quando</th><th>O que fazer</th><th>Degraus</th></tr></thead>
+    <tbody>
+      <tr><td data-r="Quando">Hoje (10 min)</td><td data-r="O que fazer">Numa folha, sem olhar, refaça o exemplo da esfera do Problema 78 (Degrau 3) e o da mulher na tempestade (Degrau 5). Depois confira.</td><td data-r="Degraus">3, 5</td></tr>
+      <tr><td data-r="Quando">+1 dia</td><td data-r="O que fazer">Problemas 13, 17 e 45 do livro.</td><td data-r="Degraus">2, 3, 6</td></tr>
+      <tr><td data-r="Quando">+3 dias</td><td data-r="O que fazer">Problemas 19, 27, 47 e 77.</td><td data-r="Degraus">3, 5, 6</td></tr>
+      <tr><td data-r="Quando">+7 dias</td><td data-r="O que fazer">Problemas 23, 43, 57, 63 e 81, e uma questão deste guia que você só resolveu com ajuda de nível 3 ou mais.</td><td data-r="Degraus">3 a 7</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <details>
+    <summary>Gabarito do livro para o plano de revisão</summary>
+    <p>P13: 3,54 µC. P17: (a) 37 µC; (b) 4,1 × 10⁶ N·m²/C. P45: (a) 2,50 × 10⁴ N/C; (b) 1,35 × 10⁴ N/C. P19: (a) 4,5 × 10⁻⁷ C/m²; (b) 5,1 × 10⁴ N/C. P27: 3,8 × 10⁻⁸ C/m². P47: −7,5 nC. P77: (a) +4,0 µC; (b) −4,0 µC. P23: (a) 0,32 µC; (b) 0,14 µC. P43: (a) 0; (b) 1,31 µN/C; (c) 3,08 µN/C; (d) 3,08 µN/C. P57: (a) 0; (b) 2,88 × 10⁴ N/C; (c) 200 N/C. P63: −1,04 nC. P81: (a) 0,25R; (b) 2,0R.</p>
+  </details>
+
+  <p class="zerar">Seu progresso fica salvo só neste navegador. <button class="btn sec" type="button" id="btn-zerar">Apagar meu progresso</button></p>
+</section>
+</main>
+<script>
+(function () {
+  'use strict';
+  var CHAVE = 'guia-cap23-v1';
+  var DEGRAUS = ['d1', 'd2', 'd3', 'd4', 'd5', 'd6', 'd7'];
+  var QUESTOES = ['P5', 'P24', 'P52', 'P76', 'P29', 'P39', 'P53'];
+  var est = {};
+  try { est = JSON.parse(localStorage.getItem(CHAVE) || '{}') || {}; } catch (e) { est = {}; }
+  est.r = est.r || {};    // respostas: id -> {ok, primeira, conf, tent, v}
+  est.aj = est.aj || {};  // ajuda: questão -> maior nível aberto
+  est.deg = est.deg || {};
+  est.ref = est.ref || {};
+  function salvar() { try { localStorage.setItem(CHAVE, JSON.stringify(est)); } catch (e) {} }
+
+  function $(s, r) { return (r || document).querySelector(s); }
+  function $$(s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); }
+  function el(tag, attrs, txt) {
+    var n = document.createElement(tag);
+    if (attrs) Object.keys(attrs).forEach(function (k) { n.setAttribute(k, attrs[k]); });
+    if (txt != null) n.textContent = txt;
+    return n;
+  }
+
+  /* ---------- números em pt-BR ---------- */
+  var SUP = { '0': '⁰', '1': '¹', '2': '²', '3': '³', '4': '⁴', '5': '⁵', '6': '⁶', '7': '⁷', '8': '⁸', '9': '⁹', '-': '⁻' };
+  function fmt(v, d) { return (Math.round(v * Math.pow(10, d)) / Math.pow(10, d)).toFixed(d).replace('.', ',').replace('-', '−'); }
+  function fmtSci(v, sig) {
+    sig = sig || 3;
+    if (v === 0) return '0';
+    var ex = Math.floor(Math.log10(Math.abs(v)));
+    var m = v / Math.pow(10, ex);
+    if (Math.abs(m) >= 9.995) { m /= 10; ex += 1; }
+    if (ex >= -2 && ex <= 2) return fmt(v, Math.max(0, sig - 1 - ex));
+    return fmt(m, sig - 1) + ' × 10' + String(ex).split('').map(function (c) { return SUP[c]; }).join('');
+  }
+
+  /* ---------- leitor de números: vírgula, ×10^, sobrescritos, π, √, frações ---------- */
+  var SUPINV = { '⁰': '0', '¹': '1', '²': '2', '³': '3', '⁴': '4', '⁵': '5', '⁶': '6', '⁷': '7', '⁸': '8', '⁹': '9', '⁻': '-', '⁺': '+' };
+  function lerNumero(txt, unid) {
+    var s = String(txt || '').trim();
+    if (!s) return { erro: 'Digite um número.' };
+    if (unid) {
+      var u = unid.replace(/[()]/g, '').trim();
+      if (u && s.toLowerCase().slice(-u.length) === u.toLowerCase()) s = s.slice(0, -u.length).trim();
+    }
+    s = s.replace(/°|graus?/gi, '').replace(/[−–—]/g, '-').replace(/\s+/g, '');
+    s = s.replace(/[⁰¹²³⁴⁵⁶⁷⁸⁹⁻⁺]+/g, function (m) { return '^(' + m.split('').map(function (c) { return SUPINV[c]; }).join('') + ')'; });
+    s = s.replace(/,/g, '.').replace(/[×·]/g, '*').replace(/(\d)[xX](?=\d)/g, '$1*').replace(/\*\*/g, '^');
+    s = s.replace(/sqrt/gi, '√').replace(/pi/gi, 'π');
+    var i = 0;
+    function pk() { return s[i]; }
+    function numero() {
+      var m = /^(\d+\.?\d*|\.\d+)([eE][-+]?\d+)?/.exec(s.slice(i));
+      if (!m) throw new Error('x');
+      i += m[0].length; return parseFloat(m[0]);
+    }
+    function primario() {
+      var c = pk();
+      if (c === '(') { i++; var v = expr(); if (pk() !== ')') throw new Error('x'); i++; return v; }
+      if (c === 'π') { i++; return Math.PI; }
+      if (c === '√') { i++; return Math.sqrt(unario()); }
+      return numero();
+    }
+    function potencia() { var b = primario(); if (pk() === '^') { i++; return Math.pow(b, unario()); } return b; }
+    function unario() { if (pk() === '-') { i++; return -unario(); } if (pk() === '+') { i++; return unario(); } return potencia(); }
+    function termo() {
+      var v = unario();
+      for (;;) {
+        var c = pk();
+        if (c === '*') { i++; v *= unario(); }
+        else if (c === '/') { i++; v /= unario(); }
+        else if (c === 'π' || c === '√' || c === '(') { v *= unario(); }
+        else return v;
+      }
+    }
+    function expr() {
+      var v = termo();
+      for (;;) {
+        var c = pk();
+        if (c === '+') { i++; v += termo(); } else if (c === '-') { i++; v -= termo(); } else return v;
+      }
+    }
+    try {
+      var v = expr();
+      if (i !== s.length || !isFinite(v)) throw new Error('x');
+      return { v: v };
+    } catch (e) {
+      return { erro: 'Não consegui ler "' + txt + '". Digite só o número (a unidade já está indicada), como 1,38e-10 ou 1,38×10^-10.' };
+    }
+  }
+
+  function bate(v, alvo, box) {
+    if (box.dataset.ang) { var d = (((v - alvo) % 360) + 540) % 360 - 180; return Math.abs(d) <= 1.5; }
+    if (box.dataset.abs) return Math.abs(v - alvo) <= parseFloat(box.dataset.abs);
+    var tol = parseFloat(box.dataset.tol || '0.02');
+    return Math.abs(v - alvo) <= tol * Math.abs(alvo);
+  }
+
+  /* ---------- confiança ---------- */
+  function linhaConfianca(box) {
+    var wrap = el('span', { class: 'conf', role: 'group', 'aria-label': 'Sua confiança' });
+    wrap.appendChild(el('span', null, 'Confiança:'));
+    [['1', 'chute'], ['2', 'acho que sim'], ['3', 'certeza']].forEach(function (p) {
+      var b = el('button', { type: 'button', 'aria-pressed': 'false', 'data-c': p[0] }, p[0] + ' ' + p[1]);
+      b.addEventListener('click', function () {
+        $$('button', wrap).forEach(function (x) { x.setAttribute('aria-pressed', 'false'); });
+        b.setAttribute('aria-pressed', 'true');
+        box.dataset.confEscolhida = p[0];
+      });
+      wrap.appendChild(b);
+    });
+    return wrap;
+  }
+
+  function registrar(id, ok, box) {
+    var r = est.r[id] || { tent: 0 };
+    r.tent = (r.tent || 0) + 1;
+    if (r.primeira == null) {
+      r.primeira = ok;
+      r.conf = box.dataset.confEscolhida ? parseInt(box.dataset.confEscolhida, 10) : null;
+    }
+    if (ok) r.ok = true;
+    est.r[id] = r;
+    salvar();
+    atualizarTudo();
+  }
+
+  /* ---------- quizzes de alternativas ---------- */
+  function montarQuiz(box) {
+    var id = box.id;
+    var alts = $$('.alt', box);
+    var letras = 'abcdefg';
+    alts.forEach(function (b, k) {
+      var l = el('span', { class: 'let' }, letras[k] + ')');
+      b.insertBefore(l, b.firstChild);
+      b.setAttribute('role', 'radio');
+      b.setAttribute('aria-checked', 'false');
+    });
+    var grupo = $('.alts', box);
+    if (grupo) grupo.setAttribute('role', 'radiogroup');
+    var fb = el('p', { class: 'fb', 'aria-live': 'polite' });
+
+    if (box.dataset.tipo === 'palpite') {
+      alts.forEach(function (b, k) {
+        b.addEventListener('click', function () {
+          alts.forEach(function (x) { x.setAttribute('aria-checked', 'false'); });
+          b.setAttribute('aria-checked', 'true');
+          est.palpite = { k: k, txt: b.textContent.replace(/^[a-g]\)/, '').trim() };
+          salvar();
+          fb.className = 'fb';
+          fb.textContent = 'Palpite guardado. A resposta aparece no Degrau 3.';
+          mostrarPalpite();
+        });
+      });
+      box.appendChild(fb);
+      if (est.palpite && alts[est.palpite.k]) { alts[est.palpite.k].setAttribute('aria-checked', 'true'); fb.textContent = 'Palpite guardado.'; }
+      return;
+    }
+
+    alts.forEach(function (b) {
+      b.addEventListener('click', function () {
+        alts.forEach(function (x) { x.setAttribute('aria-checked', 'false'); });
+        b.setAttribute('aria-checked', 'true');
+      });
+    });
+    var linha = el('div', { class: 'linha-acao' });
+    var querConf = box.dataset.conf === '1';
+    if (querConf) linha.appendChild(linhaConfianca(box));
+    var btn = el('button', { type: 'button', class: 'btn' }, 'Conferir');
+    linha.appendChild(btn);
+    box.appendChild(linha);
+    box.appendChild(fb);
+
+    btn.addEventListener('click', function () {
+      var esc = alts.filter(function (b) { return b.getAttribute('aria-checked') === 'true'; })[0];
+      if (!esc) { fb.className = 'fb no'; fb.textContent = 'Escolha uma alternativa.'; return; }
+      if (querConf && !box.dataset.confEscolhida && !(est.r[id] && est.r[id].primeira != null)) {
+        fb.className = 'fb no'; fb.textContent = 'Marque sua confiança (1 a 3) antes de conferir.'; return;
+      }
+      var ok = esc.dataset.ok === '1';
+      alts.forEach(function (b) { b.classList.remove('certa', 'errada'); });
+      esc.classList.add(ok ? 'certa' : 'errada');
+      fb.className = 'fb ' + (ok ? 'ok' : 'no');
+      fb.textContent = ok ? 'Certo. ' : 'Ainda não. ';
+      if (esc.dataset.fb) fb.appendChild(el('span', { class: 'expl' }, esc.dataset.fb));
+      if (!ok && !box.dataset.prever) fb.appendChild(el('span', { class: 'expl' }, 'Pense de novo e escolha outra.'));
+      var mini = $('.mini[data-se="erro"]', box);
+      if (mini && !ok) mini.classList.add('mostrar');
+      $$('[data-oculto]:not(.mini)', box).forEach(function (n) { if (ok) n.classList.add('mostrar'); });
+      if (box.dataset.prever) destravar(box.dataset.prever);
+      registrar(id, ok, box);
+      verCheckpoint(box);
+    });
+
+    var r = est.r[id];
+    if (r && r.ok) {
+      alts.forEach(function (b) { if (b.dataset.ok === '1') { b.classList.add('certa'); b.setAttribute('aria-checked', 'true'); } });
+      fb.className = 'fb ok'; fb.textContent = 'Você já acertou esta.';
+      if (box.dataset.prever) destravar(box.dataset.prever);
+    } else if (r && box.dataset.prever) { destravar(box.dataset.prever); }
+  }
+
+  /* ---------- campos numéricos ---------- */
+  function montarNum(box) {
+    var id = box.id;
+    var campo = el('div', { class: 'campo' });
+    var lab = el('label', { for: 'in-' + id }, box.dataset.rot || 'Resposta:');
+    var inp = el('input', { id: 'in-' + id, type: 'text', inputmode: 'decimal', autocomplete: 'off', spellcheck: 'false' });
+    var un = el('span', { class: 'unid' }, box.dataset.unid || '');
+    campo.appendChild(lab); campo.appendChild(inp); campo.appendChild(un);
+    var depois = $$('[data-oculto]', box);
+    box.insertBefore(campo, box.firstChild);
+    var linha = el('div', { class: 'linha-acao' });
+    var querConf = box.dataset.conf === '1';
+    if (querConf) linha.appendChild(linhaConfianca(box));
+    var btn = el('button', { type: 'button', class: 'btn' }, 'Conferir');
+    linha.appendChild(btn);
+    var btnMostrar = null;
+    if (box.dataset.lacuna) {
+      btnMostrar = el('button', { type: 'button', class: 'btn sec', hidden: '' }, 'Mostrar a resposta');
+      linha.appendChild(btnMostrar);
+    }
+    box.appendChild(linha);
+    var fb = el('p', { class: 'fb', 'aria-live': 'polite' });
+    box.appendChild(fb);
+    depois.forEach(function (n) { box.appendChild(n); });
+
+    function conferir() {
+      var lido = lerNumero(inp.value, box.dataset.unid);
+      if (lido.erro) { fb.className = 'fb no'; fb.textContent = lido.erro; return; }
+      if (querConf && !box.dataset.confEscolhida && !(est.r[id] && est.r[id].primeira != null)) {
+        fb.className = 'fb no'; fb.textContent = 'Marque sua confiança (1 a 3) antes de conferir.'; return;
+      }
+      var v = lido.v, alvo = parseFloat(box.dataset.resp);
+      var ok = bate(v, alvo, box);
+      fb.className = 'fb ' + (ok ? 'ok' : 'no');
+      if (ok) {
+        fb.textContent = 'Certo.';
+        if (box.dataset.mostra) fb.appendChild(el('span', { class: 'expl' }, box.dataset.mostra));
+        depois.forEach(function (n) { n.classList.add('mostrar'); });
+      } else {
+        var msg = null;
+        try {
+          JSON.parse(box.dataset.erros || '[]').forEach(function (par) {
+            if (!msg && bate(v, par[0], { dataset: { tol: '0.02', ang: box.dataset.ang } })) msg = par[1];
+          });
+        } catch (e) {}
+        if (!msg && box.dataset.sinal && bate(-v, alvo, box)) msg = 'O módulo está certo. E o sinal?';
+        if (!msg && !box.dataset.ang && alvo !== 0 && v / alvo > 0) {
+          var l = Math.log10(v / alvo);
+          if (Math.abs(l - Math.round(l)) < 0.009 && Math.round(l) !== 0) msg = 'Os algarismos batem, mas a potência de 10 não. Confira prefixos (µ, n, p, f) e a conversão de cm para m.';
+        }
+        if (!msg && !box.dataset.ang && alvo !== 0 && v / alvo < 0 && !box.dataset.sinal && bate(-v, alvo, box)) msg = 'Aqui a resposta é um módulo (positivo).';
+        fb.textContent = 'Ainda não. ';
+        fb.appendChild(el('span', { class: 'expl' }, msg || 'Refaça a conta em símbolos, confira as unidades (tudo em SI) e tente de novo.'));
+        if (btnMostrar) btnMostrar.hidden = false;
+      }
+      var r = est.r[id] || {};
+      r.v = inp.value;
+      est.r[id] = r;
+      registrar(id, ok, box);
+      verCheckpoint(box);
+    }
+    btn.addEventListener('click', conferir);
+    inp.addEventListener('keydown', function (ev) { if (ev.key === 'Enter') conferir(); });
+    if (btnMostrar) btnMostrar.addEventListener('click', function () {
+      fb.className = 'fb';
+      fb.textContent = 'Resposta: ' + (box.dataset.mostra || box.dataset.resp);
+      depois.forEach(function (n) { n.classList.add('mostrar'); });
+    });
+    var r = est.r[id];
+    if (r && r.v) inp.value = r.v;
+    if (r && r.ok) { fb.className = 'fb ok'; fb.textContent = 'Você já acertou esta.'; depois.forEach(function (n) { n.classList.add('mostrar'); }); }
+  }
+
+  /* ---------- checkpoint ---------- */
+  function verCheckpoint(box) {
+    var cp = box.closest('.checkpoint');
+    if (!cp) return;
+    var itens = $$('.quiz', cp);
+    var resp = itens.filter(function (q) { return est.r[q.id] && est.r[q.id].primeira != null; });
+    var certas = itens.filter(function (q) { return est.r[q.id] && est.r[q.id].primeira === true; }).length;
+    var ver = $('.veredito', cp);
+    var deg = cp.dataset.degrau;
+    ver.innerHTML = '';
+    if (resp.length < itens.length) { ver.textContent = 'Respondidas: ' + resp.length + ' de ' + itens.length + '.'; return; }
+    if (certas >= 2) {
+      ver.textContent = 'Você acertou ' + certas + ' de ' + itens.length + ' de primeira. Pode subir!';
+      if (!est.deg[deg]) { est.deg[deg] = true; salvar(); atualizarTudo(); }
+    } else {
+      ver.textContent = 'Você acertou ' + certas + ' de ' + itens.length + ' de primeira. Releia os blocos ligados às que errou e refaça. ';
+      var b = el('button', { type: 'button', class: 'btn sec' }, est.deg[deg] ? 'Degrau marcado como concluído' : 'Marcar o degrau como concluído mesmo assim');
+      b.addEventListener('click', function () { est.deg[deg] = true; salvar(); atualizarTudo(); b.textContent = 'Degrau marcado como concluído'; });
+      ver.appendChild(b);
+    }
+  }
+
+  /* ---------- ajuda em níveis ---------- */
+  function montarAjuda(aj) {
+    var q = aj.dataset.q;
+    var niveis = $$('.nivel', aj);
+    var barra = el('div', { class: 'botoes-ajuda', role: 'group', 'aria-label': 'Ajuda, um nível por vez' });
+    var roteiro = $('.roteiro', aj);
+    roteiro.parentNode.insertBefore(barra, roteiro.nextSibling);
+    var reflexao = $('.reflexao', aj);
+    var max = est.aj[q] || 0;
+    var botoes = niveis.map(function (sec, k) {
+      var n = k + 1;
+      sec.id = sec.id || ('aj-' + q + '-' + n);
+      var b = el('button', { type: 'button', 'aria-expanded': 'false', 'aria-controls': sec.id }, sec.dataset.titulo || ('Nível ' + n));
+      if (n > max + 1) b.disabled = true;
+      b.addEventListener('click', function () {
+        var aberto = b.getAttribute('aria-expanded') === 'true';
+        b.setAttribute('aria-expanded', aberto ? 'false' : 'true');
+        sec.hidden = aberto;
+        if (!aberto) {
+          if (n > (est.aj[q] || 0)) { est.aj[q] = n; salvar(); }
+          if (botoes[k + 1]) botoes[k + 1].disabled = false;
+          if (n >= 4 && reflexao) reflexao.hidden = false;
+        }
+      });
+      barra.appendChild(b);
+      return b;
+    });
+    if (reflexao) {
+      var ta = $('textarea', reflexao);
+      if (est.ref[q]) ta.value = est.ref[q];
+      ta.addEventListener('input', function () { est.ref[q] = ta.value; salvar(); });
+      if (max >= 4) reflexao.hidden = false;
+    }
+  }
+
+  function mostrarPalpite() {
+    var p = $('[data-palpite]');
+    if (!p) return;
+    if (est.palpite) { p.hidden = false; p.textContent = 'Seu palpite no aquecimento: "' + est.palpite.txt + '". Compare com a conta abaixo.'; }
+  }
+
+  /* ---------- progresso, mapa e calibração ---------- */
+  function questaoResolvida(q) {
+    var art = document.getElementById(q);
+    if (!art) return false;
+    var partes = $$('.num[data-q], .quiz[data-q]', art);
+    return partes.length > 0 && partes.every(function (p) { return est.r[p.id] && est.r[p.id].ok; });
+  }
+  function atualizarTudo() {
+    var nd = DEGRAUS.filter(function (d) { return est.deg[d]; }).length;
+    var nq = QUESTOES.filter(questaoResolvida).length;
+    var pct = Math.round(100 * (nd + nq) / (DEGRAUS.length + QUESTOES.length));
+    $('#prog-txt').textContent = 'Progresso: ' + nd + ' de ' + DEGRAUS.length + ' degraus, ' + nq + ' de ' + QUESTOES.length + ' questões';
+    $('#prog-barra').style.width = pct + '%';
+    $('.progresso .barra').setAttribute('aria-valuenow', String(pct));
+    var atualMarcado = false;
+    $$('.escada li').forEach(function (li) {
+      var d = li.dataset.deg;
+      var feito = d === 'd0' ? Object.keys(est.r).some(function (k) { return /^pre\d/.test(k); }) : !!est.deg[d];
+      li.classList.toggle('feito', feito);
+      li.classList.remove('atual');
+      if (!feito && !atualMarcado) { li.classList.add('atual'); atualMarcado = true; }
+    });
+    $$('.chip-q').forEach(function (c) { c.classList.toggle('feito', questaoResolvida(c.dataset.q)); });
+    var cal = $('#calibracao');
+    if (cal) {
+      var ids = Object.keys(est.r).filter(function (k) { return est.r[k].conf; });
+      if (ids.length) {
+        var c3 = ids.filter(function (k) { return est.r[k].conf === 3; });
+        var erradas = c3.filter(function (k) { return est.r[k].primeira === false; });
+        cal.innerHTML = '';
+        cal.appendChild(el('p', null, 'Respostas com confiança marcada: ' + ids.length + '. Com "certeza" (3): ' + c3.length + ', das quais ' + erradas.length + ' erradas de primeira.'));
+        if (erradas.length) {
+          var ul = el('ul');
+          erradas.forEach(function (k) {
+            var alvo = document.getElementById(k);
+            var li = el('li');
+            var a = el('a', { href: '#' + k }, (alvo && alvo.closest('section, article') ? (alvo.closest('section, article').querySelector('h2, h3') || {}).textContent || k : k) + ' (' + k + ')');
+            li.appendChild(a); ul.appendChild(li);
+          });
+          cal.appendChild(ul);
+          cal.appendChild(el('p', { class: 'pequeno' }, 'Estas são as mais valiosas para revisar: você achava que sabia.'));
+        } else {
+          cal.appendChild(el('p', { class: 'pequeno' }, 'Nenhum erro com confiança máxima até agora.'));
+        }
+      }
+    }
+  }
+
+  /* ---------- tema ---------- */
+  function montarTema() {
+    var b = $('#btn-tema');
+    var nomes = { auto: 'automático', claro: 'claro', escuro: 'escuro' };
+    var atual = 'auto';
+    try { atual = localStorage.getItem('guia-cap23-tema') || 'auto'; } catch (e) {}
+    function aplicar() {
+      var h = document.documentElement;
+      if (atual === 'claro') h.setAttribute('data-theme', 'light');
+      else if (atual === 'escuro') h.setAttribute('data-theme', 'dark');
+      else h.removeAttribute('data-theme');
+      b.textContent = 'Tema: ' + nomes[atual];
+    }
+    b.addEventListener('click', function () {
+      atual = atual === 'auto' ? 'claro' : atual === 'claro' ? 'escuro' : 'auto';
+      try { localStorage.setItem('guia-cap23-tema', atual); } catch (e) {}
+      aplicar();
+    });
+    aplicar();
+  }
+
+  /* ---------- widgets ---------- */
+  var destravados = {};
+  function destravar(w) {
+    var n = document.getElementById(w);
+    if (n) n.classList.remove('travado');
+    destravados[w] = true;
+  }
+  function seg(id, cb) {
+    var g = document.getElementById(id);
+    $$('button', g).forEach(function (b) {
+      b.addEventListener('click', function () {
+        $$('button', g).forEach(function (x) { x.setAttribute('aria-pressed', 'false'); });
+        b.setAttribute('aria-pressed', 'true');
+        cb();
+      });
+    });
+  }
+  function segVal(id) { var b = $('#' + id + ' button[aria-pressed="true"]'); return b ? b.dataset.v : null; }
+  function attr(n, o) { Object.keys(o).forEach(function (k) { n.setAttribute(k, o[k]); }); }
+  var SVGNS = 'http://www.w3.org/2000/svg';
+  function svgEl(tag, o) { var n = document.createElementNS(SVGNS, tag); attr(n, o || {}); return n; }
+  function usoCarga(q, x, y) { return svgEl('use', { href: q > 0 ? '#qp' : '#qn', x: x, y: y }); }
+
+  function pathDe(pts) { return pts.map(function (p, i) { return (i ? 'L ' : 'M ') + p[0].toFixed(1) + ' ' + p[1].toFixed(1); }).join(' '); }
+  function zeroSeMinusculo(v) { return Math.abs(v) < 1e-9 ? 0 : v; }
+
+  /* W1: quadrado girando num campo uniforme */
+  function w1() {
+    var th = parseFloat($('#w1-ang').value), t = th * Math.PI / 180;
+    var cx = 180, cy = 120, L = 80;
+    var nx = Math.cos(t), ny = -Math.sin(t);
+    var dx = Math.sin(t), dy = Math.cos(t);
+    attr($('#w1-placa'), { x1: cx - L * dx, y1: cy - L * dy, x2: cx + L * dx, y2: cy + L * dy });
+    attr($('#w1-normal'), { x1: cx, y1: cy, x2: cx + 55 * nx, y2: cy + 55 * ny });
+    var r = 30;
+    $('#w1-arco').setAttribute('d', th < 3 ? '' : 'M ' + (cx + r) + ' ' + cy + ' A ' + r + ' ' + r + ' 0 0 0 ' + (cx + r * Math.cos(t)).toFixed(1) + ' ' + (cy - r * Math.sin(t)).toFixed(1));
+    attr($('#w1-th'), { x: (cx + 42 * Math.cos(t / 2) - 4).toFixed(1), y: (cy - 42 * Math.sin(t / 2) + 4).toFixed(1) });
+    var g = $('#w1-linhas'); g.innerHTML = '';
+    var meia = L * Math.abs(Math.cos(t)), n = 0, tot = 0;
+    for (var y = 30; y <= 210; y += 20) {
+      var cruza = Math.abs(y - cy) < meia - 0.5;
+      tot++; if (cruza) n++;
+      var ln = svgEl('line', { x1: 15, x2: 345, y1: y, y2: y, class: cruza ? 've' : 'linha-campo' });
+      if (!cruza) ln.setAttribute('style', 'marker-end:url(#m-k)');
+      g.appendChild(ln);
+    }
+    var c = zeroSeMinusculo(Math.cos(t));
+    var phi = zeroSeMinusculo(1000 * 0.01 * Math.cos(t));
+    var sentido = c > 1e-6 ? 'o campo atravessa no sentido da normal: fluxo positivo.' : (c < -1e-6 ? 'o campo atravessa contra a normal: fluxo negativo.' : 'o campo passa rente ao quadrado: fluxo zero.');
+    $('#w1-leitura').textContent = 'θ = ' + th + '°: cos θ = ' + fmt(c, 2) + '; Φ = E·A·cos θ = 1 000 × 0,0100 × ' + fmt(c, 2) + ' = ' + fmt(phi, 1) + ' N·m²/C. Linhas que atravessam o quadrado: ' + n + ' de ' + tot + '. Aqui ' + sentido;
+  }
+
+  /* W2: saldo de linhas numa superfície fechada */
+  function formaW2(tipo) {
+    var cx = 175, cy = 130, p = [], i;
+    if (tipo === 'q') return [[cx - 80, cy - 80], [cx + 80, cy - 80], [cx + 80, cy + 80], [cx - 80, cy + 80]];
+    if (tipo === 'c') { for (i = 0; i < 96; i++) { var a = 2 * Math.PI * i / 96; p.push([cx + 85 * Math.cos(a), cy + 85 * Math.sin(a)]); } return p; }
+    for (i = 0; i < 120; i++) { var b = 2 * Math.PI * i / 120; var rr = 82 * (1 + 0.3 * Math.sin(3 * b) + 0.12 * Math.cos(2 * b)); p.push([cx + rr * Math.cos(b), cy + rr * Math.sin(b)]); }
+    return p;
+  }
+  function dentroPoligono(pt, poly) {
+    var x = pt[0], y = pt[1], dentro = false;
+    for (var i = 0, j = poly.length - 1; i < poly.length; j = i++) {
+      var xi = poly[i][0], yi = poly[i][1], xj = poly[j][0], yj = poly[j][1];
+      if (((yi > y) !== (yj > y)) && (x < (xj - xi) * (y - yi) / (yj - yi) + xi)) dentro = !dentro;
+    }
+    return dentro;
+  }
+  function cruzamentos(o, d, poly) {
+    var ts = [];
+    for (var i = 0; i < poly.length; i++) {
+      var a = poly[i], b = poly[(i + 1) % poly.length];
+      var ex = b[0] - a[0], ey = b[1] - a[1];
+      var den = d[0] * ey - d[1] * ex;
+      if (Math.abs(den) < 1e-12) continue;
+      var t = ((a[0] - o[0]) * ey - (a[1] - o[1]) * ex) / den;
+      var s = ((a[0] - o[0]) * d[1] - (a[1] - o[1]) * d[0]) / den;
+      if (t > 1e-6 && s >= 0 && s < 1) ts.push(t);
+    }
+    return ts.sort(function (u, v) { return u - v; });
+  }
+  function w2() {
+    var tipo = segVal('w2-tipo'), sB = parseFloat(segVal('w2-sinal')), xB = parseFloat($('#w2-x').value);
+    var poly = formaW2(tipo);
+    $('#w2-forma').setAttribute('d', pathDe(poly) + ' Z');
+    var cargas = [{ nome: 'A', s: 1, p: [150, 125] }, { nome: 'B', s: sB, p: [xB, 150] }];
+    var gR = $('#w2-raios'), gM = $('#w2-marcas'), gC = $('#w2-cargas');
+    gR.innerHTML = ''; gM.innerHTML = ''; gC.innerHTML = '';
+    var res = [];
+    cargas.forEach(function (c) {
+      var dentro = dentroPoligono(c.p, poly), sai = 0, entra = 0;
+      for (var k = 0; k < 12; k++) {
+        var ang = (k * 30 + 7) * Math.PI / 180, d = [Math.cos(ang), Math.sin(ang)];
+        gR.appendChild(svgEl('line', { x1: c.p[0], y1: c.p[1], x2: c.p[0] + 500 * d[0], y2: c.p[1] + 500 * d[1], style: 'stroke:var(' + (c.s > 0 ? '--pos' : '--neg') + ');stroke-width:1;opacity:.45' }));
+        cruzamentos(c.p, d, poly).forEach(function (t, idx) {
+          var paraFora = dentro ? (idx % 2 === 0) : (idx % 2 === 1);
+          var saiCampo = c.s > 0 ? paraFora : !paraFora;
+          if (saiCampo) sai++; else entra++;
+          gM.appendChild(svgEl('circle', { cx: (c.p[0] + t * d[0]).toFixed(1), cy: (c.p[1] + t * d[1]).toFixed(1), r: 3.6, class: saiCampo ? 'cruz-out' : 'cruz-in' }));
+        });
+      }
+      gC.appendChild(usoCarga(c.s, c.p[0], c.p[1]));
+      var tx = svgEl('text', { x: c.p[0] + 13, y: c.p[1] - 10, class: 't-s', style: 'font-weight:700' }); tx.textContent = c.nome; gC.appendChild(tx);
+      res.push({ nome: c.nome, s: c.s, dentro: dentro, sai: sai, entra: entra });
+    });
+    var total = 0;
+    var partes = res.map(function (r) {
+      total += r.sai - r.entra;
+      return r.nome + ' (' + (r.s > 0 ? '+' : '−') + ', ' + (r.dentro ? 'dentro' : 'fora') + '): ' + r.sai + ' saídas, ' + r.entra + ' entradas, saldo ' + (r.sai - r.entra > 0 ? '+' : '') + (r.sai - r.entra);
+    });
+    var qenv = res.filter(function (r) { return r.dentro; }).map(function (r) { return (r.s > 0 ? '+' : '−') + 'q'; });
+    $('#w2-leitura').textContent = partes.join('. ') + '. Saldo total: ' + (total > 0 ? '+' : '') + total + ' linhas, proporcional à carga de dentro (' + (qenv.length ? qenv.join(' ') : 'nenhuma') + ').';
+  }
+
+  /* W3: esfera com cavidade */
+  var W3G = false;
+  function w3() {
+    var a = parseFloat($('#w3-a').value), r = parseFloat($('#w3-r').value), S = 35;
+    attr($('#w3-cav'), { r: a * S });
+    attr($('#w3-gauss'), { r: Math.max(0.6, r * S) });
+    function E(x) { if (x <= a) return 0; if (x <= 1) return (x * x * x - a * a * a) / (x * x); return (1 - a * a * a) / (x * x); }
+    function X(x) { return 250 + 70 * x; }
+    function Y(v) { return 200 - 150 * v; }
+    if (!W3G) {
+      var g = $('#w3-grade');
+      [1, 2, 3].forEach(function (v) { var t = svgEl('text', { x: X(v) - 4, y: 216, class: 't-2' }); t.textContent = String(v); g.appendChild(t); });
+      [[0.5, '0,5'], [1, '1']].forEach(function (p) { g.appendChild(svgEl('line', { x1: 250, x2: 470, y1: Y(p[0]), y2: Y(p[0]), class: 'grade-g' })); var t = svgEl('text', { x: 230, y: Y(p[0]) + 4, class: 't-2' }); t.textContent = p[1]; g.appendChild(t); });
+      g.appendChild(svgEl('line', { x1: X(1), x2: X(1), y1: 20, y2: 200, class: 'fino' }));
+      var tR = svgEl('text', { x: X(1) + 4, y: 36, class: 't-2' }); tR.textContent = 'R'; g.appendChild(tR);
+      W3G = true;
+    }
+    var pts = [];
+    for (var x = 0; x <= 3.0001; x += 0.01) pts.push([X(x), Y(E(x))]);
+    $('#w3-curva').setAttribute('d', pathDe(pts));
+    attr($('#w3-m'), { cx: X(r), cy: Y(E(r)) });
+    var frac = r <= a ? 0 : (r >= 1 ? 1 : (r * r * r - a * a * a) / (1 - a * a * a));
+    var regiao = r <= a ? (a > 0 ? 'Na cavidade: a gaussiana não envolve carga, E = 0.' : 'No centro: nada dentro, E = 0.')
+      : (r <= 1 ? (a > 0 ? 'No material: quanto maior r, mais carga dentro.' : 'Dentro da esfera maciça: E cresce em linha reta com r.')
+        : 'Fora: toda a carga já está dentro; E cai com 1/r², como uma carga pontual.');
+    $('#w3-leitura').textContent = 'Cavidade a = ' + fmt(a, 1) + 'R; gaussiana r = ' + fmt(r, 2) + 'R: envolve ' + fmt(100 * frac, 1) + ' % da carga; E = ' + fmt(E(r), 3) + ' × ρR/(3ε₀). ' + regiao;
+  }
+
+  /* W4: cascas de cebola */
+  var W4G = false;
+  function w4() {
+    var n = parseInt(segVal('w4-modo'), 10), r = parseFloat($('#w4-r').value);
+    var g = $('#w4-aneis'); g.innerHTML = '';
+    for (var i = 0; i < 10; i++) {
+      var m = (i + 0.5) / 10;
+      var dens = n === 0 ? 0.45 : 0.9 * m * m;
+      g.appendChild(svgEl('circle', { cx: 115, cy: 115, r: (m * 70).toFixed(1), style: 'fill:none;stroke:var(--pos);stroke-width:7;stroke-opacity:' + (0.06 + dens).toFixed(2) }));
+    }
+    attr($('#w4-gauss'), { r: Math.max(0.6, r * 70) });
+    function E(x, k) { return x <= 1 ? Math.pow(x, 1 + k) : 1 / (x * x); }
+    function X(x) { return 250 + 140 * x; }
+    function Y(v) { return 200 - 160 * v; }
+    if (!W4G) {
+      var gg = $('#w4-grade');
+      [0.5, 1, 1.5].forEach(function (v) { var t = svgEl('text', { x: X(v) - 8, y: 216, class: 't-2' }); t.textContent = fmt(v, 1); gg.appendChild(t); });
+      [[0.5, '0,5'], [1, '1']].forEach(function (p) { gg.appendChild(svgEl('line', { x1: 250, x2: 470, y1: Y(p[0]), y2: Y(p[0]), class: 'grade-g' })); var t = svgEl('text', { x: 230, y: Y(p[0]) + 4, class: 't-2' }); t.textContent = p[1]; gg.appendChild(t); });
+      W4G = true;
+    }
+    function curva(k) { var p = []; for (var x = 0; x <= 1.5001; x += 0.01) p.push([X(x), Y(E(x, k))]); return pathDe(p); }
+    $('#w4-curva').setAttribute('d', curva(n));
+    $('#w4-outra').setAttribute('d', curva(n === 0 ? 2 : 0));
+    attr($('#w4-m'), { cx: X(r), cy: Y(E(r, n)) });
+    var frac = r >= 1 ? 1 : Math.pow(r, 3 + n);
+    $('#w4-leitura').textContent = (n === 0 ? 'ρ uniforme' : 'ρ ∝ r²') + '; gaussiana r = ' + fmt(r, 2) + 'R: envolve ' + fmt(100 * frac, 1) + ' % da carga total; E = ' + fmt(E(r, n), 3) + ' × E(R). Tracejado: o outro modelo. ' + (r > 1 ? 'Fora, os dois coincidem: só a carga total importa.' : '');
+  }
+
+  /* W5: ponto, fio e placa */
+  var W5G = false;
+  function w5() {
+    var geo = parseInt(segVal('w5-geo'), 10), r = parseFloat($('#w5-r').value);
+    function X(x) { return 250 + 70 * (x - 1); }
+    function Y(v) { return 200 - 160 * v; }
+    function f(x, k) { return k === 0 ? 1 / (x * x) : (k === 1 ? 1 / x : 1); }
+    if (!W5G) {
+      [0, 1, 2].forEach(function (k) { var p = []; for (var x = 1; x <= 4.0001; x += 0.02) p.push([X(x), Y(f(x, k))]); $('#w5-c' + k).setAttribute('d', pathDe(p)); });
+      var g = $('#w5-grade');
+      [1, 2, 3, 4].forEach(function (v) { var t = svgEl('text', { x: X(v) - 4, y: 216, class: 't-2' }); t.textContent = String(v); g.appendChild(t); });
+      [[0.5, '0,5'], [1, '1']].forEach(function (p) { g.appendChild(svgEl('line', { x1: 250, x2: 470, y1: Y(p[0]), y2: Y(p[0]), class: 'grade-g' })); var t = svgEl('text', { x: 230, y: Y(p[0]) + 4, class: 't-2' }); t.textContent = p[1]; g.appendChild(t); });
+      W5G = true;
+    }
+    [0, 1, 2].forEach(function (k) { $('#w5-c' + k).style.strokeWidth = k === geo ? '3.6' : '1.6'; });
+    attr($('#w5-m'), { cx: X(r), cy: Y(f(r, geo)) });
+    var d = $('#w5-desenho'); d.innerHTML = '';
+    var s = 22 * r;
+    if (geo === 0) {
+      d.appendChild(svgEl('circle', { cx: 115, cy: 115, r: s, class: 'gauss' }));
+      d.appendChild(usoCarga(1, 115, 115));
+    } else if (geo === 1) {
+      d.appendChild(svgEl('rect', { x: 115 - s, y: 65, width: 2 * s, height: 100, class: 'gauss' }));
+      d.appendChild(svgEl('line', { x1: 115, y1: 12, x2: 115, y2: 218, class: 'barra-p', style: 'stroke-width:5' }));
+    } else {
+      d.appendChild(svgEl('rect', { x: 115 - s, y: 95, width: 2 * s, height: 40, class: 'gauss' }));
+      d.appendChild(svgEl('rect', { x: 109, y: 12, width: 12, height: 206, class: 'placa-p' }));
+    }
+    var t = svgEl('text', { x: 115, y: 228, class: 't-2', style: 'text-anchor:middle' });
+    t.textContent = ['esfera gaussiana', 'lata gaussiana (de lado)', 'latinha (de lado)'][geo];
+    d.appendChild(t);
+    var area = geo === 0 ? 'a área da esfera gaussiana cresce com r² (×' + fmt(r * r, 2) + ')' : (geo === 1 ? 'a parede da lata cresce com r (×' + fmt(r, 2) + ')' : 'as tampas da latinha não crescem (×1)');
+    $('#w5-leitura').textContent = ['Carga pontual', 'Fio longo', 'Placa grande'][geo] + ', r = ' + fmt(r, 2) + ' m: ' + area + ', e o mesmo fluxo se espalha por ela. E(r)/E(1 m) = ' + fmt(f(r, geo), 3) + '.';
+  }
+
+  /* W6: casca metálica com partícula dentro */
+  function w6() {
+    var q = parseInt($('#w6-q').value, 10), Q = parseInt($('#w6-Q').value, 10), fora = segVal('w6-pos') === 'f';
+    var cx = 150, cy = 130, px = fora ? cx + 35 : cx, py = cy;
+    var gp = $('#w6-part'), gs = $('#w6-sinais'), gc = $('#w6-campo');
+    gp.innerHTML = ''; gs.innerHTML = ''; gc.innerHTML = '';
+    if (q !== 0) gp.appendChild(usoCarga(q, px, py));
+    else gp.appendChild(svgEl('circle', { cx: px, cy: py, r: 4, class: 'ponto' }));
+    function sinal(s, x, y) { var t = svgEl('text', { x: x.toFixed(1), y: (y + 4).toFixed(1), class: s > 0 ? 'sinal-p' : 'sinal-n' }); t.textContent = s > 0 ? '+' : '−'; gs.appendChild(t); }
+    var ni = Math.min(12, 2 * Math.abs(q));
+    for (var i = 0; i < ni; i++) {
+      var a = fora ? (ni === 1 ? 0 : (i / (ni - 1) - 0.5) * 2.4) : 2 * Math.PI * i / ni + 0.3;
+      sinal(-q, cx + 76 * Math.cos(a), cy + 76 * Math.sin(a));
+    }
+    var qe = Q + q, ne = Math.min(16, 2 * Math.abs(qe));
+    for (var j = 0; j < ne; j++) { var b = 2 * Math.PI * j / ne + 0.2; sinal(qe, cx + 89 * Math.cos(b), cy + 89 * Math.sin(b)); }
+    if (q !== 0) {
+      for (var k = 0; k < 6; k++) {
+        var c = 2 * Math.PI * k / 6 + 0.5, r1 = 14, r2 = fora ? 28 : 40;
+        var x1 = px + r1 * Math.cos(c), y1 = py + r1 * Math.sin(c), x2 = px + r2 * Math.cos(c), y2 = py + r2 * Math.sin(c);
+        gc.appendChild(svgEl('line', q > 0 ? { x1: x1, y1: y1, x2: x2, y2: y2, class: 've' } : { x1: x2, y1: y2, x2: x1, y2: y1, class: 've' }));
+      }
+    }
+    if (qe !== 0) {
+      for (var m = 0; m < 8; m++) {
+        var e = 2 * Math.PI * m / 8 + 0.39, a1 = 101, a2 = 122;
+        var u1 = cx + a1 * Math.cos(e), v1 = cy + a1 * Math.sin(e), u2 = cx + a2 * Math.cos(e), v2 = cy + a2 * Math.sin(e);
+        gc.appendChild(svgEl('line', qe > 0 ? { x1: u1, y1: v1, x2: u2, y2: v2, class: 've' } : { x1: u2, y1: v2, x2: u1, y2: v1, class: 've' }));
+      }
+    }
+    function uc(v) { return (v > 0 ? '+' : (v < 0 ? '−' : '')) + Math.abs(v) + ' µC'; }
+    var dist = q === 0 ? '' : (fora ? ', concentrada do lado da partícula' : ', uniforme');
+    $('#w6-leitura').textContent = 'Partícula: ' + uc(q) + '. Casca: ' + uc(Q) + '. Superfície interna: −q = ' + uc(-q) + dist + '. Superfície externa: Q + q = ' + uc(qe) + (qe ? ', uniforme' : '') + '. Fora: ' + (qe ? 'campo de uma carga de ' + uc(qe) + ' no centro, ' + (qe > 0 ? 'para fora' : 'para dentro') : 'campo zero') + '. No metal: E = 0.';
+  }
+
+  function montarWidgets() {
+    if ($('#w1')) { $('#w1-ang').addEventListener('input', w1); w1(); }
+    if ($('#w2')) { $('#w2-x').addEventListener('input', w2); seg('w2-sinal', w2); seg('w2-tipo', w2); w2(); }
+    if ($('#w3')) { $('#w3-a').addEventListener('input', w3); $('#w3-r').addEventListener('input', w3); w3(); }
+    if ($('#w4')) { $('#w4-r').addEventListener('input', w4); seg('w4-modo', w4); w4(); }
+    if ($('#w5')) { $('#w5-r').addEventListener('input', w5); seg('w5-geo', w5); w5(); }
+    if ($('#w6')) { $('#w6-q').addEventListener('input', w6); $('#w6-Q').addEventListener('input', w6); seg('w6-pos', w6); w6(); }
+  }
+
+  function montarZerar() {
+    var b = $('#btn-zerar');
+    if (!b) return;
+    b.addEventListener('click', function () {
+      if (window.confirm('Apagar todo o seu progresso neste guia (respostas, checkpoints, anotações)?')) {
+        try { localStorage.removeItem(CHAVE); } catch (e) {}
+        location.reload();
+      }
+    });
+  }
+
+  /* ---------- início ---------- */
+  function iniciar() {
+    $$('.quiz').forEach(montarQuiz);
+    $$('div.num').forEach(montarNum);
+    $$('.ajuda').forEach(montarAjuda);
+    montarTema();
+    montarWidgets();
+    montarZerar();
+    mostrarPalpite();
+    $$('.checkpoint').forEach(function (cp) { var q = $('.quiz', cp); if (q) verCheckpoint(q); });
+    atualizarTudo();
+    setTimeout(function () {
+      if (!document.documentElement.classList.contains('katex-ok')) document.documentElement.classList.add('katex-falhou');
+    }, 6000);
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', iniciar); else iniciar();
+})();
+</script>
+</body>
+</html>

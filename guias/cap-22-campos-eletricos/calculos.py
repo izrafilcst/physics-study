@@ -423,6 +423,62 @@ mostra("P38 erro: z/√3", 4.0 / math.sqrt(3), unidade="cm")
 mostra("P38 erro: 2√3 z", 2 * math.sqrt(3) * 4.0, unidade="cm")
 mostra("Ficha: σ máximo antes da ruptura (σ/2ε0 = 3e6)", 2 * eps0 * E_RUPTURA, unidade="C/m²")
 
+# ---------------------------------------------------------------------------
+titulo("V2 — números novos pedidos pela rodada 1")
+# prev-w2 novo: +1 nC a 1 cm à esquerda e +4 nC a 3 cm à direita (o mais perto ganha)
+mostra("prev-w2 v2: E de +1 nC a 1 cm (→)", k * 1e-9 / 0.01**2, unidade="N/C")
+mostra("prev-w2 v2: E de +4 nC a 3 cm (←)", k * 4e-9 / 0.03**2, unidade="N/C")
+mostra("prev-w2 v2: total (+ = direita)", k * 1e-9 / 0.01**2 - k * 4e-9 / 0.03**2, unidade="N/C")
+# lacuna D2 v2: +1 nC em x=+1 cm e -3 nC em x=+2 cm (mesmo lado, sinais opostos, não cancela)
+EC2 = k * 1e-9 / 0.01**2
+ED2 = k * 3e-9 / 0.02**2
+mostra("lacuna D2 v2: E_C (-x)", EC2, unidade="N/C")
+mostra("lacuna D2 v2: E_D (+x)", ED2, unidade="N/C")
+lac2 = sum(campo_pontual(q, x, 0, 0, 0)[0] for q, x in [(1e-9, 0.01), (-3e-9, 0.02)])
+mostra("lacuna D2 v2: E_x total (negativo = -x)", lac2, unidade="N/C")
+mostra("lacuna D2 v2 erro: somou módulos", EC2 + ED2, unidade="N/C")
+mostra("lacuna D2 v2 erro: r=1 cm para D", k * 3e-9 / 0.01**2, unidade="N/C")
+# feedbacks corrigidos
+mostra("lac-a-3 erro: calculadora em graus 2kλ sen(1°)/r", 2 * k * 5e-9 * math.sin(math.radians(1)) / 2.0, unidade="N/C")
+mostra("lac-r-1 erro: r = 1 m em vez de 0,010 m", k * 1e-9 / 1.0**2, unidade="N/C")
+mostra("lac-b-2 erro: a = 4,0 m na fórmula (kλL/(a(a+L)))", k * 9e-9 * 3.0 / (4.0 * 7.0), unidade="N/C")
+mostra("lac-b-2 erro: carga toda na ponta longe kq/(4 m)²", k * 27e-9 / 4.0**2, unidade="N/C")
+mostra("lac-mil-1 erro: massa em gramas", m_gota * 1000, unidade="g")
+# prev-w6 novo: E/Em em z = R
+mostra("prev-w6 v2: E/Em em z = R (1 - 1/√2)", 1 - 1 / math.sqrt(2))
+# desafio D3: P15 com q1 = +2e
+v = [sum(c) for c in zip(*[campo_pontual(q, x, y, a15/2, a15/2) for q, x, y in [(2*e, 0, a15), (e, a15, 0), (2*e, 0, 0)]])]
+mostra("desafio D3 (P15 com q1=+2e): |E|", math.hypot(*v), unidade="N/C")
+mostra("desafio D3: ângulo com +x", angulo(*v), unidade="°")
+mostra("desafio D3: Ex", v[0], unidade="N/C")
+mostra("desafio D3: Ey", v[1], unidade="N/C")
+mostra("desafio D3 erro: atan(Ey/Ex) ok aqui (1º quadrante)", math.degrees(math.atan(v[1]/v[0])), unidade="°")
+# hidrogênio: verificação nova (força / peso do elétron)
+mostra("Ex. H v2: F elétrica / peso do elétron", 8.245e-8 / (m_e * g))
+# W5 v2: erro relativo ao valor certo = (L/2D)²
+for D_L in (0.6, 1, 2, 5, 10):
+    mostra(f"W5 v2: erro (%) do ponto com D = {D_L} L", 100 * (1 / (2 * D_L)) ** 2)
+# disco: σ em cada face (folha fina) -> σ_total
+mostra("D6 v2: 5,3 µC/m² em cada face: E_m = σ_total/(2ε0)", 2 * 5.3e-6 / (2 * eps0), unidade="N/C")
+mostra("D6 v2: σ do P34 / σ máximo antes da ruptura", 5.3e-6 / (2 * eps0 * E_RUPTURA))
+mostra("D6 v2: erro do ponto no disco ~ 0,75 (R/z)² em z/R = 4,8", 0.75 / 4.8**2)
+mostra("  exato em z/R = 4,8: (ponto-disco)/disco", ((1/(2*4.8**2)) - (1 - 4.8/math.sqrt(4.8**2+1))) / (1 - 4.8/math.sqrt(4.8**2+1)))
+# P31 figura em escala: a/L
+mostra("P31: a/L (para desenhar em escala)", a31 / L31)
+
+# ---------------------------------------------------------------------------
+titulo("Reteste (rodada 2): exercícios novos de transferência")
+# arco de 90°, raio 10 cm, +2,0 nC: campo no centro
+phi_t = math.pi / 2
+lam_t = 2e-9 / (0.10 * phi_t)
+mostra("Reteste A: λ do arco de 90° (r = 10 cm, 2,0 nC)", lam_t, unidade="C/m")
+mostra("Reteste A: E = 2kλ sen(φ/2)/r", 2 * k * lam_t * math.sin(phi_t / 2) / 0.10, unidade="N/C")
+mostra("Reteste A: conferência numérica", math.hypot(*campo_arco(2e-9, 0.10, phi_t, n=20000)), unidade="N/C")
+mostra("Reteste A erro: carga toda num ponto a 10 cm", k * 2e-9 / 0.10**2, unidade="N/C")
+# barra de 20 cm, +4,0 nC, P no prolongamento a 10 cm da ponta
+mostra("Reteste B: E = kq/(a(a+L)), L = 20 cm, a = 10 cm, q = 4,0 nC", k * 4e-9 / (0.10 * 0.30), unidade="N/C")
+mostra("Reteste B erro: carga no centro (20 cm)", k * 4e-9 / 0.20**2, unidade="N/C")
+
 print("\nResumo: linhas com divergência > 2 %:")
 div = [l for l in LINHAS if "DIVERGE" in l]
 print("\n".join(div) if div else "  nenhuma")

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lei de Gauss — Guia</title>
+<link rel="icon" href="data:,">
+<meta name="description" content="Guia de estudo do Capítulo 23 do Halliday (Lei de Gauss), em degraus, até resolver os Problemas 5, 24, 29, 39, 52, 53 e 76.">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" crossorigin="anonymous">
+<script>
+  // Tema salvo antes de pintar (evita piscar). Funciona sem localStorage.
+  (function () {
+    try {
+      var t = localStorage.getItem('guia-cap23-tema');
+      if (t === 'claro') document.documentElement.setAttribute('data-theme', 'light');
+      if (t === 'escuro') document.documentElement.setAttribute('data-theme', 'dark');
+    } catch (e) {}
+  })();
+  window.renderMath = function () {
+    if (!window.renderMathInElement) return;
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: '\\[', right: '\\]', display: true },
+        { left: '\\(', right: '\\)', display: false }
+      ],
+      throwOnError: false
+    });
+    document.documentElement.classList.add('katex-ok');
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" crossorigin="anonymous" onload="renderMath()"></script>
+<style>

@@ -1,0 +1,110 @@
+<!-- ======================= DEGRAU 0 ======================= -->
+<section class="degrau wrap" id="d0" aria-labelledby="d0-tit">
+  <div class="deg-cab">
+    <span class="deg-num" aria-hidden="true">0</span>
+    <h2 id="d0-tit">Aquecimento</h2>
+    <span class="deg-meta">10 min · uma pergunta para guardar e seis para checar a base</span>
+  </div>
+
+  <h3>Pesar a carga de um planeta com um número só</h3>
+  <div class="lado">
+    <div>
+      <p>No chão, em dia de tempo bom, o ar tem um campo elétrico de uns <b>150 N/C apontando para baixo</b>, para o chão (você viu isso no Problema 81 do Cap. 22). Em quase todo o planeta ele tem esse mesmo valor.</p>
+      <p>A Terra tem raio de 6 370 km. Só com esses dois números, sem medir mais nada, dá para descobrir a <b>carga total</b> da Terra?</p>
+    </div>
+    <figure class="fig">
+      <svg viewBox="0 0 300 260" role="img" aria-label="A Terra como um círculo azul-esverdeado. Setas âmbar curtas, em toda a volta, apontam para dentro, para a superfície: o campo de 150 N/C para baixo. Um círculo tracejado verde, um pouco maior que a Terra, é uma superfície imaginária em volta do planeta.">
+        <circle cx="150" cy="130" r="72" style="fill:#3f8f86;fill-opacity:.35;stroke:var(--tinta);stroke-width:1.5"/>
+        <circle cx="150" cy="130" r="98" class="gauss-l"/>
+        <line class="ve" x1="150" y1="14" x2="150" y2="48"/><line class="ve" x1="150" y1="246" x2="150" y2="212"/>
+        <line class="ve" x1="34" y1="130" x2="68" y2="130"/><line class="ve" x1="266" y1="130" x2="232" y2="130"/>
+        <line class="ve" x1="68" y1="48" x2="92" y2="72"/><line class="ve" x1="232" y1="48" x2="208" y2="72"/>
+        <line class="ve" x1="68" y1="212" x2="92" y2="188"/><line class="ve" x1="232" y1="212" x2="208" y2="188"/>
+        <text x="158" y="30" class="t-e t-s">E ≈ 150 N/C</text>
+        <text x="150" y="134" style="text-anchor:middle">Terra</text>
+        <text x="150" y="152" class="t-2" style="text-anchor:middle">R = 6 370 km</text>
+        <text x="236" y="238" class="t-g t-s">superfície</text><text x="236" y="252" class="t-g t-s">imaginária</text>
+      </svg>
+      <figcaption>Figura 0-1. O campo de "tempo bom" aponta para o chão em toda a volta da Terra.</figcaption>
+    </figure>
+  </div>
+
+  <div class="quiz" id="gancho" data-tipo="palpite">
+    <p class="enun"><b>Seu palpite</b> (não vale nota; a resposta aparece no Degrau 3):</p>
+    <div class="alts">
+      <button class="alt" type="button">Não: precisaria medir o campo dentro da Terra, ponto por ponto.</button>
+      <button class="alt" type="button">Sim: cerca de −1 C. A Terra é quase neutra.</button>
+      <button class="alt" type="button">Sim: cerca de −700 mil coulombs.</button>
+      <button class="alt" type="button">Não: a Terra é neutra; esse campo vem das nuvens.</button>
+    </div>
+  </div>
+
+  <h3>Teste rápido da base</h3>
+  <p>Seis perguntas, uma por ferramenta que o capítulo usa. Errou? Abre uma mini-revisão logo abaixo.</p>
+
+  <div class="quiz" id="pre1" data-conf="1">
+    <p class="enun"><b>1. Prefixos.</b> O Problema 53 fala em 7,78 fC e 14,1 pC/m³. Quanto é 1 fC (femtocoulomb) em coulombs?</p>
+    <div class="alts">
+      <button class="alt" type="button" data-fb="Esse é o pico (p = 10⁻¹²). O femto é mil vezes menor.">\(10^{-12}\) C</button>
+      <button class="alt" type="button" data-ok="1" data-fb="Isso: f (femto) = 10⁻¹⁵.">\(10^{-15}\) C</button>
+      <button class="alt" type="button" data-fb="Esse é o nano (n = 10⁻⁹).">\(10^{-9}\) C</button>
+      <button class="alt" type="button" data-fb="Esse é o micro (µ = 10⁻⁶).">\(10^{-6}\) C</button>
+    </div>
+    <div class="mini" data-oculto data-se="erro"><b>Mini-revisão.</b> Cada prefixo divide o anterior por mil: mili (m) 10⁻³, micro (µ) 10⁻⁶, nano (n) 10⁻⁹, pico (p) 10⁻¹², femto (f) 10⁻¹⁵. Valem para qualquer unidade: 1 mN/C = 10⁻³ N/C; 1 nC/m³ = 10⁻⁹ C/m³.</div>
+  </div>
+
+  <div class="quiz" id="pre2" data-conf="1">
+    <p class="enun"><b>2. Produto escalar.</b> Dois vetores de módulos 5 e 2 fazem um ângulo de 60° entre si. O produto escalar deles vale:</p>
+    <div class="alts">
+      <button class="alt" type="button" data-fb="10 seria se fossem paralelos (cos 0° = 1).">10</button>
+      <button class="alt" type="button" data-fb="8,66 = 10 × sen 60°. O produto escalar usa o cosseno.">8,66</button>
+      <button class="alt" type="button" data-ok="1" data-fb="Isso: 5 × 2 × cos 60° = 10 × 0,5 = 5.">5</button>
+      <button class="alt" type="button" data-fb="Zero só se fossem perpendiculares (cos 90° = 0).">0</button>
+    </div>
+    <div class="mini" data-oculto data-se="erro"><b>Mini-revisão.</b> \(\vec A\cdot\vec B = AB\cos\theta\), com θ o ângulo entre os dois vetores. Ele mede "quanto de um vetor está na direção do outro". Em componentes: \(\vec A\cdot\vec B = A_xB_x + A_yB_y + A_zB_z\). Paralelos: AB; perpendiculares: 0; opostos: −AB.</div>
+  </div>
+
+  <div class="quiz" id="pre3" data-conf="1">
+    <p class="enun"><b>3. Áreas.</b> A área de uma esfera de raio r e a área <b>lateral</b> (só a parede, sem as tampas) de um cilindro de raio r e altura h são:</p>
+    <div class="alts">
+      <button class="alt" type="button" data-ok="1" data-fb="Isso. Esfera: 4πr². Parede do cilindro: desenrolada, vira um retângulo de lados 2πr (a circunferência) e h.">\(4\pi r^2\) e \(2\pi r h\)</button>
+      <button class="alt" type="button" data-fb="πr² é a área de um círculo (uma tampa do cilindro), não a da esfera.">\(\pi r^2\) e \(2\pi r h\)</button>
+      <button class="alt" type="button" data-fb="Esses são os volumes da esfera e do cilindro, não as áreas.">\(\tfrac43\pi r^3\) e \(\pi r^2 h\)</button>
+      <button class="alt" type="button" data-fb="A esfera está certa, mas πr²h é o volume do cilindro. A parede é 2πr × h.">\(4\pi r^2\) e \(\pi r^2 h\)</button>
+    </div>
+    <div class="mini" data-oculto data-se="erro"><b>Mini-revisão.</b> Esfera: área \(4\pi r^2\), volume \(\tfrac43\pi r^3\). Cilindro: parede \(2\pi r h\) (corte a lata e abra: um retângulo de 2πr por h), cada tampa \(\pi r^2\), volume \(\pi r^2 h\). Uma casca esférica entre os raios a e b tem volume \(\tfrac43\pi(b^3 - a^3)\): a esfera grande menos o buraco.</div>
+  </div>
+
+  <div class="quiz" id="pre4" data-conf="1">
+    <p class="enun"><b>4. Campo de uma carga (Cap. 22).</b> A 2 cm de uma partícula carregada, o campo vale 800 N/C. A 4 cm, ele vale:</p>
+    <div class="alts">
+      <button class="alt" type="button" data-fb="Seria assim se o campo caísse com 1/r. Ele cai com 1/r².">400 N/C</button>
+      <button class="alt" type="button" data-fb="Afastar diminui o campo, não aumenta.">3 200 N/C</button>
+      <button class="alt" type="button" data-fb="O campo de uma carga pontual não é constante: cai com a distância.">800 N/C</button>
+      <button class="alt" type="button" data-ok="1" data-fb="Isso: o dobro da distância, r² quatro vezes maior, campo quatro vezes menor.">200 N/C</button>
+    </div>
+    <div class="mini" data-oculto data-se="erro"><b>Mini-revisão.</b> \(E = k\dfrac{|q|}{r^2} = \dfrac{1}{4\pi\varepsilon_0}\dfrac{|q|}{r^2}\), com \(k = 8{,}99\times10^9\) N·m²/C² e \(\varepsilon_0 = 8{,}85\times10^{-12}\) C²/(N·m²). Neste capítulo você vai usar muito a forma com ε₀. Dobrar r divide E por 4.</div>
+  </div>
+
+  <div class="quiz" id="pre5" data-conf="1">
+    <p class="enun"><b>5. Bolinha no fio (Cap. 21).</b> Uma bolinha de peso mg está parada, pendurada num fio que faz um ângulo θ com a vertical, empurrada por uma força horizontal F. Então:</p>
+    <div class="alts">
+      <button class="alt" type="button" data-fb="Esse é o resultado se você igualar F à componente horizontal de mg. Escreva as duas equações da tração.">\(F = mg\sin\theta\)</button>
+      <button class="alt" type="button" data-fb="Com θ = 0 (fio vertical) isso daria F = mg, mas o fio vertical não precisa de força horizontal nenhuma.">\(F = mg\cos\theta\)</button>
+      <button class="alt" type="button" data-ok="1" data-fb="Isso: T cos θ = mg e T sen θ = F; dividindo, tan θ = F/(mg).">\(F = mg\tan\theta\)</button>
+      <button class="alt" type="button" data-fb="Invertido: com θ pequeno (quase vertical) isso daria uma força enorme. Deveria dar quase zero.">\(F = mg/\tan\theta\)</button>
+    </div>
+    <div class="mini" data-oculto data-se="erro"><b>Mini-revisão.</b> Três forças: peso (para baixo), F (horizontal) e a tração T (ao longo do fio). Parada → soma zero. Vertical: \(T\cos\theta = mg\). Horizontal: \(T\sin\theta = F\). Dividindo uma pela outra, T some: \(\tan\theta = F/(mg)\). Confira com θ = 0: F = 0. Faz sentido.</div>
+  </div>
+
+  <div class="quiz" id="pre6" data-conf="1">
+    <p class="enun"><b>6. Integral de potência.</b> Quanto vale \(\displaystyle\int_0^{R} r^3\,dr\)?</p>
+    <div class="alts">
+      <button class="alt" type="button" data-fb="Isso é a derivada de r³ avaliada em R. Aqui é para integrar.">\(3R^2\)</button>
+      <button class="alt" type="button" data-ok="1" data-fb="Isso: a primitiva de r³ é r⁴/4; avaliada de 0 a R dá R⁴/4.">\(\dfrac{R^4}{4}\)</button>
+      <button class="alt" type="button" data-fb="Essa é a integral de r², não de r³.">\(\dfrac{R^3}{3}\)</button>
+      <button class="alt" type="button" data-fb="Faltou dividir pelo novo expoente (4).">\(R^4\)</button>
+    </div>
+    <div class="mini" data-oculto data-se="erro"><b>Mini-revisão.</b> \(\int r^n\,dr = \dfrac{r^{n+1}}{n+1}\) (para n ≠ −1). Depois, "valor em cima menos valor embaixo". Com n = 3: \(\left[\dfrac{r^4}{4}\right]_0^R = \dfrac{R^4}{4}\). No Degrau 4 você vai integrar \(r^3\) e \(r^4\) assim.</div>
+  </div>
+</section>
