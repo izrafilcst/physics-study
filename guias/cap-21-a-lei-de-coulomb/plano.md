@@ -142,3 +142,35 @@ Nenhuma figura precisou do selo "⚠ reconstrução aproximada": todas foram con
    - Layout: a 1280 px, sem rolagem lateral. A 390 px havia rolagem lateral de 48 px (equação longa dentro da grade de duas colunas); corrigido com `min-width: 0`, agora sem rolagem. Os títulos do mapa estouravam as caixas e os botões de ajuda quebravam em 3 linhas no celular; ambos corrigidos.
    - Tema escuro e impressão capturados.
    - Capturas em `rodada-1/telas/` (`desktop-*.png`, `celular-*.png`, `escuro-*.png`, `impressao-topo.png`), com o altímetro fixo desligado só durante a captura.
+
+---
+
+## 8. Mudanças de estrutura na v2 (depois da rodada de alunos)
+
+O antigo Degrau 3 ("força elétrica na mecânica") virou dois, porque três alunos o acharam denso e porque a geometria do fio não era ensinada:
+
+| Degrau (v2) | Objetivo | Desbloqueia | Tempo |
+|---|---|---|---|
+| 0 — Aquecimento | gancho e pré-requisitos (agora com a regra do quociente) | — | 10 min |
+| 1 — Duas cargas | módulo e sentido | (base) | 15 min |
+| 2 — Cargas na reta | superposição e força nula | P7 | 15 min |
+| 3 — Centrípeta | Coulomb como força centrípeta | P73 | 10 min |
+| 4 — Fio e gangorra | ΣF = 0 com geometria do fio, ângulo pequeno, Στ = 0 | P42, P50 | 20 min |
+| 5 — Cargas no plano | componentes e simetria | P10 | 20 min |
+| 6 — Força que varia | F(x), limites, máximo (quociente + cadeia) | P23 | 20 min |
+| 7 — Carga espalhada | densidade e integral (+ λ, σ, ρ) | P21 | 15 min |
+
+Total: cerca de 2 h nos degraus. Ordem das questões mantida: P7, P73, P42, P50, P10, P23, P21. As decisões item a item estão em `rodada-1/consolidacao.md`.
+
+## 9. Verificação da v2
+
+1. **`calculos.py`**: roda sem erro e sem divergência. Ganhou a seção "RODADA 1" (respostas do Professor: sela do Ex. 21.02, forças cruzadas do P50, voltas de Bohr, x exato do P42, lacuna nova de derivada) e a seção dos Degraus 3–4 novos (MCU do próton: 5,26 × 10⁴ m/s; lacunas do fio, 1,18 × 10⁻³ N, e da gangorra, 1,12 N; checkpoint de 1,15°).
+2. **Cobertura:** 7 questões, 35 blocos de ajuda com `data-questao`/`data-nivel`, figura em todas; 8 degraus.
+3. **Navegador** (Playwright/Chromium):
+   - Console: nenhum erro ou aviso. KaTeX: 1337 fórmulas, 0 erros.
+   - Ajudas: as 35 começam fechadas; só a Dica 1 habilitada. Os 6 widgets começam travados, com tela e leitura escondidas; a previsão os libera.
+   - Leitor de números: aceita "−2√2", "−1/(2√2)", "3,77×10⁻⁸", "3.8e-8 C", "2,19 x 10^6 m/s", "0"; recusa "−4 abc" com mensagem. A lacuna do P13 aceita o "−14" do gabarito e mostra o gabarito só depois de acertar.
+   - Escolhas das questões: feedback por alternativa. Concluir o checkpoint do Degrau 1 pinta o altímetro e o degrau do mapa ("2 de 15").
+   - Alternativa correta redistribuída: com 4 opções, posições a/b/c/d = 10/9/9/9; com 3, 2/1/2.
+   - Layout sem rolagem lateral a 1280 px e a 390 px. Títulos do mapa cabem nas caixas (medido com getBBox).
+   - Capturas em `rodada-2/telas/` (desktop, celular, escuro, impressão).

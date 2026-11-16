@@ -375,6 +375,28 @@ def forca_xy(px, py):
 item("v2 Ex. 21.02: Fy em (2L; 0,01L) — negativo = restauradora", forca_xy(2.0, 0.01)[1], "", s=3)
 item("v2 Ex. 21.02: Fx em (2,01L; 0) — positivo = foge", forca_xy(2.01, 0.0)[0], "", s=3)
 
+secao("v2 — DEGRAUS 3 (centrípeta) e 4 (fio e gangorra) novos")
+# D3: lacuna nova — próton em MCU em torno de carga fixa −2e, r = 1,0e-10 m
+m_pr = 1.67e-27
+v_lac = math.sqrt(k * 2 * e * e / (m_pr * 1.0e-10))
+item("v2 D3 lacuna: v do próton em torno de −2e a 1,0e-10 m", v_lac, "m/s")
+item("v2 D3 checkpoint: fator em v se a carga central dobra", math.sqrt(2), "", s=3)
+# D4: exemplo do pêndulo com fio de 30 cm — afastamento da vertical
+th_ex = math.atan(F_b / P_b)
+item("v2 D4 ex.: afastamento da vertical L·sen θ (L = 30 cm)", 0.30 * math.sin(th_ex) * 100, "cm")
+# D4: lacuna do pêndulo — m = 3,0 g, L = 50 cm, afastamento 2,0 cm
+s_th = 0.020 / 0.50
+item("v2 D4 lacuna: sen θ = 2,0/50", s_th, "", s=3)
+F_lac = 3.0e-3 * g * math.tan(math.asin(s_th))
+item("v2 D4 lacuna: F_e = mg tan θ (exato)", F_lac, "N")
+item("v2 D4 lacuna: F_e = mg sen θ (aproximado)", 3.0e-3 * g * s_th, "N")
+# D4: lacuna da gangorra com o peso a 0,40 m
+item("v2 D4 lacuna: peso a 0,40 m do apoio", F_t * 0.50 / 0.40, "N")
+# D4 checkpoint: bolinhas em fios de 1,0 m afastadas 4,0 cm
+item("v2 D4 checkpoint: ângulo de cada fio (x = 4,0 cm, L = 1,0 m)", math.degrees(math.asin(0.02)), "graus")
+item("v2 D4 distrator: usando x inteiro (sen θ = 0,04)", math.degrees(math.asin(0.04)), "graus")
+item("v2 D4 'x ∝ q^(2/3)': fator para q ×2", 2 ** (2 / 3), "")
+
 secao("RESUMO")
 if divergencias:
     print("  Divergências > 2 % com o gabarito:")
