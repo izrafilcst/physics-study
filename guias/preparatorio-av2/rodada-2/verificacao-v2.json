@@ -1,0 +1,62 @@
+{
+  "erros": [],
+  "katex": true,
+  "katexErros": [],
+  "formulasRenderizadas": 398,
+  "niveisAbertosNoInicio": 0,
+  "totalNiveis": 151,
+  "botoesLiberadosNoInicio": true,
+  "depoisDoNivel1": "EEDDD",
+  "nivel1Visivel": true,
+  "nivel2Visivel": false,
+  "cartaoBotoes": 3,
+  "widgetsTravados": 3,
+  "widgetsTravadosDepois": 0,
+  "leituras": {
+    "w4_inicial": "Densidade ρ ∝ r². Em r = 0,75R (dentro): a lata envolve 31,6 % da carga por metro, e E vale 42,2 % de E(R). Dentro, E cresce como r³.",
+    "w4_fora": "Densidade ρ ∝ r². Em r = 1,25R (fora): a lata envolve 100 % da carga, e E = E(R)·R/r = 80,0 % de E(R). Fora, todas as densidades dão 1/r, como um fio.",
+    "w4_uniforme": "Densidade uniforme. Em r = 0,50R (dentro): a lata envolve 25,0 % da carga por metro, e E vale 50,0 % de E(R). Dentro, E cresce como r.",
+    "w5_PA6": "Elétron: v = 2,84 × 10⁷ m/s; r = mv/(|q|B) = 13,7 cm; período T = 30,3 ns. Meia volta cabe no quadro. Carga negativa: curva para baixo.",
+    "w5_proton": "Próton: v = 6,62 × 10⁵ m/s; r = mv/(|q|B) = 5,86 m; período T = 55,6 μs. A meia volta não cabe no quadro: só se vê um arco. Carga positiva: curva para cima.",
+    "w5_V_dobrada": "Elétron: v = 4,01 × 10⁷ m/s; r = mv/(|q|B) = 19,4 cm; período T = 30,3 ns. A meia volta não cabe no quadro: só se vê um arco. Carga negativa: curva para baixo.",
+    "w7_P30_27": "a = 2,0 cm, t = 2,5 s: Φ = 2,0t²a³ = 100 μWb; fem = dΦ/dt = 4,0ta³ = 80,0 μV. Sentido: o fluxo ⊙ aumenta, a corrente induzida é horária. (Os números do Problema 30.27.)",
+    "w7_PA10": "a = 3,0 cm, t = 10,0 s: Φ = 2,0t²a³ = 5,40 mWb; fem = dΦ/dt = 4,0ta³ = 1,08 mV. Sentido: o fluxo ⊙ aumenta, a corrente induzida é horária. (Os números da PA10.)"
+  },
+  "conferencia": {
+    "pa1_ok": "Certo. É a resposta considerada certa na prova de 2024.2 (1,3 × 10⁷ N/C).",
+    "pa5_dentro": "Ainda não. Esse é o campo em r = 3,0 cm, dentro do cilindro (fórmula de dentro). O ponto pedido, 5,0 cm, está fora: a lata envolve o cilindro todo, então a integral vai até R = 4,0 cm.",
+    "pa5_ok": "Certo. É a resposta considerada certa na prova de 2024.1 (3,6 N/C).",
+    "pa6_semMeio": "Ainda não. Faltou o 2 de ½mv²: v = √(2eV/m), não √(eV/m).",
+    "p28_5_sinal": "Ainda não. O módulo está certo. E o sinal?",
+    "p28_5_ok": "Certo. Gabarito do livro: −2,0 T.",
+    "pa10_livro": "Ainda não. Esse é o resultado do livro (lado 2,0 cm, t = 2,5 s). Na prova os números mudaram: refaça a conta.",
+    "pa10_ok": "Certo. É a resposta considerada certa na prova de 2024.1.",
+    "pa9_ok": "Certo. É a resposta considerada certa na prova de 2024.1.",
+    "pa4_extra_zero": "Certo.",
+    "lac2_2": "Certo. q = πCR⁴ = π(3,0 × 10⁻⁶)(0,10)⁴ = 9,4 × 10⁻¹⁰ C.",
+    "s4": "Certo."
+  },
+  "vereditoD1": "Você acertou 3 de 3 de primeira. Pode subir!",
+  "calibracao": "Respostas com confiança marcada: 11. Com \"certeza\" (3): 5, das quais 2 erradas de primeira. PA5 · Prova 2024.1, Questão 1 (PA5-a) Revisão intercalada (rev1) Estas são as mais valiosas para revisar: você achava que sabia.",
+  "progresso": "Progresso: 1 de 7 degraus, 4 de 17 questões",
+  "palpiteNaPA9": "Seu palpite no aquecimento: “quadruplicar”. Compare com a conta abaixo.",
+  "relogio": "1:59:59",
+  "relogioZerado": "2:00:00",
+  "persistiuAposReload": "Progresso: 1 de 7 degraus, 4 de 17 questões",
+  "largura_390": "390/390",
+  "largos_390": [
+    "path.[object SVGAnimatedString]#",
+    "path.[object SVGAnimatedString]#",
+    "path.[object SVGAnimatedString]#",
+    "path.[object SVGAnimatedString]#",
+    "path.[object SVGAnimatedString]#"
+  ],
+  "largura_1280": "1280/1280",
+  "largos_1280": [
+    "path.[object SVGAnimatedString]#",
+    "path.[object SVGAnimatedString]#",
+    "path.[object SVGAnimatedString]#",
+    "path.[object SVGAnimatedString]#",
+    "path.[object SVGAnimatedString]#"
+  ]
+}

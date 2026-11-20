@@ -1,0 +1,9 @@
+== largura 1280 (scrollWidth 1280)
+rótulos fora do viewBox:
+  nenhum
+KaTeX com erro: []
+elementos estourando a largura:
+  nenhum
+== largura 390 (scrollWidth 390)
+elementos estourando a largura:
+  nenhum

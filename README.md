@@ -8,6 +8,7 @@ Guias de estudo interativos do *Fundamentos de Física*, vol. 3 (Halliday, Resni
 |---|---|---|---|
 | 21. A Lei de Coulomb | [`guias/cap-21-a-lei-de-coulomb/guia-v2.html`](guias/cap-21-a-lei-de-coulomb/guia-v2.html) | Problemas 7, 10, 21, 23, 42, 50 e 73 | pronto (versão final) |
 | 22. Campos Elétricos | [`guias/cap-22-campos-eletricos/guia-v1.html`](guias/cap-22-campos-eletricos/guia-v1.html) | Problemas 8, 9, 15, 26, 29, 31, 38 e 81 | em andamento (só a v1) |
+| 23. Lei de Gauss | [`guias/cap-23-lei-de-gauss/guia-v2.html`](guias/cap-23-lei-de-gauss/guia-v2.html) | Problemas 5, 24, 29, 39, 52, 53 e 76 | pronto (versão final) |
 
 Em cada capítulo, abra a **maior versão** que existir (`guia-v2.html` é a final; a `guia-v1.html` é a de antes da revisão).
 

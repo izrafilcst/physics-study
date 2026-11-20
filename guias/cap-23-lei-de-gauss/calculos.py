@@ -323,6 +323,53 @@ mostra("Ficha: σ do satélite (P19 gabarito 4,5e-7)", 2.4e-6 / (4 * math.pi * 0
 mostra("Teste 4: E nos pontos 3 e 4 / E no ponto 2 = (2d/d)²", (2 / 1)**2)
 
 # ---------------------------------------------------------------------------
+titulo("V2 — correções e contas das 'Dúvidas da turma'")
+mostra("lac1-2 (erro comum): aresta em vez de área, -2,00 × 1,40", -2.00 * 1.40, unidade="N·m²/C")
+mostra("P5 com e = 1,60e-19 (o livro): e/(6ε0)", 1.60e-19 / (6 * eps0), 3.01e-9, "N·m²/C")
+# Ângulo sólido de um quadrado de lado d visto do eixo a uma distância h: Ω = 4 asin(d²/(d² + 4h²))
+def fracao_quadrado(h_sobre_d):
+    return 4 * math.asin(1 / (1 + 4 * h_sobre_d**2)) / (4 * math.pi)
+mostra("Dúvida P5: fração do fluxo com h = d/2 (deve ser 1/6)", fracao_quadrado(0.5), 1 / 6)
+f4 = mostra("Dúvida P5: fração do fluxo com h = d/4", fracao_quadrado(0.25))
+mostra("Dúvida P5: fluxo com h = d/4", f4 * e / eps0, unidade="N·m²/C")
+mostra("Dúvida P5: fração com h → 0 (metade)", fracao_quadrado(1e-9), 0.5)
+# Terra vista de uma gaussiana a 300 m (Problema 13: 60 N/C a 300 m, 100 N/C a 200 m)
+mostra("Dúvida Terra: q_env com E = 100 N/C a 200 m", -eps0 * 100 * 4 * math.pi * (R_TERRA + 200)**2, unidade="C")
+mostra("Dúvida Terra: q_env com E = 60 N/C a 300 m", -eps0 * 60 * 4 * math.pi * (R_TERRA + 300)**2, unidade="C")
+mostra("Dúvida Terra: carga positiva no ar entre 0 e 300 m (com 150 N/C no chão)", -eps0 * 60 * 4 * math.pi * (R_TERRA + 300)**2 - Q_terra, unidade="C")
+mostra("Dúvida 300 V: E × 2 m no campo de tempo bom", 150 * 2.0, unidade="V")
+mostra("Aquecimento (b): campo no chão se a Terra tivesse -1 C", k * 1.0 / R_TERRA**2, unidade="N/C")
+# Placa finita: disco de raio Rd, E/E∞ = 1 - z/sqrt(z² + Rd²)
+Rd = math.sqrt(0.10**2 / math.pi)
+mostra("Dúvida placa: raio do disco com a área de um quadrado de 10 cm", Rd, unidade="m")
+mostra("Dúvida placa: E/E∞ a 1 cm desse disco", 1 - 0.01 / math.sqrt(0.01**2 + Rd**2))
+mostra("Dúvida placa: z/R para erro de 10 % (1 - z/√(z²+R²) = 0,9)", 0.1 / math.sqrt(1 - 0.01))
+# Placa condutora no P39: força de imagem k q²/(2d)² comparada com qE
+Fe39 = m39 * g * math.tan(th)
+for dd in (0.01, 0.10):
+    mostra(f"Dúvida P39 condutora: força de imagem com a esfera a {dd*100:.0f} cm", k * q39**2 / (2 * dd)**2, unidade="N")
+mostra("Dúvida P39 condutora: força elétrica do problema qE", Fe39, unidade="N")
+mostra("Dúvida P39 condutora: distância em que imagem = qE", math.sqrt(k * q39**2 / (4 * Fe39)), unidade="m")
+# Casca do P29 aterrada: externa vai a zero; interna continua -Q1
+mostra("Dúvida P29 aterrada: carga que vai para a terra (externa antiga)", Q1 + Q2, unidade="C")
+# Ficha D1: folha A4 no campo de tempo bom
+mostra("Ficha D1: Φ numa folha A4 (0,0624 m²) deitada, E = 150 N/C", 150 * 0.210 * 0.297, unidade="N·m²/C")
+# Régua de campos e cargas
+mostra("Régua: núcleo do H sobre o elétron k e / a0²", k * e / 5.29e-11**2, unidade="N/C")
+mostra("Régua: cúpula de Van de Graaff R = 20 cm no limite do ar, q = 4πε0R²·3e6", 4 * math.pi * eps0 * 0.20**2 * E_RUPTURA, unidade="C")
+mostra("Mulher / fio Geiger: razão de λ", (Q6 / L6) / (3.6e-9 / 0.16))
+# Revisão intercalada numérica
+mostra("rev-8: casca fina de 10 cm com +4,0 nC, E a 20 cm", k * 4.0e-9 / 0.20**2, unidade="N/C")
+mostra("rev-8 (erro): usou r = 10 cm", k * 4.0e-9 / 0.10**2, unidade="N/C")
+mostra("rev-8 (erro): sem o quadrado", k * 4.0e-9 / 0.20, unidade="N/C")
+mostra("rev-9: fio com λ = 3,0 nC/m, E a 4,0 cm", E_linha(3.0e-9, 0.040), unidade="N/C")
+mostra("rev-9 (erro): kλ/r² (fórmula de ponto)", k * 3.0e-9 / 0.040**2, unidade="N/C")
+mostra("rev-9 (erro): sem o 2 (λ/(4πε0 r))", k * 3.0e-9 / 0.040, unidade="N/C")
+mostra("P52 (erro comum f): fórmula de dentro em 3b", rho52 * ((3 * b52)**3 - a52**3) / (3 * eps0 * (3 * b52)**2), unidade="N/C")
+mostra("P29 (erro comum a): k|Q1+Q2|/r² (carga pontual)", k * abs(Q1 + Q2) / (2 * R2)**2, unidade="N/C")
+mostra("Duas placas do D7 (Ex. 23.07): entre e fora", Ep + En, unidade="N/C")
+
+# ---------------------------------------------------------------------------
 titulo("RESUMO")
 print(f"{len(LINHAS)} linhas; divergências com o gabarito: {len(DIVERGENCIAS)}")
 for d in DIVERGENCIAS:
