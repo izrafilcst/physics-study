@@ -445,6 +445,29 @@ svg .orbita { stroke: var(--res); stroke-width: 2; fill: none; stroke-dasharray:
 .grupo-cap { font-family: var(--f-ui); font-size: 1.05rem; margin: 2rem 0 .3rem; border-bottom: 2px solid var(--tinta); padding-bottom: .2rem; }
 .tag-prova { font-family: var(--f-ui); font-size: .78rem; font-weight: 700; background: var(--erro-2); color: var(--erro); border-radius: 4px; padding: .05rem .4rem; }
 @media print { .folha { background-image: none; } .relogio, #btn-relogio { display: none; } }
+
+/* ---------- figuras dos cartões (vindas dos guias dos caps. 21–23) ---------- */
+.cartao .enunciado-cont { margin: .4rem 0; font-size: .98rem; }
+.cartao .fig-livro { margin: .8rem 0 1rem; }
+.cartao .fig figcaption { font-size: .85rem; color: var(--tinta-2); margin-top: .4rem; line-height: 1.45; text-align: center; }
+.cartao .nivel .fig { margin: .8rem 0; }
+.cartao .fig.larga { display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-end; gap: .6rem; }
+.cartao .fig.larga > svg { margin: 0; flex: 1 1 18rem; max-width: 24rem; }
+.cartao .fig.larga > figcaption { flex-basis: 100%; }
+.cartao .fig-res > svg { max-width: 20rem; }
+svg .c21-cota { stroke: var(--tinta-2); stroke-width: 1; fill: none; }
+svg .c21-eixo { stroke: var(--tinta); stroke-width: 1.3; fill: none; }
+svg .c21-forca { stroke: var(--res); stroke-width: 3; fill: none; }
+svg .c21-guia { stroke: var(--tinta-2); stroke-width: 1; stroke-dasharray: 4 4; fill: none; }
+svg .c21-fio { stroke: var(--tinta); stroke-width: 1.5; fill: none; }
+svg .c21-solido { fill: var(--grade); stroke: var(--tinta-2); stroke-width: 1; }
+svg .c21-neu { fill: var(--tinta-2); }
+svg .c21-pos { fill: var(--pos); }
+svg .c21-neg { fill: var(--neg); }
+svg .c21-serif { font-family: "KaTeX_Main", "Latin Modern Roman", Georgia, "Times New Roman", serif; }
+svg .c21-t-forca { fill: var(--res); font-weight: 650; }
+svg .c21-t-muted { fill: var(--tinta-2); }
+svg .c21-carga-t { fill: var(--papel-3); font-weight: 700; font-size: 13px; text-anchor: middle; dominant-baseline: central; }
 </style>
 </head>
 <body>
@@ -460,6 +483,11 @@ svg .orbita { stroke: var(--res); stroke-width: 2; fill: none; stroke-dasharray:
     <marker id="m-g" viewBox="0 0 10 10" refX="8.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--gauss)"/></marker>
     <marker id="m-b" viewBox="0 0 10 10" refX="8.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--mag)"/></marker>
     <marker id="m-c" viewBox="0 0 10 10" refX="5" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10" style="fill:none;stroke:var(--tinta-2);stroke-width:1.5"/></marker>
+    <marker id="ah-forca" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--res)"/></marker>
+    <marker id="ah-ink" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--tinta)"/></marker>
+    <marker id="ah-accent" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--res)"/></marker>
+    <marker id="ah-cota" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 z" style="fill:var(--tinta-2)"/></marker>
+    <marker id="ah-eixo" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 z" style="fill:var(--tinta)"/></marker>
     <g id="qp"><circle r="11" style="fill:var(--pos);stroke:var(--tinta);stroke-width:1"/><text y="5" style="fill:var(--texto-q);font-weight:800;font-size:15px;text-anchor:middle;font-family:var(--f-ui)">+</text></g>
     <g id="qn"><circle r="11" style="fill:var(--neg);stroke:var(--tinta);stroke-width:1"/><text y="5" style="fill:var(--texto-q);font-weight:800;font-size:15px;text-anchor:middle;font-family:var(--f-ui)">−</text></g>
     <g id="pt"><circle r="3.5" style="fill:var(--tinta)"/></g>
@@ -2734,18 +2762,33 @@ svg .orbita { stroke: var(--res); stroke-width: 2; fill: none; stroke-dasharray:
 <!-- ======================= CARTÕES 21–23 ======================= -->
 <section class="wrap" id="cartoes" aria-labelledby="cartoes-tit" style="margin-top:3rem">
   <h2 id="cartoes-tit">Cartões da lista: caps. 21, 22 e 23</h2>
-  <p>Você já resolveu estes 22 problemas nos guias anteriores. Aqui cada um tem o enunciado, duas dicas e a resposta; a resolução completa (com figura) está no guia antigo, no link do cartão. Os marcados com <span class="tag-prova">parece prova</span> usam o mesmo método de uma questão de prova antiga: priorize esses.</p>
-  <p class="pequeno">Os problemas com figura mostram só o texto aqui: abra o guia antigo para ver a figura.</p>
+  <p>Você já resolveu estes 22 problemas nos guias anteriores. Aqui cada um tem o enunciado, duas dicas e a resposta; a resolução completa está no guia antigo, no link do cartão. Os marcados com <span class="tag-prova">parece prova</span> usam o mesmo método de uma questão de prova antiga: priorize esses.</p>
+  <p class="pequeno">O enunciado de cada cartão é o do livro, com a figura do livro reconstruída a partir do PDF. Desenhos de apoio (diagrama de forças, superfícies gaussianas) ficam na Dica 1, e os gráficos pedidos no problema ficam na Resposta.</p>
 
   <h3 class="grupo-cap">Cap. 21 (Degrau 1, e o 21.21 no Degrau 2)</h3>
 
   <article class="questao cartao" id="C21-7" aria-labelledby="C21-7-tit">
     <div class="q-cab"><h3 id="C21-7-tit">Problema 21.7</h3><span class="meta">Degrau 1</span></div>
     <div class="q-corpo">
-      <p class="enunciado">Três partículas estão num eixo x, na ordem 1, 2, 3. As partículas 1 e 2 são fixas; a 3 está livre, mas a força eletrostática total sobre ela é zero. Se L₂₃ = L₁₂, qual é a razão q₁/q₂?</p>
+      <p class="enunciado">Na Fig. 21-23, três partículas carregadas estão em um eixo \(x\). As partículas 1 e 2 são mantidas fixas. A partícula 3 está livre para se mover, mas a força eletrostática exercida sobre ela pelas partículas 1 e 2 é zero. Se \(L_{23} = L_{12}\), qual é o valor da razão \(q_1/q_2\)?</p>
+      <figure class="fig fig-livro fig-c21">
+        <svg viewBox="0 0 400 110" role="img" aria-labelledby="c21-7-e0-fq7-t">
+          <title id="c21-7-e0-fq7-t">Figura 21-23: partículas 1, 2 e 3 no eixo x, nessa ordem, com L12 entre 1 e 2 e L23 entre 2 e 3.</title>
+          <line x1="30" y1="72" x2="385" y2="72" class="c21-eixo" marker-end="url(#ah-eixo)"/>
+          <text x="376" y="92" font-size="13" class="c21-serif">x</text>
+          <circle cx="90" cy="72" r="7" class="c21-neu"/><circle cx="200" cy="72" r="7" class="c21-neu"/><circle cx="310" cy="72" r="7" class="c21-neu"/>
+          <text x="90" y="98" font-size="13" text-anchor="middle">1</text><text x="200" y="98" font-size="13" text-anchor="middle">2</text><text x="310" y="98" font-size="13" text-anchor="middle">3</text>
+          <line x1="90" y1="38" x2="200" y2="38" class="c21-cota" marker-start="url(#ah-cota)" marker-end="url(#ah-cota)"/>
+          <line x1="200" y1="38" x2="310" y2="38" class="c21-cota" marker-start="url(#ah-cota)" marker-end="url(#ah-cota)"/>
+          <line x1="90" y1="30" x2="90" y2="62" class="c21-guia"/><line x1="200" y1="30" x2="200" y2="62" class="c21-guia"/><line x1="310" y1="30" x2="310" y2="62" class="c21-guia"/>
+          <text x="145" y="30" font-size="13" text-anchor="middle" class="c21-serif">L₁₂</text>
+          <text x="255" y="30" font-size="13" text-anchor="middle" class="c21-serif">L₂₃</text>
+        </svg>
+        <figcaption><b>Figura 21-23 (reconstruída a partir do PDF do livro).</b> Os sinais das cargas não são dados: descobrir é parte do problema.</figcaption>
+      </figure>
       <div class="ajuda" data-q="C21-7">
         <p class="roteiro">Desenhe as duas forças sobre a partícula 3.</p>
-        <section class="nivel" data-questao="C21-7" data-nivel="1" data-titulo="Dica 1" hidden><p>Degrau 1, "onde o campo pode zerar numa reta": a 3 está fora do par, então os sinais de q₁ e q₂ são opostos.</p></section>
+        <section class="nivel" data-questao="C21-7" data-nivel="1" data-titulo="Dica 1" hidden><p>Degrau 1, "onde o campo pode zerar numa reta": a 3 está fora do par, então os sinais de q₁ e q₂ são opostos.</p><figure class="fig fig-res fig-c21" style="max-width:420px"><svg viewBox="0 0 400 90" role="img" aria-label="Diagrama esperado: sobre a partícula 3, duas setas na mesma reta, de mesmo tamanho e sentidos opostos, uma devida à partícula 1 e outra à 2."><line x1="20" y1="50" x2="385" y2="50" class="c21-guia"/><circle cx="60" cy="50" r="7" class="c21-neu"/><circle cx="190" cy="50" r="7" class="c21-neu"/><circle cx="320" cy="50" r="7" class="c21-neu"/><text x="60" y="78" font-size="13" text-anchor="middle">1</text><text x="190" y="78" font-size="13" text-anchor="middle">2</text><text x="320" y="78" font-size="13" text-anchor="middle">3</text><line x1="328" y1="40" x2="372" y2="40" class="c21-forca" marker-end="url(#ah-forca)"/><line x1="312" y1="60" x2="268" y2="60" class="c21-forca" stroke-dasharray="5 3" marker-end="url(#ah-forca)"/><text x="350" y="30" font-size="12" class="c21-t-forca" text-anchor="middle">de 1 ou de 2?</text><text x="268" y="82" font-size="12" class="c21-t-forca">a outra</text></svg><figcaption>O desenho que você deve ter feito: duas setas iguais e opostas sobre a partícula 3. Qual seta vem de qual partícula depende dos sinais, e é isso que você vai decidir.</figcaption></figure></section>
         <section class="nivel" data-questao="C21-7" data-nivel="2" data-titulo="Dica 2" hidden><p>Iguale os módulos: |q₁|/(2L)² = |q₂|/L². Depois ponha o sinal na razão.</p></section>
         <section class="nivel" data-questao="C21-7" data-nivel="3" data-titulo="Resposta" hidden><p>q₁/q₂ = −4,00 (gabarito). <a class="link-antigo" href="../cap-21-a-lei-de-coulomb/guia-v2.html#p7">Resolução completa no guia do cap. 21</a></p></section>
       </div>
@@ -2755,10 +2798,29 @@ svg .orbita { stroke: var(--res); stroke-width: 2; fill: none; stroke-dasharray:
   <article class="questao cartao" id="C21-10" aria-labelledby="C21-10-tit">
     <div class="q-cab"><h3 id="C21-10-tit">Problema 21.10</h3><span class="meta">Degrau 1</span></div>
     <div class="q-corpo">
-      <p class="enunciado">Quatro partículas formam um quadrado, com q₁ = q₄ = Q e q₂ = q₃ = q. (a) Qual deve ser Q/q (com sinal) para que seja nula a força total sobre as partículas 1 e 4? (b) Existe algum q que zere a força sobre todas as partículas?</p>
+      <p class="enunciado">Na Fig. 21-25, quatro partículas formam um quadrado. As cargas são \(q_1 = q_4 = Q\) e \(q_2 = q_3 = q\).</p>
+      <p class="enunciado-cont">(a) Qual deve ser o valor da razão \(Q/q\) (com sinal) para que seja nula a força eletrostática total a que as partículas 1 e 4 estão submetidas? (b) Existe algum valor de \(q\) para o qual a força eletrostática a que todas as partículas estão submetidas seja nula? Justifique sua resposta.</p>
+      <figure class="fig fig-livro fig-c21">
+        <svg viewBox="0 0 300 280" role="img" aria-labelledby="c21-10-e0-fq10-t">
+          <title id="c21-10-e0-fq10-t">Figura 21-25 com as cargas do Problema 10: Q nos cantos 1 (em cima, à esquerda) e 4 (embaixo, à direita); q nos cantos 2 (em cima, à direita) e 3 (embaixo, à esquerda, na origem).</title>
+          <line x1="70" y1="220" x2="270" y2="220" class="c21-eixo" marker-end="url(#ah-eixo)"/>
+          <line x1="70" y1="230" x2="70" y2="30" class="c21-eixo" marker-end="url(#ah-eixo)"/>
+          <text x="262" y="238" font-size="12" class="c21-serif">x</text><text x="56" y="38" font-size="12" class="c21-serif">y</text>
+          <rect x="70" y="70" width="150" height="150" fill="none" class="c21-guia"/>
+          <circle cx="70" cy="70" r="8" class="c21-neu"/><text x="46" y="64" font-size="13" font-weight="700">1</text><text x="80" y="92" font-size="13" class="c21-serif">Q</text>
+          <circle cx="220" cy="70" r="8" class="c21-neu"/><text x="230" y="64" font-size="13" font-weight="700">2</text><text x="200" y="92" font-size="13" class="c21-serif">q</text>
+          <circle cx="70" cy="220" r="8" class="c21-neu"/><text x="46" y="240" font-size="13" font-weight="700">3</text><text x="80" y="208" font-size="13" class="c21-serif">q</text>
+          <circle cx="220" cy="220" r="8" class="c21-neu"/><text x="230" y="240" font-size="13" font-weight="700">4</text><text x="198" y="208" font-size="13" class="c21-serif">Q</text>
+          <line x1="70" y1="52" x2="220" y2="52" class="c21-cota" marker-start="url(#ah-cota)" marker-end="url(#ah-cota)"/>
+          <text x="145" y="46" font-size="12" class="c21-serif" text-anchor="middle">a</text>
+          <line x1="240" y1="70" x2="240" y2="220" class="c21-cota" marker-start="url(#ah-cota)" marker-end="url(#ah-cota)"/>
+          <text x="248" y="150" font-size="12" class="c21-serif">a</text>
+        </svg>
+        <figcaption><b>Figura 21-25 (reconstruída a partir do PDF do livro),</b> com as cargas deste problema escritas ao lado de cada partícula. Os sinais de \(Q\) e \(q\) não são dados.</figcaption>
+      </figure>
       <div class="ajuda" data-q="C21-10">
         <p class="roteiro">Desenhe as três forças sobre a partícula 1.</p>
-        <section class="nivel" data-questao="C21-10" data-nivel="1" data-titulo="Dica 1" hidden><p>Degrau 1, receita de componentes. A partícula 4 (na diagonal) empurra a 1 para fora; as partículas 2 e 3 precisam puxar para dentro: q tem sinal oposto a Q.</p></section>
+        <section class="nivel" data-questao="C21-10" data-nivel="1" data-titulo="Dica 1" hidden><p>Degrau 1, receita de componentes. A partícula 4 (na diagonal) empurra a 1 para fora; as partículas 2 e 3 precisam puxar para dentro: q tem sinal oposto a Q.</p><figure class="fig fig-res fig-c21" style="max-width:300px"><svg viewBox="0 0 260 230" role="img" aria-label="Diagrama esperado: sobre a partícula 1, no canto de cima à esquerda, a força da partícula 4 aponta para fora do quadrado pela diagonal; as forças das partículas 2 e 3 apontam para dentro, uma para a direita e outra para baixo."><rect x="90" y="70" width="130" height="130" fill="none" class="c21-guia"/><circle cx="90" cy="70" r="8" class="c21-neu"/><text x="74" y="96" font-size="13" font-weight="700">1</text><circle cx="220" cy="70" r="6" class="c21-neu"/><text x="228" y="66" font-size="12">2</text><circle cx="90" cy="200" r="6" class="c21-neu"/><text x="74" y="214" font-size="12">3</text><circle cx="220" cy="200" r="6" class="c21-neu"/><text x="228" y="214" font-size="12">4</text><line x1="84" y1="64" x2="40" y2="20" class="c21-forca" marker-end="url(#ah-forca)"/><text x="10" y="40" font-size="12" class="c21-t-forca">de 4</text><line x1="98" y1="70" x2="150" y2="70" class="c21-forca" marker-end="url(#ah-forca)"/><text x="122" y="60" font-size="12" class="c21-t-forca">de 2</text><line x1="90" y1="78" x2="90" y2="130" class="c21-forca" marker-end="url(#ah-forca)"/><text x="96" y="122" font-size="12" class="c21-t-forca">de 3</text></svg><figcaption>O desenho que você deve ter feito (sem escala). Para as forças de 2 e 3 apontarem para dentro, que sinal \(q\) precisa ter?</figcaption></figure></section>
         <section class="nivel" data-questao="C21-10" data-nivel="2" data-titulo="Dica 2" hidden><p>Componente x na partícula 1: kQ²/(2a²)·cos 45° = k|Qq|/a². Para (b), faça o mesmo na partícula 2 e compare as duas condições.</p></section>
         <section class="nivel" data-questao="C21-10" data-nivel="3" data-titulo="Resposta" hidden><p>(a) Q/q = −2√2 ≈ −2,83; (b) não: a partícula 2 exige Q/q = −1/(2√2). <a class="link-antigo" href="../cap-21-a-lei-de-coulomb/guia-v2.html#p10">Resolução completa no guia do cap. 21</a></p></section>
       </div>
@@ -2768,7 +2830,7 @@ svg .orbita { stroke: var(--res); stroke-width: 2; fill: none; stroke-dasharray:
   <article class="questao cartao" id="C21-21" aria-labelledby="C21-21-tit">
     <div class="q-cab"><h3 id="C21-21-tit">Problema 21.21 <span class="tag-prova">parece prova</span></h3><span class="meta">Degrau 2</span></div>
     <div class="q-corpo">
-      <p class="enunciado">Uma casca esférica isolante, de raio interno 4,0 cm e raio externo 6,0 cm, tem densidade volumétrica de carga ρ = b/r, com r em metros e b = 3,0 μC/m². Qual é a carga total da casca?</p>
+      <p class="enunciado">Uma casca esférica isolante, com um raio interno de 4,0 cm e um raio externo de 6,0 cm, possui uma distribuição de carga não uniforme. A densidade volumétrica de carga \(\rho\), cuja unidade no SI é o coulomb por metro cúbico, é a carga por unidade de volume. No caso dessa casca, \(\rho = b/r\), em que \(r\) é a distância em metros a partir do centro da casca e \(b = 3{,}0\ \mu\text{C/m}^2\). Qual é a carga total da casca?</p>
       <div class="ajuda" data-q="C21-21">
         <p class="roteiro">ρ muda com r: "ρ × volume" não vale.</p>
         <section class="nivel" data-questao="C21-21" data-nivel="1" data-titulo="Dica 1" hidden><p>Degrau 2: casca esférica fina, dq = ρ(r)·4πr² dr. É o mesmo passo da PA5 (lá, com cascas cilíndricas).</p></section>
@@ -2781,7 +2843,22 @@ svg .orbita { stroke: var(--res); stroke-width: 2; fill: none; stroke-dasharray:
   <article class="questao cartao" id="C21-23" aria-labelledby="C21-23-tit">
     <div class="q-cab"><h3 id="C21-23-tit">Problema 21.23</h3><span class="meta">Degrau 1</span></div>
     <div class="q-corpo">
-      <p class="enunciado">As partículas 1 e 2, de carga +3,20 × 10⁻¹⁹ C cada, estão no eixo y, a d = 17,0 cm da origem (uma em cima, outra embaixo). A partícula 3, de carga +6,40 × 10⁻¹⁹ C, é deslocada no eixo x de x = 0 até x = 5,0 m. Para que x a força sobre ela é (a) mínima e (b) máxima? Quais são (c) o mínimo e (d) o máximo?</p>
+      <p class="enunciado">Na Fig. 21-32, as partículas 1 e 2, de carga \(q_1 = q_2 = +3{,}20\times10^{-19}\) C, estão no eixo \(y\), a uma distância \(d = 17{,}0\) cm da origem. A partícula 3, de carga \(q_3 = +6{,}40\times10^{-19}\) C, é deslocada ao longo do eixo \(x\), de \(x = 0\) até \(x = +5{,}0\) m.</p>
+      <p class="enunciado-cont">Para qual valor de \(x\) o módulo da força eletrostática exercida pelas partículas 1 e 2 sobre a partícula 3 é (a) mínimo e (b) máximo? Qual é o valor (c) mínimo e (d) máximo do módulo?</p>
+      <figure class="fig fig-livro fig-c21">
+        <svg viewBox="0 0 300 220" role="img" aria-labelledby="c21-23-e0-fq23-t">
+          <title id="c21-23-e0-fq23-t">Figura 21-32: partícula 1 no eixo y em y igual a d, partícula 2 em y igual a menos d, partícula 3 no eixo x.</title>
+          <line x1="20" y1="110" x2="285" y2="110" class="c21-eixo" marker-end="url(#ah-eixo)"/>
+          <line x1="80" y1="205" x2="80" y2="12" class="c21-eixo" marker-end="url(#ah-eixo)"/>
+          <text x="278" y="128" font-size="12" class="c21-serif">x</text><text x="66" y="20" font-size="12" class="c21-serif">y</text>
+          <circle cx="80" cy="50" r="7" class="c21-pos"/><text x="92" y="48" font-size="13" font-weight="700">1</text>
+          <circle cx="80" cy="170" r="7" class="c21-pos"/><text x="92" y="182" font-size="13" font-weight="700">2</text>
+          <circle cx="200" cy="110" r="7" class="c21-pos"/><text x="196" y="134" font-size="13" font-weight="700">3</text>
+          <line x1="58" y1="50" x2="58" y2="110" class="c21-cota" marker-start="url(#ah-cota)" marker-end="url(#ah-cota)"/><text x="44" y="84" font-size="12" class="c21-serif">d</text>
+          <line x1="58" y1="110" x2="58" y2="170" class="c21-cota" marker-start="url(#ah-cota)" marker-end="url(#ah-cota)"/><text x="44" y="144" font-size="12" class="c21-serif">d</text>
+        </svg>
+        <figcaption><b>Figura 21-32 (reconstruída a partir do PDF do livro).</b></figcaption>
+      </figure>
       <div class="ajuda" data-q="C21-23">
         <p class="roteiro">Pela simetria, que componente da força sobrevive?</p>
         <section class="nivel" data-questao="C21-23" data-nivel="1" data-titulo="Dica 1" hidden><p>Degrau 1: as componentes y se cancelam; sobra F(x) = 2kq₁q₃x/(x² + d²)^{3/2}. É a mesma forma do campo no eixo do anel (Degrau 3).</p></section>
@@ -2794,7 +2871,29 @@ svg .orbita { stroke: var(--res); stroke-width: 2; fill: none; stroke-dasharray:
   <article class="questao cartao" id="C21-42" aria-labelledby="C21-42-tit">
     <div class="q-cab"><h3 id="C21-42-tit">Problema 21.42</h3><span class="meta">Degrau 1</span></div>
     <div class="q-corpo">
-      <p class="enunciado">Duas pequenas esferas condutoras, de massa m e carga q, estão penduradas em fios isolantes de comprimento L. Com θ pequeno (tan θ ≈ sen θ): (a) mostre que a distância de equilíbrio é \(x = \left(\dfrac{q^2L}{2\pi\varepsilon_0 mg}\right)^{1/3}\); (b) com L = 120 cm, m = 10 g e x = 5,0 cm, ache |q|.</p>
+      <p class="enunciado">Na Fig. 21-39, duas pequenas esferas condutoras de mesma massa \(m\) e mesma carga \(q\) estão penduradas em fios isolantes de comprimento \(L\). Suponha que o ângulo \(\theta\) é tão pequeno que a aproximação \(\tan\theta \approx \text{sen}\,\theta\) pode ser usada.</p>
+      <p class="enunciado-cont">(a) Mostre que a distância de equilíbrio entre as esferas é dada por</p>
+      <p class="enunciado-cont">\[x = \left(\frac{q^2 L}{2\pi\varepsilon_0\, m g}\right)^{1/3}.\]</p>
+      <p class="enunciado-cont">(b) Se \(L = 120\) cm, \(m = 10\) g e \(x = 5{,}0\) cm, qual é o valor de \(|q|\)?</p>
+      <p class="pequeno">O livro imprime "tan θ ≤ sen θ". É erro de digitação: o certo é "tan θ ≈ sen θ".</p>
+      <figure class="fig fig-livro fig-c21">
+        <svg viewBox="0 0 300 270" role="img" aria-labelledby="c21-42-e0-fq42-t">
+          <title id="c21-42-e0-fq42-t">Figura 21-39: dois fios de comprimento L presos no mesmo ponto do teto, cada um fazendo um ângulo theta com a vertical; nas pontas, esferas de carga q separadas pela distância x.</title>
+          <rect x="110" y="10" width="80" height="9" class="c21-solido"/>
+          <line x1="150" y1="19" x2="150" y2="215" class="c21-guia"/>
+          <line x1="150" y1="19" x2="102" y2="205" class="c21-fio"/>
+          <line x1="150" y1="19" x2="198" y2="205" class="c21-fio"/>
+          <path d="M150,64 A45,45 0 0 1 139,63" fill="none" style="stroke:var(--muted)"/>
+          <path d="M150,64 A45,45 0 0 0 161,63" fill="none" style="stroke:var(--muted)"/>
+          <text x="133" y="82" font-size="12" class="c21-serif">θ</text><text x="157" y="82" font-size="12" class="c21-serif">θ</text>
+          <text x="110" y="120" font-size="13" class="c21-serif">L</text><text x="183" y="120" font-size="13" class="c21-serif">L</text>
+          <circle cx="102" cy="205" r="9" class="c21-pos"/><circle cx="198" cy="205" r="9" class="c21-pos"/>
+          <text x="84" y="200" font-size="13" class="c21-serif">q</text><text x="210" y="200" font-size="13" class="c21-serif">q</text>
+          <line x1="102" y1="238" x2="198" y2="238" class="c21-cota" marker-start="url(#ah-cota)" marker-end="url(#ah-cota)"/>
+          <text x="150" y="256" font-size="13" text-anchor="middle" class="c21-serif">x</text>
+        </svg>
+        <figcaption><b>Figura 21-39 (reconstruída a partir do PDF do livro).</b> O ângulo está exagerado para ficar visível; no item (b) ele é de pouco mais de 1°.</figcaption>
+      </figure>
       <div class="ajuda" data-q="C21-42">
         <p class="roteiro">Quais são as três forças numa esfera?</p>
         <section class="nivel" data-questao="C21-42" data-nivel="1" data-titulo="Dica 1" hidden><p>Checkpoint 1, questão 3: tan θ = F<sub>e</sub>/(mg). A geometria do fio dá sen θ = (x/2)/L.</p></section>
@@ -2807,10 +2906,39 @@ svg .orbita { stroke: var(--res); stroke-width: 2; fill: none; stroke-dasharray:
   <article class="questao cartao" id="C21-50" aria-labelledby="C21-50-tit">
     <div class="q-cab"><h3 id="C21-50-tit">Problema 21.50</h3><span class="meta">Degrau 1</span></div>
     <div class="q-corpo">
-      <p class="enunciado">Uma barra isolante de comprimento L, sem massa, articulada no centro, tem esferas de carga q (ponta esquerda) e 2q (ponta direita), cada uma a uma distância h acima de uma esfera fixa de carga Q. Um bloco de peso P equilibra a barra a uma distância x da ponta esquerda. (a) Ache x para a barra ficar horizontal. (b) Que h faz a barra não exercer força vertical no apoio?</p>
+      <p class="enunciado">A Fig. 21-42 mostra uma barra longa, isolante, de massa desprezível e comprimento \(L\), articulada no centro e equilibrada por um bloco de peso \(P\) situado a uma distância \(x\) da extremidade esquerda. Nas extremidades esquerda e direita da barra existem pequenas esferas condutoras, de carga positiva \(q\) e \(2q\), respectivamente. A uma distância vertical \(h\) abaixo de cada esfera existe uma esfera fixa de carga positiva \(Q\).</p>
+      <p class="enunciado-cont">(a) Determine a distância \(x\) para que a barra fique equilibrada na horizontal. (b) Qual deve ser o valor de \(h\) para que a barra não exerça força vertical sobre o apoio quando está equilibrada na horizontal?</p>
+      <p class="pequeno">O texto em português do livro diz "extremidades <b>direita e esquerda</b> … \(q\) e \(2q\), respectivamente", o que poria \(2q\) à esquerda. A figura do próprio livro (e o original em inglês) mostra <b>\(+q\) à esquerda e \(+2q\) à direita</b>. O guia segue a figura; o "e se…" da resolução mostra o que muda com a outra leitura.</p>
+      <figure class="fig fig-livro fig-c21">
+        <svg viewBox="0 0 420 240" role="img" aria-labelledby="c21-50-e0-fq50-t">
+          <title id="c21-50-e0-fq50-t">Figura 21-42: barra horizontal de comprimento L apoiada no centro; esfera +q na ponta esquerda e +2q na direita; a uma distância h abaixo de cada uma, uma esfera fixa +Q; um bloco de peso P pendurado à direita do apoio, a uma distância x da ponta esquerda.</title>
+          <rect x="20" y="212" width="390" height="10" class="c21-solido"/>
+          <polygon points="203,86 217,86 232,212 188,212" class="c21-solido"/>
+          <line x1="40" y1="82" x2="380" y2="82" stroke-width="5" style="stroke:var(--ink)"/>
+          <circle cx="40" cy="82" r="10" class="c21-pos"/><text x="40" y="82" class="c21-carga-t" font-size="11">+</text>
+          <circle cx="380" cy="82" r="10" class="c21-pos"/><text x="380" y="82" class="c21-carga-t" font-size="11">+</text>
+          <text x="56" y="104" font-size="13" class="c21-serif">+q</text><text x="340" y="104" font-size="13" class="c21-serif">+2q</text>
+          <line x1="40" y1="162" x2="40" y2="212" class="c21-fio"/><line x1="380" y1="162" x2="380" y2="212" class="c21-fio"/>
+          <circle cx="40" cy="152" r="10" class="c21-pos"/><text x="40" y="152" class="c21-carga-t" font-size="11">+</text>
+          <circle cx="380" cy="152" r="10" class="c21-pos"/><text x="380" y="152" class="c21-carga-t" font-size="11">+</text>
+          <text x="56" y="156" font-size="13" class="c21-serif">+Q</text><text x="340" y="156" font-size="13" class="c21-serif">+Q</text>
+          <line x1="300" y1="84" x2="300" y2="112" class="c21-fio"/>
+          <rect x="284" y="112" width="32" height="30" class="c21-solido"/>
+          <text x="300" y="132" font-size="13" text-anchor="middle" class="c21-serif">P</text>
+          <text x="236" y="182" font-size="11.5" class="c21-t-muted">apoio</text>
+          <line x1="40" y1="26" x2="380" y2="26" class="c21-cota" marker-start="url(#ah-cota)" marker-end="url(#ah-cota)"/>
+          <text x="210" y="20" font-size="13" text-anchor="middle" class="c21-serif">L</text>
+          <line x1="40" y1="52" x2="300" y2="52" class="c21-cota" marker-start="url(#ah-cota)" marker-end="url(#ah-cota)"/>
+          <text x="170" y="46" font-size="13" text-anchor="middle" class="c21-serif">x</text>
+          <line x1="40" y1="20" x2="40" y2="70" class="c21-guia"/><line x1="380" y1="20" x2="380" y2="70" class="c21-guia"/><line x1="300" y1="46" x2="300" y2="76" class="c21-guia"/>
+          <line x1="16" y1="82" x2="16" y2="152" class="c21-cota" marker-start="url(#ah-cota)" marker-end="url(#ah-cota)"/>
+          <text x="4" y="122" font-size="13" class="c21-serif">h</text>
+        </svg>
+        <figcaption><b>Figura 21-42 (reconstruída a partir do PDF do livro).</b> No livro, o bloco aparece à direita do apoio, como aqui.</figcaption>
+      </figure>
       <div class="ajuda" data-q="C21-50">
         <p class="roteiro">Corpo rígido em equilíbrio: duas condições.</p>
-        <section class="nivel" data-questao="C21-50" data-nivel="1" data-titulo="Dica 1" hidden><p>Forças de Coulomb para cima nas pontas: kqQ/h² e 2kqQ/h². (a) Torques em relação ao apoio; (b) soma das forças com N = 0.</p></section>
+        <section class="nivel" data-questao="C21-50" data-nivel="1" data-titulo="Dica 1" hidden><p>Forças de Coulomb para cima nas pontas: kqQ/h² e 2kqQ/h². (a) Torques em relação ao apoio; (b) soma das forças com N = 0.</p><figure class="fig fig-res fig-c21" style="max-width:440px"><svg viewBox="0 0 400 150" role="img" aria-label="Diagrama esperado da barra: forças F1 e F2 para cima nas pontas, com F2 maior; peso P para baixo à direita do apoio; força N do apoio no centro; braços medidos a partir do apoio."><line x1="30" y1="70" x2="370" y2="70" stroke-width="5" style="stroke:var(--ink)"/><path d="M200,74 L188,98 L212,98 z" class="c21-solido"/><line x1="34" y1="112" x2="34" y2="78" class="c21-forca" marker-end="url(#ah-forca)"/><text x="42" y="110" font-size="13" class="c21-t-forca">F₁</text><line x1="366" y1="134" x2="366" y2="78" class="c21-forca" marker-end="url(#ah-forca)"/><text x="344" y="132" font-size="13" class="c21-t-forca">F₂</text><line x1="290" y1="72" x2="290" y2="120" class="c21-forca" marker-end="url(#ah-forca)"/><text x="298" y="118" font-size="13" class="c21-t-forca">P</text><line x1="200" y1="130" x2="200" y2="104" class="c21-forca" stroke-dasharray="4 3" marker-end="url(#ah-forca)"/><text x="208" y="128" font-size="13" class="c21-t-forca">N</text><line x1="34" y1="40" x2="200" y2="40" class="c21-cota" marker-start="url(#ah-cota)" marker-end="url(#ah-cota)"/><text x="117" y="34" font-size="12.5" text-anchor="middle">L/2</text><line x1="200" y1="40" x2="290" y2="40" class="c21-cota" marker-start="url(#ah-cota)" marker-end="url(#ah-cota)"/><text x="245" y="34" font-size="12.5" text-anchor="middle">x − L/2</text></svg><figcaption>O diagrama que você deve ter feito (sem escala de força). \(F_2\) é maior que \(F_1\); os braços saem do apoio.</figcaption></figure></section>
         <section class="nivel" data-questao="C21-50" data-nivel="2" data-titulo="Dica 2" hidden><p>(a) kqQ/h²·(L/2) + P(L/2 − x) = 2kqQ/h²·(L/2). (b) kqQ/h² + 2kqQ/h² = P.</p></section>
         <section class="nivel" data-questao="C21-50" data-nivel="3" data-titulo="Resposta" hidden><p>(a) \(x = \frac L2\left(1 + \frac{qQ}{4\pi\varepsilon_0 Ph^2}\right)\); (b) \(h = \sqrt{\frac{3qQ}{4\pi\varepsilon_0 P}}\) (calculadas pelo guia). <a class="link-antigo" href="../cap-21-a-lei-de-coulomb/guia-v2.html#p50">Resolução completa no guia do cap. 21</a></p></section>
       </div>
@@ -2820,7 +2948,10 @@ svg .orbita { stroke: var(--res); stroke-width: 2; fill: none; stroke-dasharray:
   <article class="questao cartao" id="C21-73" aria-labelledby="C21-73-tit">
     <div class="q-cab"><h3 id="C21-73-tit">Problema 21.73</h3><span class="meta">Degraus 1 e 5 (MCU)</span></div>
     <div class="q-corpo">
-      <p class="enunciado">No modelo de Bohr, o elétron gira em torno do próton em órbitas de raio r = n²a₀, com a₀ = 52,92 pm. Qual é a velocidade do elétron (a) para n = 1 e (b) para n = 2? (c) Numa órbita maior, a velocidade aumenta, diminui ou fica igual?</p>
+      <p class="enunciado">Em um modelo antigo do átomo de hidrogênio (o <em>modelo de Bohr</em>), o elétron descrevia uma órbita circular em torno do próton, e o raio da órbita era restrito aos valores</p>
+      <p class="enunciado-cont">\[r = n^2 a_0,\qquad n = 1, 2, 3, \ldots,\]</p>
+      <p class="enunciado-cont">em que \(a_0 = 52{,}92\) pm. Qual seria a velocidade do elétron (a) na órbita de menor raio e (b) na órbita com o segundo menor raio? (c) Se o elétron passasse para uma órbita de raio maior, a velocidade do elétron aumentaria, diminuiria ou permaneceria a mesma?</p>
+      <p class="pequeno">pm = picômetro = \(10^{-12}\) m.</p>
       <div class="ajuda" data-q="C21-73">
         <p class="roteiro">Que força real segura o elétron no círculo?</p>
         <section class="nivel" data-questao="C21-73" data-nivel="1" data-titulo="Dica 1" hidden><p>A força de Coulomb é a centrípeta: ke²/r² = mv²/r (Degrau 0, pergunta 6; o mesmo raciocínio do círculo em B, no Degrau 5).</p></section>
@@ -2835,7 +2966,20 @@ svg .orbita { stroke: var(--res); stroke-width: 2; fill: none; stroke-dasharray:
   <article class="questao cartao" id="C22-8" aria-labelledby="C22-8-tit">
     <div class="q-cab"><h3 id="C22-8-tit">Problema 22.8</h3><span class="meta">Degrau 1</span></div>
     <div class="q-corpo">
-      <p class="enunciado">Na Fig. 22-36, quatro partículas fixas têm cargas q₁ = q₂ = +5e, q₃ = +3e e q₄ = −12e, com d = 5,0 μm. Qual é o módulo do campo elétrico no ponto P? (figura no guia antigo)</p>
+      <p class="enunciado">Na Fig. 22-36, as quatro partículas são mantidas fixas e têm cargas \(q_1 = q_2 = +5e\), \(q_3 = +3e\) e \(q_4 = -12e\). A distância d = 5,0 µm. Qual é o módulo do campo elétrico no ponto P?</p>
+      <figure class="fig fig-livro fig-c22 sem-grade">
+        <svg viewBox="0 0 320 250" role="img" aria-label="Figura 22-36 reconstruída. O ponto P está no vértice de um ângulo reto. Numa diagonal, q1 fica acima e à esquerda de P, a uma distância d, e q2 abaixo e à direita, também a d. Na outra diagonal, para cima e à direita, q3 está a d de P e q4 está logo depois, a mais d (2d de P).">
+          <line class="fino" x1="95" y1="85" x2="225" y2="215"/><line class="fino" x1="160" y1="150" x2="280" y2="30"/>
+          <use href="#qp" x="105.5" y="95.5"/><text x="30" y="86" class="t-p">q₁ = +5e</text>
+          <use href="#qp" x="214.5" y="204.5"/><text x="232" y="214" class="t-p">q₂ = +5e</text>
+          <use href="#qp" x="214.5" y="95.5"/><text x="230" y="112" class="t-p">q₃ = +3e</text>
+          <use href="#qn" x="269" y="41"/><text x="180" y="30" class="t-n">q₄ = −12e</text>
+          <use href="#pt" x="160" y="150"/><text x="138" y="160">P</text>
+          <polyline points="167.1,142.9 174.2,150 167.1,157.1" class="fino" style="stroke-dasharray:none"/>
+          <text x="120" y="118" class="t-2">d</text><text x="194" y="190" class="t-2">d</text><text x="176" y="116" class="t-2">d</text><text x="232" y="62" class="t-2">d</text>
+        </svg>
+        <figcaption>Figura 22-36 (reconstruída a partir do PDF do livro). As duas diagonais se cruzam em ângulo reto em P.</figcaption>
+      </figure>
       <div class="ajuda" data-q="C22-8">
         <p class="roteiro">P está alinhado com dois pares de cargas.</p>
         <section class="nivel" data-questao="C22-8" data-nivel="1" data-titulo="Dica 1" hidden><p>Degrau 1: em cada reta (q₁–P–q₂ e P–q₃–q₄), compare |q|/r² e os sentidos.</p></section>
@@ -2848,10 +2992,28 @@ svg .orbita { stroke: var(--res); stroke-width: 2; fill: none; stroke-dasharray:
   <article class="questao cartao" id="C22-9" aria-labelledby="C22-9-tit">
     <div class="q-cab"><h3 id="C22-9-tit">Problema 22.9</h3><span class="meta">Degrau 1</span></div>
     <div class="q-corpo">
-      <p class="enunciado">−q = −3,20 × 10⁻¹⁹ C está em x = −3,00 m e +q = 3,20 × 10⁻¹⁹ C em x = +3,00 m. Determine (a) o módulo e (b) a orientação (em relação a +x) do campo em P, no eixo y, em y = 4,00 m.</p>
+      <p class="enunciado">A Fig. 22-37 mostra duas partículas carregadas mantidas fixas no eixo x: \(-q = -3{,}20\times10^{-19}\) C, no ponto x = −3,00 m, e \(q = 3{,}20\times10^{-19}\) C, no ponto x = +3,00 m. Determine (a) o módulo e (b) a orientação (em relação ao semieixo x positivo) do campo elétrico no ponto P, para o qual y = 4,00 m.</p>
+      <figure class="fig fig-livro fig-c22 sem-grade">
+        <svg viewBox="0 0 340 220" role="img" aria-label="Figura 22-37 reconstruída: eixos x e y; carga −q em x = −3,00 m, carga +q em x = +3,00 m, ponto P no eixo y em y = 4,00 m.">
+          <line class="eixo-s" x1="10" y1="180" x2="330" y2="180"/><line class="eixo-s" x1="170" y1="210" x2="170" y2="10"/>
+          <text x="318" y="200" class="t-2">x</text><text x="176" y="20" class="t-2">y</text>
+          <use href="#qn" x="80" y="180"/><text x="70" y="206" class="t-n">−q</text>
+          <use href="#qp" x="260" y="180"/><text x="254" y="206" class="t-p">q</text>
+          <use href="#pt" x="170" y="60"/><text x="178" y="58">P</text>
+          <text x="104" y="174" class="t-2">3,00 m</text><text x="200" y="174" class="t-2">3,00 m</text><text x="176" y="126" class="t-2">4,00 m</text>
+        </svg>
+        <figcaption>Figura 22-37 (reconstruída a partir do PDF do livro).</figcaption>
+      </figure>
       <div class="ajuda" data-q="C22-9">
         <p class="roteiro">Mesma geometria do exemplo com lacunas do Degrau 1, mas com sinais opostos.</p>
-        <section class="nivel" data-questao="C22-9" data-nivel="1" data-titulo="Dica 1" hidden><p>Degrau 1, lacunas: r = 5 m, triângulo 3-4-5. Com sinais opostos, agora são as componentes y que se cancelam.</p></section>
+        <section class="nivel" data-questao="C22-9" data-nivel="1" data-titulo="Dica 1" hidden><p>Degrau 1, lacunas: r = 5 m, triângulo 3-4-5. Com sinais opostos, agora são as componentes y que se cancelam.</p><figure class="fig fig-res fig-c22 sem-grade">
+              <svg viewBox="0 0 220 170" role="img" aria-label="Direções esperadas em P: o campo de +q aponta para cima e para a esquerda; o de −q aponta para baixo e para a esquerda.">
+                <use href="#pt" x="120" y="85"/><text x="128" y="80">P</text>
+                <line class="ve" x1="120" y1="85" x2="84" y2="37"/><text x="40" y="34" class="t-e t-s">de +q</text>
+                <line class="ve" x1="120" y1="85" x2="84" y2="133"/><text x="40" y="150" class="t-e t-s">de −q</text>
+              </svg>
+              <figcaption>Os sentidos esperados (sem números).</figcaption>
+            </figure></section>
         <section class="nivel" data-questao="C22-9" data-nivel="2" data-titulo="Dica 2" hidden><p>E de cada carga: kq/25; componente x de cada uma: E₁·(3/5), as duas para −x.</p></section>
         <section class="nivel" data-questao="C22-9" data-nivel="3" data-titulo="Resposta" hidden><p>(a) 1,38 × 10⁻¹⁰ N/C; (b) 180° (gabarito). <a class="link-antigo" href="../cap-22-campos-eletricos/guia-v2.html#P9">Resolução completa no guia do cap. 22</a></p></section>
       </div>
@@ -2861,7 +3023,22 @@ svg .orbita { stroke: var(--res); stroke-width: 2; fill: none; stroke-dasharray:
   <article class="questao cartao" id="C22-15" aria-labelledby="C22-15-tit">
     <div class="q-cab"><h3 id="C22-15-tit">Problema 22.15</h3><span class="meta">Degrau 1</span></div>
     <div class="q-corpo">
-      <p class="enunciado">Na Fig. 22-42, três partículas fixas têm cargas q₁ = q₂ = +e e q₃ = +2e, com a = 6,00 μm. Determine (a) o módulo e (b) a direção do campo elétrico no ponto P. (figura no guia antigo)</p>
+      <p class="enunciado">Na Fig. 22-42, as três partículas são mantidas fixas no lugar e têm cargas \(q_1 = q_2 = +e\) e \(q_3 = +2e\). A distância a = 6,00 µm. Determine (a) o módulo e (b) a direção do campo elétrico no ponto P.</p>
+      <figure class="fig fig-livro fig-c22 sem-grade">
+        <svg viewBox="0 0 300 250" role="img" aria-label="Figura 22-42 reconstruída: partícula 3 na origem; partícula 1 no eixo y, a uma distância a acima da origem; partícula 2 no eixo x, a uma distância a à direita. P fica no centro do quadrado de lado a, no cruzamento das retas tracejadas que ligam 1 a 2 e 3 a P, com um ângulo reto marcado.">
+          <line class="eixo-s" x1="80" y1="200" x2="290" y2="200"/><line class="eixo-s" x1="80" y1="230" x2="80" y2="15"/>
+          <text x="278" y="220" class="t-2">x</text><text x="86" y="22" class="t-2">y</text>
+          <line class="fino" x1="80" y1="50" x2="230" y2="200"/><polyline points="80,50 230,50 230,200" class="fino" style="opacity:.5"/><line class="fino" x1="80" y1="200" x2="155" y2="125"/>
+          <polyline points="162.1,132.1 155,139.2 147.9,132.1" class="fino" style="stroke-dasharray:none"/>
+          <use href="#qp" x="80" y="50"/><text x="94" y="45" class="t-p">1</text>
+          <use href="#qp" x="230" y="200"/><text x="226" y="186" class="t-p">2</text>
+          <use href="#qp" x="80" y="200"/><text x="62" y="222" class="t-p">3</text>
+          <use href="#pt" x="155" y="125"/><text x="160" y="118">P</text>
+          <line class="cota" x1="50" y1="50" x2="50" y2="200"/><text x="34" y="130" class="t-2">a</text>
+          <line class="cota" x1="80" y1="232" x2="230" y2="232"/><text x="150" y="246" class="t-2">a</text>
+        </svg>
+        <figcaption>Figura 22-42 (reconstruída a partir do PDF do livro). P é o ponto médio de 1–2, que é também o centro do quadrado de lado a (o 4º vértice, pontilhado, não está no livro).</figcaption>
+      </figure>
       <div class="ajuda" data-q="C22-15">
         <p class="roteiro">q₁ e q₂ estão na mesma reta que passa por P.</p>
         <section class="nivel" data-questao="C22-15" data-nivel="1" data-titulo="Dica 1" hidden><p>Degrau 1: q₁ e q₂ iguais, em lados opostos e à mesma distância de P → se anulam. Sobra q₃.</p></section>
@@ -2874,7 +3051,19 @@ svg .orbita { stroke: var(--res); stroke-width: 2; fill: none; stroke-dasharray:
   <article class="questao cartao" id="C22-26" aria-labelledby="C22-26-tit">
     <div class="q-cab"><h3 id="C22-26-tit">Problema 22.26 <span class="tag-prova">parece prova</span></h3><span class="meta">Degrau 3</span></div>
     <div class="q-corpo">
-      <p class="enunciado">Uma barra fina de vidro forma uma semicircunferência de raio r = 5,00 cm. Uma carga +q = 4,50 pC está distribuída uniformemente na metade de cima e −q = −4,50 pC na metade de baixo. Determine (a) o módulo e (b) a orientação (em relação a +x) do campo no centro P.</p>
+      <p class="enunciado">Na Fig. 22-50, uma barra fina de vidro forma uma semicircunferência de raio r = 5,00 cm. Uma carga +q = 4,50 pC está distribuída uniformemente na parte superior da barra, e uma carga −q = −4,50 pC está distribuída uniformemente na parte inferior da barra. Determine (a) o módulo e (b) a orientação (em relação ao semieixo x positivo) do campo elétrico \(\vec E\) no ponto P, situado no centro do semicírculo.</p>
+      <figure class="fig fig-livro fig-c22 sem-grade">
+        <svg viewBox="0 0 280 240" role="img" aria-label="Figura 22-50 reconstruída: semicircunferência de raio r à esquerda do ponto P, que fica na origem. O quarto de cima, no segundo quadrante, tem carga +q; o quarto de baixo, no terceiro quadrante, tem carga −q.">
+          <line class="eixo-s" x1="20" y1="120" x2="270" y2="120"/><line class="eixo-s" x1="170" y1="230" x2="170" y2="10"/>
+          <text x="258" y="138" class="t-2">x</text><text x="176" y="20" class="t-2">y</text>
+          <path d="M 170 30 A 90 90 0 0 0 80 120" class="barra-p"/>
+          <path d="M 80 120 A 90 90 0 0 0 170 210" class="barra-n"/>
+          <text x="70" y="50" class="t-p">+q</text><text x="70" y="200" class="t-n">−q</text>
+          <use href="#pt" x="170" y="120"/><text x="176" y="138">P</text>
+          <line class="fino" x1="170" y1="120" x2="140" y2="204.8"/><text x="142" y="170" class="t-2">r</text>
+        </svg>
+        <figcaption>Figura 22-50 (reconstruída a partir do PDF do livro).</figcaption>
+      </figure>
       <div class="ajuda" data-q="C22-26">
         <p class="roteiro">Com metades de sinais opostos, qual componente sobra?</p>
         <section class="nivel" data-questao="C22-26" data-nivel="1" data-titulo="Dica 1" hidden><p>Degrau 3, "onde a analogia quebra" do coral: agora a componente que sobra é a perpendicular ao eixo de simetria (a vertical).</p></section>
@@ -2887,7 +3076,22 @@ svg .orbita { stroke: var(--res); stroke-width: 2; fill: none; stroke-dasharray:
   <article class="questao cartao" id="C22-29" aria-labelledby="C22-29-tit">
     <div class="q-cab"><h3 id="C22-29-tit">Problema 22.29 <span class="tag-prova">parece prova</span></h3><span class="meta">Degrau 3</span></div>
     <div class="q-corpo">
-      <p class="enunciado">Uma barra isolante com carga +Q uniforme forma uma semicircunferência de raio R e produz um campo de módulo E no centro P. Se a barra for trocada por uma carga pontual a uma distância R de P, qual é a razão entre o novo E e o antigo?</p>
+      <p class="enunciado">A Fig. 22-52a mostra uma barra isolante com uma carga +Q distribuída uniformemente. A barra forma uma semicircunferência de raio R e produz um campo elétrico de módulo E no centro de curvatura P. Se a barra é substituída por uma carga pontual situada a uma distância R do ponto P (Fig. 22-52b), qual é a razão entre o novo valor de E e o antigo valor?</p>
+      <figure class="fig fig-livro fig-c22 sem-grade">
+        <svg viewBox="0 0 360 180" role="img" aria-label="Figura 22-52 reconstruída. (a) Semicircunferência de raio R com carga +Q, à esquerda do ponto P, que fica no centro de curvatura. (b) Uma carga pontual +Q à esquerda de P, a uma distância R.">
+          <line class="eixo" x1="10" y1="90" x2="180" y2="90"/>
+          <path d="M 130 20 A 70 70 0 0 0 130 160" class="barra-p"/>
+          <use href="#pt" x="130" y="90"/><text x="136" y="82">P</text>
+          <line class="fino" x1="130" y1="90" x2="80.5" y2="139.5"/><text x="92" y="128" class="t-2">R</text>
+          <text x="40" y="34" class="t-p">+Q</text><text x="90" y="174" class="t-2">(a)</text>
+          <line class="eixo" x1="200" y1="90" x2="350" y2="90"/>
+          <use href="#qp" x="240" y="90"/><text x="230" y="70" class="t-p">+Q</text>
+          <use href="#pt" x="310" y="90"/><text x="306" y="78">P</text>
+          <line class="cota" x1="240" y1="118" x2="310" y2="118"/><text x="270" y="136" class="t-2">R</text>
+          <text x="268" y="174" class="t-2">(b)</text>
+        </svg>
+        <figcaption>Figura 22-52 (reconstruída a partir do PDF do livro).</figcaption>
+      </figure>
       <div class="ajuda" data-q="C22-29">
         <p class="roteiro">Calcule os dois campos em símbolos.</p>
         <section class="nivel" data-questao="C22-29" data-nivel="1" data-titulo="Dica 1" hidden><p>Degrau 3: arco com φ = π dá E = 2kλ/R (Checkpoint 3, questão 3).</p></section>
@@ -2900,7 +3104,20 @@ svg .orbita { stroke: var(--res); stroke-width: 2; fill: none; stroke-dasharray:
   <article class="questao cartao" id="C22-31" aria-labelledby="C22-31-tit">
     <div class="q-cab"><h3 id="C22-31-tit">Problema 22.31 <span class="tag-prova">parece prova</span></h3><span class="meta">Degrau 3 · o método da PA1</span></div>
     <div class="q-corpo">
-      <p class="enunciado">Uma barra isolante de comprimento L = 8,15 cm tem carga −q = −4,23 fC uniforme. (a) Qual é a densidade linear de carga? Determine (b) o módulo e (c) a direção do campo num ponto P do eixo x, a a = 12,0 cm da ponta da barra. Determine o módulo do campo num ponto do eixo a D = 50 m do centro da barra, (d) pela barra e (e) por uma partícula de carga −q no centro da barra.</p>
+      <p class="enunciado">Na Fig. 22-54, uma barra isolante, de comprimento L = 8,15 cm, tem uma carga −q = −4,23 fC uniformemente distribuída. (a) Qual é a densidade linear de carga da barra? Determine (b) o módulo e (c) a direção (em relação ao semieixo x positivo) do campo elétrico produzido no ponto P, situado no eixo x, a uma distância a = 12,0 cm da extremidade da barra. Determine o módulo do campo elétrico produzido em um ponto situado no eixo x, a uma distância D = 50 m do centro da barra, (d) pela barra e (e) por uma partícula de carga −q = −4,23 fC colocada no lugar anteriormente ocupado pelo centro da barra.</p>
+      <p class="pequeno">Atenção: nos itens (d) e (e) o livro reusa a letra a para essa distância de 50 m, medida do <b>centro</b> da barra. Neste guia ela se chama D, para não confundir com o a = 12,0 cm dos itens (b) e (c).</p>
+      <figure class="fig fig-livro fig-c22 sem-grade">
+        <svg viewBox="0 0 360 130" role="img" aria-label="Figura 22-54 reconstruída, em escala: barra com carga −q no eixo x, de comprimento L = 8,15 cm, à esquerda; o ponto P fica à direita, no eixo x, a uma distância a = 12,0 cm da ponta direita da barra. Um traço marca o centro da barra.">
+          <line class="eixo-s" x1="10" y1="60" x2="350" y2="60"/><text x="338" y="80" class="t-2">x</text>
+          <line x1="30" y1="60" x2="130" y2="60" class="barra-n"/>
+          <line class="fino" x1="80" y1="48" x2="80" y2="72" style="stroke-dasharray:none"/><text x="62" y="40" class="t-2">centro</text>
+          <text x="66" y="24" class="t-n">−q</text>
+          <use href="#pt" x="277" y="60"/><text x="273" y="45">P</text>
+          <line class="cota" x1="30" y1="95" x2="128" y2="95"/><text x="76" y="114" class="t-2">L</text>
+          <line class="cota" x1="132" y1="95" x2="277" y2="95"/><text x="200" y="114" class="t-2">a</text>
+        </svg>
+        <figcaption>Figura 22-54 (reconstruída a partir do PDF do livro; aqui em escala, a/L = 1,47; o livro não está em escala).</figcaption>
+      </figure>
       <div class="ajuda" data-q="C22-31">
         <p class="roteiro">É a barra no eixo do Degrau 3, com carga negativa.</p>
         <section class="nivel" data-questao="C22-31" data-nivel="1" data-titulo="Dica 1" hidden><p>Degrau 3, exemplo resolvido: E = k|q|/(a(a + L)). Carga negativa → campo aponta para a barra.</p></section>
@@ -2913,7 +3130,28 @@ svg .orbita { stroke: var(--res); stroke-width: 2; fill: none; stroke-dasharray:
   <article class="questao cartao" id="C22-38" aria-labelledby="C22-38-tit">
     <div class="q-cab"><h3 id="C22-38-tit">Problema 22.38</h3><span class="meta">Degrau 3 · disco</span></div>
     <div class="q-corpo">
-      <p class="enunciado">A Fig. 22-58 mostra um disco uniformemente carregado e o gráfico de E no eixo z, em termos do valor máximo Eₘ, com escala z_s = 8,0 cm. Qual é o raio do disco? (gráfico no guia antigo)</p>
+      <p class="enunciado">A Fig. 22-58a mostra um disco circular uniformemente carregado. O eixo central z é perpendicular ao plano do disco e a origem está no centro do disco. A Fig. 22-58b mostra o módulo do campo elétrico no eixo z em função do valor de z, em termos do valor máximo \(E_m\) do módulo do campo elétrico. A escala do eixo z é definida por \(z_s\) = 8,0 cm. Qual é o raio do disco?</p>
+      <figure class="fig fig-livro fig-c22 larga sem-grade">
+        <svg viewBox="0 0 130 225" style="max-width:7.5rem" role="img" aria-label="Figura 22-58a reconstruída: disco com o eixo z vertical passando pelo centro.">
+          <g transform="translate(0,10)">
+            <ellipse cx="60" cy="110" rx="50" ry="15" class="disco"/>
+            <line class="eixo" x1="60" y1="190" x2="60" y2="20"/><text x="66" y="28" class="t-2">z</text>
+            <text x="50" y="210" class="t-2">(a)</text>
+          </g>
+        </svg>
+        <svg viewBox="0 0 345 232" role="img" aria-label="Figura 22-58b reconstruída: gráfico do módulo do campo no eixo em função de z, de 0 a z s igual a 8,0 cm, com o eixo horizontal dividido em quatro partes iguais. Linhas de grade horizontais em E m e em 0,5 E m. A curva começa em E m em z igual a zero e decresce; ela cruza a linha de 0,5 E m exatamente na segunda linha vertical da grade e termina, em z s, perto de um quarto de E m.">
+          <g>
+            <line class="grade-g" x1="120" y1="40" x2="120" y2="190"/><line class="grade-g" x1="190" y1="40" x2="190" y2="190"/><line class="grade-g" x1="260" y1="40" x2="260" y2="190"/><line class="grade-g" x1="330" y1="40" x2="330" y2="190"/>
+            <line class="grade-g" x1="50" y1="40" x2="330" y2="40"/><line class="grade-g" x1="50" y1="115" x2="330" y2="115"/>
+            <line class="eixo" x1="50" y1="190" x2="330" y2="190"/><line class="eixo" x1="50" y1="190" x2="50" y2="30"/>
+            <line class="eixo" x1="120" y1="190" x2="120" y2="182"/><line class="eixo" x1="190" y1="190" x2="190" y2="182"/><line class="eixo" x1="260" y1="190" x2="260" y2="182"/><line class="eixo" x1="330" y1="190" x2="330" y2="182"/>
+            <path class="curva" d="M 50.0 40.0 L 53.5 42.2 L 57.0 44.3 L 60.5 46.5 L 64.0 48.6 L 67.5 50.8 L 71.0 52.9 L 74.5 55.1 L 78.0 57.2 L 81.5 59.3 L 85.0 61.4 L 88.5 63.5 L 92.0 65.6 L 95.5 67.7 L 99.0 69.7 L 102.5 71.7 L 106.0 73.8 L 109.5 75.7 L 113.0 77.7 L 116.5 79.7 L 120.0 81.6 L 123.5 83.5 L 127.0 85.4 L 130.5 87.3 L 134.0 89.1 L 137.5 90.9 L 141.0 92.7 L 144.5 94.5 L 148.0 96.2 L 151.5 97.9 L 155.0 99.6 L 158.5 101.3 L 162.0 102.9 L 165.5 104.5 L 169.0 106.1 L 172.5 107.6 L 176.0 109.2 L 179.5 110.7 L 183.0 112.1 L 186.5 113.6 L 190.0 115.0 L 193.5 116.4 L 197.0 117.8 L 200.5 119.1 L 204.0 120.4 L 207.5 121.7 L 211.0 123.0 L 214.5 124.2 L 218.0 125.4 L 221.5 126.6 L 225.0 127.8 L 228.5 128.9 L 232.0 130.0 L 235.5 131.1 L 239.0 132.2 L 242.5 133.3 L 246.0 134.3 L 249.5 135.3 L 253.0 136.3 L 256.5 137.3 L 260.0 138.2 L 263.5 139.1 L 267.0 140.0 L 270.5 140.9 L 274.0 141.8 L 277.5 142.6 L 281.0 143.5 L 284.5 144.3 L 288.0 145.1 L 291.5 145.9 L 295.0 146.6 L 298.5 147.4 L 302.0 148.1 L 305.5 148.8 L 309.0 149.5 L 312.5 150.2 L 316.0 150.9 L 319.5 151.5 L 323.0 152.1 L 326.5 152.8 L 330.0 153.4"/>
+            <text x="20" y="45" class="t-s">Eₘ</text><text x="2" y="120" class="t-s">0,5Eₘ</text><text x="40" y="208" class="t-s">0</text><text x="322" y="208" class="t-s">zₛ</text>
+            <text x="160" y="226" class="t-2">z (cm)</text><text x="186" y="18" class="t-2">(b)</text>
+          </g>
+        </svg>
+        <figcaption>Figura 22-58 (reconstruída a partir do PDF do livro, ampliado; a curva foi conferida em três pontos da grade). Como no livro, só 0 e zₛ estão numerados no eixo z.</figcaption>
+      </figure>
       <div class="ajuda" data-q="C22-38">
         <p class="roteiro">Leia um ponto (z, E/Eₘ) na grade do gráfico.</p>
         <section class="nivel" data-questao="C22-38" data-nivel="1" data-titulo="Dica 1" hidden><p>Disco no eixo: \(E = \frac{\sigma}{2\varepsilon_0}\left(1 - \frac{z}{\sqrt{z^2+R^2}}\right)\); Eₘ é o valor em z = 0. (O disco é uma soma de anéis do Degrau 3.)</p></section>
@@ -2926,10 +3164,18 @@ svg .orbita { stroke: var(--res); stroke-width: 2; fill: none; stroke-dasharray:
   <article class="questao cartao" id="C22-81" aria-labelledby="C22-81-tit">
     <div class="q-cab"><h3 id="C22-81-tit">Problema 22.81</h3><span class="meta">Degrau 1</span></div>
     <div class="q-corpo">
-      <p class="enunciado">Na atmosfera existe um campo elétrico vertical, para baixo, de cerca de 150 N/C. Queremos fazer "flutuar" nele uma esfera de enxofre de 4,4 N de peso, carregando-a. (a) Qual deve ser a carga (sinal e valor)? (b) Por que isso não dá certo na prática?</p>
+      <p class="enunciado">Existe na atmosfera um campo elétrico \(\vec E\), dirigido verticalmente para baixo, cujo módulo é da ordem de 150 N/C. Estamos interessados em fazer "flutuar" nesse campo uma esfera de enxofre com 4,4 N de peso, carregando-a eletricamente. (a) Qual deve ser a carga da esfera (sinal e valor absoluto)? (b) Por que o experimento não pode ser realizado na prática?</p>
       <div class="ajuda" data-q="C22-81">
         <p class="roteiro">Flutuar = força elétrica igual ao peso.</p>
-        <section class="nivel" data-questao="C22-81" data-nivel="1" data-titulo="Dica 1" hidden><p>F = qE. A força precisa apontar para cima, e E aponta para baixo: q negativa.</p></section>
+        <section class="nivel" data-questao="C22-81" data-nivel="1" data-titulo="Dica 1" hidden><p>F = qE. A força precisa apontar para cima, e E aponta para baixo: q negativa.</p><figure class="fig fig-res fig-c22 sem-grade">
+              <svg viewBox="0 0 220 200" role="img" aria-label="Diagrama de forças: esfera, peso W para baixo, força elétrica F para cima, campo E para baixo ao lado.">
+                <circle cx="100" cy="100" r="28" class="enxofre"/>
+                <line class="vk" x1="100" y1="128" x2="100" y2="190"/><text x="108" y="182">W</text>
+                <line class="vk" x1="100" y1="72" x2="100" y2="12"/><text x="108" y="24">F</text>
+                <line class="ve" x1="185" y1="40" x2="185" y2="140"/><text x="192" y="94" class="t-e">E</text>
+              </svg>
+              <figcaption>O diagrama esperado (sem números).</figcaption>
+            </figure></section>
         <section class="nivel" data-questao="C22-81" data-nivel="2" data-titulo="Dica 2" hidden><p>|q| = P/E. Para (b): estime o campo que essa carga criaria na superfície da esfera.</p></section>
         <section class="nivel" data-questao="C22-81" data-nivel="3" data-titulo="Resposta" hidden><p>(a) q = −0,029 C; (b) a repulsão despedaçaria a esfera (e o ar em volta faria faísca antes) (gabarito). <a class="link-antigo" href="../cap-22-campos-eletricos/guia-v2.html#P81">Resolução completa no guia do cap. 22</a></p></section>
       </div>
@@ -2941,10 +3187,31 @@ svg .orbita { stroke: var(--res); stroke-width: 2; fill: none; stroke-dasharray:
   <article class="questao cartao" id="C23-5" aria-labelledby="C23-5-tit">
     <div class="q-cab"><h3 id="C23-5-tit">Problema 23.5</h3><span class="meta">Degrau 4</span></div>
     <div class="q-corpo">
-      <p class="enunciado">Um próton está a uma distância d/2 do centro de um quadrado de aresta d, na reta perpendicular ao quadrado que passa pelo centro dele. Qual é o módulo do fluxo elétrico através do quadrado? (Sugestão: pense no quadrado como uma face de um cubo de aresta d.)</p>
+      <p class="enunciado">Na Fig. 23-33, um próton está a uma distância d/2 do centro de um quadrado de aresta d (na reta perpendicular ao quadrado que passa pelo centro dele). Qual é o módulo do fluxo elétrico através do quadrado? (<i>Sugestão:</i> pense no quadrado como uma das faces de um cubo de aresta d.)</p>
+      <figure class="fig fig-livro">
+          <svg viewBox="0 0 300 198" role="img" aria-label="Figura 23-33: um quadrado de aresta d visto em perspectiva, deitado. Um próton fica acima do centro do quadrado, a uma distância d/2.">
+            <polygon points="50,160 190,160 250,115 110,115" style="fill:#7fc3e8;fill-opacity:.45;stroke:var(--tinta);stroke-width:1.4"/>
+            <line class="fino" x1="150" y1="137.5" x2="150" y2="48"/>
+            <use href="#qp-p" x="150" y="40"/>
+            <line class="cota" x1="166" y1="48" x2="166" y2="137.5"/><text x="172" y="98" class="t-s">d/2</text>
+            <line class="cota" x1="50" y1="176" x2="190" y2="176"/><text x="114" y="188" class="t-s">d</text>
+            <line class="cota" x1="205" y1="165" x2="265" y2="120"/><text x="240" y="160" class="t-s">d</text>
+          </svg>
+          <figcaption>Figura 23-33 (reconstruída a partir do PDF).</figcaption>
+        </figure>
       <div class="ajuda" data-q="C23-5">
         <p class="roteiro">A lei de Gauss só vale para superfícies fechadas.</p>
-        <section class="nivel" data-questao="C23-5" data-nivel="1" data-titulo="Dica 1" hidden><p>Feche o quadrado num cubo com o próton no centro. Fluxo total pelo cubo: e/ε₀.</p></section>
+        <section class="nivel" data-questao="C23-5" data-nivel="1" data-titulo="Dica 1" hidden><p>Feche o quadrado num cubo com o próton no centro. Fluxo total pelo cubo: e/ε₀.</p><figure class="fig fig-res">
+              <svg viewBox="0 0 250 190" role="img" aria-label="Um cubo em perspectiva com o próton no centro. A face de cima, destacada, é o quadrado do problema.">
+                <polygon points="60,70 110,30 210,30 160,70" style="fill:var(--gauss);fill-opacity:.25;stroke:var(--gauss);stroke-width:2"/>
+                <polygon points="60,70 160,70 160,170 60,170" style="fill:none;stroke:var(--tinta);stroke-width:1.4"/>
+                <polygon points="160,70 210,30 210,130 160,170" style="fill:none;stroke:var(--tinta);stroke-width:1.4"/>
+                <polyline points="60,170 110,130 210,130" class="fino"/><line x1="110" y1="30" x2="110" y2="130" class="fino"/>
+                <use href="#qp-p" x="135" y="100"/>
+                <text x="92" y="22" class="t-g t-s">o quadrado (face de cima)</text>
+              </svg>
+              <figcaption>O cubo imaginário: o próton fica a d/2 de cada face.</figcaption>
+            </figure></section>
         <section class="nivel" data-questao="C23-5" data-nivel="2" data-titulo="Dica 2" hidden><p>As 6 faces são iguais em relação ao próton: cada uma leva 1/6.</p></section>
         <section class="nivel" data-questao="C23-5" data-nivel="3" data-titulo="Resposta" hidden><p>|Φ| = e/(6ε₀) = 3,01 × 10⁻⁹ N·m²/C (gabarito). <a class="link-antigo" href="../cap-23-lei-de-gauss/guia-v2.html#P5">Resolução completa no guia do cap. 23</a></p></section>
       </div>
@@ -2954,12 +3221,44 @@ svg .orbita { stroke: var(--res); stroke-width: 2; fill: none; stroke-dasharray:
   <article class="questao cartao" id="C23-24" aria-labelledby="C23-24-tit">
     <div class="q-cab"><h3 id="C23-24-tit">Problema 23.24 <span class="tag-prova">parece prova</span></h3><span class="meta">Degrau 4 · a PA4 com outros números</span></div>
     <div class="q-corpo">
-      <p class="enunciado">Um tubo longo de metal, de paredes finas, tem raio R = 3,00 cm e λ = 2,00 × 10⁻⁸ C/m. Determine E em (a) r = R/2,00 e (b) r = 2,00R. (c) Faça o gráfico de E(r) para 0 ≤ r ≤ 2,00R.</p>
+      <p class="enunciado">A Fig. 23-40 mostra uma seção de um tubo longo, de metal, de paredes finas, com raio R = 3,00 cm e carga por unidade de comprimento λ = 2,00 × 10⁻⁸ C/m. Determine o módulo E do campo elétrico a uma distância radial (a) r = R/2,00 e (b) r = 2,00R. (c) Faça um gráfico de E em função de r para 0 ≤ r ≤ 2,00R.</p>
+      <figure class="fig fig-livro">
+          <svg viewBox="0 0 300 190" role="img" aria-label="Figura 23-40: um trecho de tubo metálico longo, de parede fina, visto em perspectiva, com cargas positivas na superfície. O raio R vai do eixo até a parede.">
+            <line x1="10" y1="95" x2="290" y2="95" class="fino"/>
+            <path d="M 70 40 L 230 40 A 22 55 0 0 1 230 150 L 70 150" style="fill:var(--metal);fill-opacity:.55;stroke:var(--tinta);stroke-width:1.4"/>
+            <ellipse cx="70" cy="95" rx="22" ry="55" class="metal"/><ellipse cx="70" cy="95" rx="17" ry="49" style="fill:var(--tinta-2);fill-opacity:.35;stroke:var(--tinta);stroke-width:1"/>
+            <text x="8" y="178" class="t-2">oco, parede fina</text>
+            <line class="cota" x1="70" y1="95" x2="70" y2="40"/><text x="56" y="72" class="t-s">R</text>
+            <text x="110" y="62" class="sinal-p">+</text><text x="150" y="58" class="sinal-p">+</text><text x="190" y="62" class="sinal-p">+</text><text x="130" y="134" class="sinal-p">+</text><text x="170" y="136" class="sinal-p">+</text><text x="210" y="132" class="sinal-p">+</text><text x="230" y="100" class="sinal-p">+</text>
+            <text x="250" y="178" class="t-2">eixo</text>
+          </svg>
+          <figcaption>Figura 23-40 (reconstruída a partir do PDF).</figcaption>
+        </figure>
       <div class="ajuda" data-q="C23-24">
         <p class="roteiro">Faça a PA4 primeiro: é o mesmo tubo.</p>
-        <section class="nivel" data-questao="C23-24" data-nivel="1" data-titulo="Dica 1" hidden><p>Degrau 4: dentro, a lata não envolve carga; fora, λ/(2πε₀r).</p></section>
+        <section class="nivel" data-questao="C23-24" data-nivel="1" data-titulo="Dica 1" hidden><p>Degrau 4: dentro, a lata não envolve carga; fora, λ/(2πε₀r).</p><figure class="fig fig-res">
+              <svg viewBox="0 0 220 220" role="img" aria-label="Corte do tubo: um círculo de raio R com cargas positivas. Duas latas gaussianas em corte, tracejadas: uma de raio R/2, dentro do tubo, e outra de raio 2R, fora.">
+                <circle cx="110" cy="110" r="50" style="fill:none;stroke:var(--pos);stroke-width:4"/>
+                <circle cx="110" cy="110" r="25" class="gauss-l"/><circle cx="110" cy="110" r="100" class="gauss-l"/>
+                <use href="#pt" x="110" y="110"/>
+                <text x="138" y="114" class="t-g t-s">R/2</text><text x="160" y="40" class="t-g t-s">2R</text><text x="112" y="56" class="t-p t-s">R</text>
+              </svg>
+              <figcaption>Corte do tubo com as duas latas (vistas de frente).</figcaption>
+            </figure></section>
         <section class="nivel" data-questao="C23-24" data-nivel="2" data-titulo="Dica 2" hidden><p>Gráfico: zero até R, salto em R, depois cai com 1/r (vale a metade do pico em 2R).</p></section>
-        <section class="nivel" data-questao="C23-24" data-nivel="3" data-titulo="Resposta" hidden><p>(a) 0; (b) 5,99 × 10³ N/C (calculada pelo guia). <a class="link-antigo" href="../cap-23-lei-de-gauss/guia-v2.html#P24">Resolução completa no guia do cap. 23</a></p></section>
+        <section class="nivel" data-questao="C23-24" data-nivel="3" data-titulo="Resposta" hidden><p>(a) 0; (b) 5,99 × 10³ N/C (calculada pelo guia). </p><figure class="fig fig-res">
+            <svg viewBox="0 0 320 200" role="img" aria-label="Gráfico de E em função de r para o tubo: zero de 0 a R; salto vertical em R até 1,2 vezes 10 elevado a 4 N/C; depois uma curva que cai como 1/r até 6,0 vezes 10 elevado a 3 N/C em 2R.">
+              <line class="eixo-s" x1="40" y1="170" x2="310" y2="170"/><line class="eixo-s" x1="40" y1="170" x2="40" y2="12"/>
+              <line x1="40" y1="170" x2="170" y2="170" class="curva"/>
+              <line x1="170" y1="170" x2="170" y2="30" class="fino" style="stroke:var(--tinta)"/>
+              <path d="M 170.0 30.0 L 178.7 38.8 L 187.3 46.5 L 196.0 53.3 L 204.7 59.5 L 213.3 65.0 L 222.0 70.0 L 230.7 74.5 L 239.3 78.7 L 248.0 82.5 L 256.7 86.0 L 265.3 89.2 L 274.0 92.2 L 282.7 95.0 L 291.3 97.6 L 300.0 100.0" class="curva"/>
+              <line x1="40" y1="30" x2="170" y2="30" class="fino"/><line x1="40" y1="100" x2="300" y2="100" class="fino"/>
+              <text x="2" y="34" class="t-2">1,2·10⁴</text><text x="2" y="104" class="t-2">6,0·10³</text>
+              <text x="102" y="186" class="t-2">R/2</text><text x="166" y="186" class="t-2">R</text><text x="292" y="186" class="t-2">2R</text>
+              <text x="270" y="164" class="t-2">r</text><text x="46" y="20" class="t-2">E (N/C)</text>
+            </svg>
+            <figcaption>E(r) do tubo: zero dentro, salto na parede, 1/r fora.</figcaption>
+          </figure><p><a class="link-antigo" href="../cap-23-lei-de-gauss/guia-v2.html#P24">Resolução completa no guia do cap. 23</a></p></section>
       </div>
     </div>
   </article>
@@ -2967,10 +3266,33 @@ svg .orbita { stroke: var(--res); stroke-width: 2; fill: none; stroke-dasharray:
   <article class="questao cartao" id="C23-29" aria-labelledby="C23-29-tit">
     <div class="q-cab"><h3 id="C23-29-tit">Problema 23.29</h3><span class="meta">Degrau 4 · condutores</span></div>
     <div class="q-corpo">
-      <p class="enunciado">Uma barra condutora de raio R₁ = 1,30 mm e comprimento L = 11,00 m está dentro de uma casca coaxial condutora fina, de raio R₂ = 10,0R₁ e mesmo comprimento. A barra tem Q₁ = +3,40 × 10⁻¹² C e a casca Q₂ = −2,00Q₁. Ache E e a direção (a, b) em r = 2,00R₂ e (c, d) em r = 5,00R₁. Ache a carga (e) na superfície interna e (f) na externa da casca.</p>
+      <p class="enunciado">A Fig. 23-42 é uma seção de uma barra condutora de raio R₁ = 1,30 mm e comprimento L = 11,00 m no interior de uma casca coaxial (condutora), de paredes finas, de raio R₂ = 10,0R₁ e mesmo comprimento L. A carga da barra é Q₁ = +3,40 × 10⁻¹² C; a carga da casca é Q₂ = −2,00Q₁. Determine (a) o módulo E e (b) a direção (para dentro ou para fora) do campo elétrico a uma distância radial r = 2,00R₂. Determine (c) E e (d) a direção do campo elétrico para r = 5,00R₁. Determine a carga (e) na superfície interna e (f) na superfície externa da casca.</p>
+      <p class="pequeno">(A tradução perdeu a palavra "condutora": o original fala em "conducting shell", e o gabarito de (e) e (f) só bate assim. Coaxial: com o mesmo eixo da barra.)</p>
+      <figure class="fig fig-livro">
+          <svg viewBox="0 0 320 300" role="img" aria-label="Figura 23-42 em corte: barra condutora fina no centro, de raio R1 e carga Q1 positiva, dentro de uma casca condutora coaxial de raio R2 = 10 R1 e carga Q2 negativa. Dois pontos marcados: a 5 R1 do eixo, entre a barra e a casca, e a 2 R2, fora de tudo. O comprimento L é perpendicular ao papel.">
+            <circle cx="150" cy="150" r="70" style="fill:none;stroke:var(--metal);stroke-width:7"/>
+            <circle cx="150" cy="150" r="70" style="fill:none;stroke:var(--neg);stroke-width:1.5"/>
+            <circle cx="150" cy="150" r="7" class="metal" style="stroke:var(--pos);stroke-width:2"/>
+            <line class="fino" x1="150" y1="150" x2="185" y2="150"/><use href="#pt" x="185" y="150"/><text x="178" y="168" class="t-s">5R₁</text>
+            <line class="fino" x1="150" y1="150" x2="150" y2="12"/><use href="#pt" x="150" y="12"/><text x="157" y="18" class="t-s">r = 2R₂</text>
+            <line class="cota" x1="150" y1="150" x2="100.5" y2="199.5"/><text x="104" y="190" class="t-s">R₂</text>
+            <text x="8" y="122" class="t-p t-s">barra: R₁, Q₁</text><line class="fino" x1="96" y1="126" x2="144" y2="146"/>
+            <text x="204" y="92" class="t-n t-s">casca: R₂, Q₂</text>
+            <text x="160" y="292" class="t-2" style="text-anchor:middle">L = 11,00 m, para dentro do papel</text>
+          </svg>
+          <figcaption>Figura 23-42 em corte (reconstruída a partir do PDF, que a mostra em perspectiva).</figcaption>
+        </figure>
       <div class="ajuda" data-q="C23-29">
         <p class="roteiro">Converta as cargas em λ = Q/L e veja o que cada lata envolve.</p>
-        <section class="nivel" data-questao="C23-29" data-nivel="1" data-titulo="Dica 1" hidden><p>Degrau 4: lata coaxial; o sinal de q<sub>env</sub> dá o sentido. Checkpoint 4, questão 3: carga induzida na parede interna.</p></section>
+        <section class="nivel" data-questao="C23-29" data-nivel="1" data-titulo="Dica 1" hidden><p>Degrau 4: lata coaxial; o sinal de q<sub>env</sub> dá o sentido. Checkpoint 4, questão 3: carga induzida na parede interna.</p><figure class="fig fig-res">
+              <svg viewBox="0 0 260 260" role="img" aria-label="Corte com a barra no centro e a casca de raio R2. Duas latas gaussianas tracejadas: uma de raio 5R1, entre a barra e a casca, e outra de raio 2R2, fora de tudo.">
+                <circle cx="130" cy="130" r="60" style="fill:none;stroke:var(--neg);stroke-width:4"/>
+                <circle cx="130" cy="130" r="6" class="metal" style="stroke:var(--pos);stroke-width:2"/>
+                <circle cx="130" cy="130" r="30" class="gauss-l"/><circle cx="130" cy="130" r="120" class="gauss-l"/>
+                <text x="160" y="120" class="t-g t-s">5R₁</text><text x="214" y="40" class="t-g t-s">2R₂</text><text x="186" y="170" class="t-n t-s">R₂</text>
+              </svg>
+              <figcaption>Uma lata entre a barra e a casca; outra fora de tudo.</figcaption>
+            </figure></section>
         <section class="nivel" data-questao="C23-29" data-nivel="2" data-titulo="Dica 2" hidden><p>Em 2R₂ a lata envolve Q₁ + Q₂ = −Q₁ (para dentro). Em 5R₁, só Q₁ (para fora). Superfície interna: −Q₁; externa: o resto (Q₂ + Q₁).</p></section>
         <section class="nivel" data-questao="C23-29" data-nivel="3" data-titulo="Resposta" hidden><p>(a) 0,214 N/C; (b) para dentro; (c) 0,855 N/C; (d) para fora; (e) −3,40 × 10⁻¹² C; (f) −3,40 × 10⁻¹² C (gabarito). <a class="link-antigo" href="../cap-23-lei-de-gauss/guia-v2.html#P29">Resolução completa no guia do cap. 23</a></p></section>
       </div>
@@ -2980,10 +3302,33 @@ svg .orbita { stroke: var(--res); stroke-width: 2; fill: none; stroke-dasharray:
   <article class="questao cartao" id="C23-39" aria-labelledby="C23-39-tit">
     <div class="q-cab"><h3 id="C23-39-tit">Problema 23.39</h3><span class="meta">Degraus 1 e 4 · placa</span></div>
     <div class="q-corpo">
-      <p class="enunciado">Uma esfera isolante pequena, de massa 1,0 mg e carga 2,0 × 10⁻⁸ C, está pendurada num fio que faz θ = 30° com uma placa vertical isolante, grande e uniformemente carregada. Calcule a densidade superficial de carga σ da placa.</p>
+      <p class="enunciado">Na Fig. 23-49, uma pequena esfera isolante, de massa m = 1,0 mg e carga q = 2,0 × 10⁻⁸ C (distribuída uniformemente em todo o volume), está pendurada em um fio isolante que faz um ângulo θ = 30° com uma placa vertical, isolante, uniformemente carregada (vista em seção reta). Considerando a força gravitacional a que a esfera está submetida e supondo que a placa possui uma grande extensão, calcule a densidade superficial de carga σ da placa. <span class="pequeno">(A placa é vertical, então θ também é o ângulo do fio com a vertical, como na figura.)</span></p>
+      <figure class="fig fig-livro">
+          <svg viewBox="0 0 220 220" role="img" aria-label="Figura 23-49: uma placa vertical com cargas positivas, à esquerda. Um fio preso no alto da placa desce inclinado para a direita, fazendo o ângulo theta com a placa. Na ponta, uma pequena esfera de massa m e carga q.">
+            <rect x="50" y="10" width="14" height="200" class="placa-p"/>
+            <g class="sinal-p"><text x="57" y="30">+</text><text x="57" y="70">+</text><text x="57" y="110">+</text><text x="57" y="150">+</text><text x="57" y="190">+</text></g>
+            <text x="36" y="24" class="t-p t-s">σ</text>
+            <line class="fino" x1="64" y1="40" x2="64" y2="190"/>
+            <line x1="64" y1="40" x2="139" y2="169.9" style="stroke:var(--tinta);stroke-width:1.5;stroke-dasharray:3 2"/>
+            <circle cx="139" cy="169.9" r="8" style="fill:#9fb7d6;stroke:var(--tinta);stroke-width:1.2"/>
+            <path d="M 64 80 A 40 40 0 0 0 84 74.6" class="fino" style="stroke-dasharray:none"/><text x="68" y="96" class="t-s">θ</text>
+            <text x="150" y="192" class="t-s">m, q</text>
+          </svg>
+          <figcaption>Figura 23-49 (reconstruída a partir do PDF).</figcaption>
+        </figure>
       <div class="ajuda" data-q="C23-39">
         <p class="roteiro">Três forças na esfera: peso, tração e força elétrica.</p>
-        <section class="nivel" data-questao="C23-39" data-nivel="1" data-titulo="Dica 1" hidden><p>Checkpoint 1, questão 3 (qE = mg tan θ) e o campo da placa isolante, σ/(2ε₀) (tabela do Degrau 4).</p></section>
+        <section class="nivel" data-questao="C23-39" data-nivel="1" data-titulo="Dica 1" hidden><p>Checkpoint 1, questão 3 (qE = mg tan θ) e o campo da placa isolante, σ/(2ε₀) (tabela do Degrau 4).</p><figure class="fig fig-res">
+              <svg viewBox="0 0 220 200" role="img" aria-label="Diagrama de forças da esfera: a tração ao longo do fio, para cima e para a esquerda; o peso para baixo; a força elétrica horizontal, para a direita.">
+                <circle cx="110" cy="110" r="10" style="fill:#9fb7d6;stroke:var(--tinta);stroke-width:1.2"/>
+                <line class="vk" x1="110" y1="110" x2="62" y2="27"/><text x="44" y="24" class="t-s">T</text>
+                <line class="vk" x1="110" y1="110" x2="110" y2="190"/><text x="116" y="186" class="t-s">mg</text>
+                <line class="vk" x1="110" y1="110" x2="166" y2="110"/><text x="170" y="114" class="t-s">F = qE</text>
+                <line class="fino" x1="110" y1="110" x2="110" y2="30"/>
+                <path d="M 110 70 A 40 40 0 0 0 90 75.4" class="fino" style="stroke-dasharray:none"/><text x="96" y="64" class="t-s">θ</text>
+              </svg>
+              <figcaption>O diagrama esperado (sem números).</figcaption>
+            </figure></section>
         <section class="nivel" data-questao="C23-39" data-nivel="2" data-titulo="Dica 2" hidden><p>q·σ/(2ε₀) = mg tan θ → isole σ.</p></section>
         <section class="nivel" data-questao="C23-39" data-nivel="3" data-titulo="Resposta" hidden><p>σ = 5,0 × 10⁻⁹ C/m² (gabarito). <a class="link-antigo" href="../cap-23-lei-de-gauss/guia-v2.html#P39">Resolução completa no guia do cap. 23</a></p></section>
       </div>
@@ -2993,12 +3338,39 @@ svg .orbita { stroke: var(--res); stroke-width: 2; fill: none; stroke-dasharray:
   <article class="questao cartao" id="C23-52" aria-labelledby="C23-52-tit">
     <div class="q-cab"><h3 id="C23-52-tit">Problema 23.52</h3><span class="meta">Degrau 4</span></div>
     <div class="q-corpo">
-      <p class="enunciado">Uma casca esférica tem ρ = 1,84 nC/m³ uniforme, raio interno a = 10,0 cm e externo b = 2,00a. Determine E em (a) r = 0, (b) a/2, (c) a, (d) 1,50a, (e) b e (f) 3,00b.</p>
+      <p class="enunciado">A Fig. 23-57 mostra uma casca esférica com uma densidade volumétrica de carga uniforme ρ = 1,84 nC/m³, raio interno a = 10,0 cm e raio externo b = 2,00a. Determine o módulo do campo elétrico (a) em r = 0, (b) em r = a/2,00, (c) em r = a, (d) em r = 1,50a, (e) em r = b e (f) em r = 3,00b.</p>
+      <figure class="fig fig-livro">
+          <svg viewBox="0 0 220 210" role="img" aria-label="Figura 23-57: corte de uma casca esférica grossa. O material entre os raios a e b tem cargas positivas espalhadas; o miolo, de raio a, é vazio.">
+            <circle cx="105" cy="105" r="96" class="cheio-p"/><circle cx="105" cy="105" r="48" class="vazio"/>
+            <g class="sinal-p"><text x="164" y="121">+</text><text x="138" y="159">+</text><text x="93" y="168">+</text><text x="55" y="142">+</text><text x="46" y="97">+</text><text x="72" y="59">+</text><text x="117" y="50">+</text><text x="155" y="76">+</text><text x="180" y="109">+</text><text x="168" y="150">+</text><text x="136" y="177">+</text><text x="94" y="183">+</text><text x="56" y="166">+</text><text x="33" y="130">+</text><text x="33" y="88">+</text><text x="56" y="52">+</text><text x="94" y="35">+</text><text x="136" y="41">+</text><text x="168" y="68">+</text><text x="193" y="122">+</text><text x="179" y="159">+</text><text x="149" y="186">+</text><text x="112" y="198">+</text><text x="72" y="192">+</text><text x="40" y="170">+</text><text x="20" y="135">+</text><text x="17" y="96">+</text><text x="31" y="59">+</text><text x="61" y="32">+</text><text x="98" y="20">+</text><text x="138" y="26">+</text><text x="170" y="48">+</text><text x="190" y="83">+</text></g>
+            <line class="cota" x1="105" y1="105" x2="139" y2="71"/><text x="124" y="98" class="t-s">a</text>
+            <line class="cota" x1="105" y1="105" x2="105" y2="201"/><text x="111" y="196" class="t-s">b</text>
+          </svg>
+          <figcaption>Figura 23-57 (reconstruída a partir do PDF).</figcaption>
+        </figure>
       <div class="ajuda" data-q="C23-52">
         <p class="roteiro">Três regiões: cavidade, material e fora.</p>
-        <section class="nivel" data-questao="C23-52" data-nivel="1" data-titulo="Dica 1" hidden><p>Degrau 4, esfera gaussiana: q<sub>env</sub> = ρ × volume de material dentro da gaussiana.</p></section>
+        <section class="nivel" data-questao="C23-52" data-nivel="1" data-titulo="Dica 1" hidden><p>Degrau 4, esfera gaussiana: q<sub>env</sub> = ρ × volume de material dentro da gaussiana.</p><figure class="fig fig-res">
+              <svg viewBox="0 0 270 270" role="img" aria-label="Casca grossa em corte, com raios a e b, e duas esferas gaussianas tracejadas: uma em 1,5a, dentro do material, e outra em 3b, bem fora.">
+                <circle cx="135" cy="135" r="40" class="cheio-p"/><circle cx="135" cy="135" r="20" class="vazio"/>
+                <circle cx="135" cy="135" r="30" class="gauss-l"/><circle cx="135" cy="135" r="120" class="gauss-l"/>
+                <text x="168" y="118" class="t-g t-s">1,5a</text><text x="210" y="40" class="t-g t-s">3b</text>
+                <text x="129" y="139" class="t-2">a</text><text x="160" y="170" class="t-p t-s">b</text>
+              </svg>
+              <figcaption>Uma gaussiana dentro do material e outra fora.</figcaption>
+            </figure></section>
         <section class="nivel" data-questao="C23-52" data-nivel="2" data-titulo="Dica 2" hidden><p>No material: q<sub>env</sub> = ρ·(4/3)π(r³ − a³). E = kq<sub>env</sub>/r².</p></section>
-        <section class="nivel" data-questao="C23-52" data-nivel="3" data-titulo="Resposta" hidden><p>(a) 0; (b) 0; (c) 0; (d) 7,32 N/C; (e) 12,1 N/C; (f) 1,35 N/C (calculada pelo guia). <a class="link-antigo" href="../cap-23-lei-de-gauss/guia-v2.html#P52">Resolução completa no guia do cap. 23</a></p></section>
+        <section class="nivel" data-questao="C23-52" data-nivel="3" data-titulo="Resposta" hidden><p>(a) 0; (b) 0; (c) 0; (d) 7,32 N/C; (e) 12,1 N/C; (f) 1,35 N/C (calculada pelo guia). </p><figure class="fig fig-res">
+            <svg viewBox="0 0 320 200" role="img" aria-label="Gráfico de E em função de r para a casca grossa do Problema 52: zero até a = 10 cm; sobe até 12,1 N/C em b = 20 cm; depois cai como 1 sobre r ao quadrado, até 1,35 N/C em 3b = 60 cm. Sem saltos.">
+              <line class="eixo-s" x1="40" y1="170" x2="310" y2="170"/><line class="eixo-s" x1="40" y1="170" x2="40" y2="12"/>
+              <path d="M 40.0 170.0 L 42.2 170.0 L 44.3 170.0 L 46.5 170.0 L 48.7 170.0 L 50.8 170.0 L 53.0 170.0 L 55.2 170.0 L 57.3 170.0 L 59.5 170.0 L 61.7 170.0 L 63.8 170.0 L 66.0 170.0 L 68.2 170.0 L 70.3 170.0 L 72.5 170.0 L 74.7 170.0 L 76.8 170.0 L 79.0 170.0 L 81.2 170.0 L 83.3 170.0 L 85.5 158.6 L 87.7 148.1 L 89.8 138.5 L 92.0 129.6 L 94.2 121.2 L 96.3 113.3 L 98.5 105.9 L 100.7 98.8 L 102.8 92.1 L 105.0 85.6 L 107.2 79.3 L 109.3 73.3 L 111.5 67.4 L 113.7 61.7 L 115.8 56.1 L 118.0 50.7 L 120.2 45.4 L 122.3 40.2 L 124.5 35.1 L 126.7 30.0 L 128.8 36.8 L 131.0 43.0 L 133.2 48.9 L 135.3 54.3 L 137.5 59.4 L 139.7 64.2 L 141.8 68.6 L 144.0 72.8 L 146.2 76.7 L 148.3 80.4 L 150.5 83.9 L 152.7 87.2 L 154.8 90.3 L 157.0 93.2 L 159.2 96.0 L 161.3 98.6 L 163.5 101.1 L 165.7 103.4 L 167.8 105.7 L 170.0 107.8 L 172.2 109.8 L 174.3 111.7 L 176.5 113.6 L 178.7 115.3 L 180.8 117.0 L 183.0 118.6 L 185.2 120.1 L 187.3 121.6 L 189.5 123.0 L 191.7 124.3 L 193.8 125.6 L 196.0 126.8 L 198.2 128.0 L 200.3 129.1 L 202.5 130.2 L 204.7 131.2 L 206.8 132.2 L 209.0 133.2 L 211.2 134.1 L 213.3 135.0 L 215.5 135.9 L 217.7 136.7 L 219.8 137.5 L 222.0 138.3 L 224.2 139.0 L 226.3 139.7 L 228.5 140.4 L 230.7 141.1 L 232.8 141.7 L 235.0 142.4 L 237.2 143.0 L 239.3 143.5 L 241.5 144.1 L 243.7 144.7 L 245.8 145.2 L 248.0 145.7 L 250.2 146.2 L 252.3 146.7 L 254.5 147.1 L 256.7 147.6 L 258.8 148.0 L 261.0 148.5 L 263.2 148.9 L 265.3 149.3 L 267.5 149.7 L 269.7 150.1 L 271.8 150.4 L 274.0 150.8 L 276.2 151.1 L 278.3 151.5 L 280.5 151.8 L 282.7 152.1 L 284.8 152.5 L 287.0 152.8 L 289.2 153.1 L 291.3 153.4 L 293.5 153.6 L 295.7 153.9 L 297.8 154.2 L 300.0 154.4" class="curva"/>
+              <line x1="40" y1="30" x2="126.7" y2="30" class="fino"/><line x1="126.7" y1="30" x2="126.7" y2="170" class="fino"/>
+              <text x="4" y="34" class="t-2">12,1</text><text x="77" y="186" class="t-2">a</text><text x="123" y="186" class="t-2">b</text><text x="288" y="186" class="t-2">3b</text>
+              <text x="101" y="78" class="t-2">7,32</text><text x="270" y="146" class="t-2">1,35</text>
+              <text x="46" y="20" class="t-2">E (N/C)</text>
+            </svg>
+            <figcaption>E(r) do Problema 52: zero na cavidade, sobe no material, cai com 1/r² fora; contínuo em a e em b.</figcaption>
+          </figure><p><a class="link-antigo" href="../cap-23-lei-de-gauss/guia-v2.html#P52">Resolução completa no guia do cap. 23</a></p></section>
       </div>
     </div>
   </article>
@@ -3006,12 +3378,30 @@ svg .orbita { stroke: var(--res); stroke-width: 2; fill: none; stroke-dasharray:
   <article class="questao cartao" id="C23-53" aria-labelledby="C23-53-tit">
     <div class="q-cab"><h3 id="C23-53-tit">Problema 23.53 <span class="tag-prova">parece prova</span></h3><span class="meta">Degraus 2 e 4 · o método da PA5</span></div>
     <div class="q-corpo">
-      <p class="enunciado">Uma esfera isolante de raio R = 5,60 cm tem ρ = (14,1 pC/m³)r/R. (a) Ache a carga da esfera. Ache E (b) em r = 0, (c) em r = R/2,00 e (d) em r = R. (e) Faça o gráfico de E(r).</p>
+      <p class="enunciado">Uma esfera isolante, de raio R = 5,60 cm, possui uma distribuição de carga não uniforme ρ = (14,1 pC/m³)r/R, em que r é a distância do centro da esfera. (a) Determine a carga da esfera. (b) Determine o módulo E do campo elétrico em r = 0, (c) em r = R/2,00 e (d) em r = R. (e) Faça um gráfico de E em função de r.</p>
       <div class="ajuda" data-q="C23-53">
         <p class="roteiro">É a PA5 numa esfera.</p>
-        <section class="nivel" data-questao="C23-53" data-nivel="1" data-titulo="Dica 1" hidden><p>Degrau 2 (casca esférica dq = ρ4πr² dr) e Degrau 4 (gaussiana esférica).</p></section>
+        <section class="nivel" data-questao="C23-53" data-nivel="1" data-titulo="Dica 1" hidden><p>Degrau 2 (casca esférica dq = ρ4πr² dr) e Degrau 4 (gaussiana esférica).</p><figure class="fig fig-res">
+              <svg viewBox="0 0 200 200" role="img" aria-label="Esfera com uma casca fina de raio r prime e espessura d r prime destacada, dentro de uma esfera gaussiana de raio r.">
+                <circle cx="100" cy="100" r="85" style="fill:var(--pos);fill-opacity:.2;stroke:var(--tinta);stroke-width:1.2"/>
+                <circle cx="100" cy="100" r="35" style="fill:none;stroke:var(--res);stroke-width:7;opacity:.7"/>
+                <circle cx="100" cy="100" r="60" class="gauss-l"/>
+                <text x="128" y="96" class="t-r t-s">r′</text><text x="150" y="58" class="t-g t-s">r</text><text x="160" y="170" class="t-s">R</text>
+              </svg>
+              <figcaption>Cascas de raio r′ somadas até a gaussiana de raio r.</figcaption>
+            </figure></section>
         <section class="nivel" data-questao="C23-53" data-nivel="2" data-titulo="Dica 2" hidden><p>q<sub>env</sub>(r) = πρ₀r⁴/R (ρ₀ = 14,1 pC/m³); E = kq<sub>env</sub>/r² ∝ r² dentro.</p></section>
-        <section class="nivel" data-questao="C23-53" data-nivel="3" data-titulo="Resposta" hidden><p>(a) 7,78 × 10⁻¹⁵ C; (b) 0; (c) 5,58 mN/C; (d) 22,3 mN/C (gabarito). <a class="link-antigo" href="../cap-23-lei-de-gauss/guia-v2.html#P53">Resolução completa no guia do cap. 23</a></p></section>
+        <section class="nivel" data-questao="C23-53" data-nivel="3" data-titulo="Resposta" hidden><p>(a) 7,78 × 10⁻¹⁵ C; (b) 0; (c) 5,58 mN/C; (d) 22,3 mN/C (gabarito). </p><figure class="fig fig-res">
+            <svg viewBox="0 0 320 200" role="img" aria-label="Gráfico de E em função de r: parábola subindo de zero no centro até 22,3 mN/C em r = R, depois curva caindo como 1 sobre r ao quadrado, chegando a um quarto do pico em 2R.">
+              <line class="eixo-s" x1="40" y1="170" x2="310" y2="170"/><line class="eixo-s" x1="40" y1="170" x2="40" y2="12"/>
+              <path d="M 40.0 170.0 L 53.0 168.6 L 66.0 164.4 L 79.0 157.4 L 92.0 147.6 L 105.0 135.0 L 118.0 119.6 L 131.0 101.4 L 144.0 80.4 L 157.0 56.6 L 170.0 30.0 L 183.0 54.3 L 196.0 72.8 L 209.0 87.2 L 222.0 98.6 L 235.0 107.8 L 248.0 115.3 L 261.0 121.6 L 274.0 126.8 L 287.0 131.2 L 300.0 135.0" class="curva"/>
+              <line x1="40" y1="30" x2="170" y2="30" class="fino"/><line x1="170" y1="30" x2="170" y2="170" class="fino"/>
+              <line x1="40" y1="135" x2="105" y2="135" class="fino"/>
+              <text x="2" y="34" class="t-2">22,3</text><text x="6" y="139" class="t-2">5,6</text><text x="166" y="186" class="t-2">R</text><text x="292" y="186" class="t-2">2R</text>
+              <text x="100" y="186" class="t-2">R/2</text><text x="46" y="20" class="t-2">E (mN/C)</text>
+            </svg>
+            <figcaption>E(r): parábola dentro, 1/r² fora, contínuo em R.</figcaption>
+          </figure><p><a class="link-antigo" href="../cap-23-lei-de-gauss/guia-v2.html#P53">Resolução completa no guia do cap. 23</a></p></section>
       </div>
     </div>
   </article>
@@ -3019,10 +3409,17 @@ svg .orbita { stroke: var(--res); stroke-width: 2; fill: none; stroke-dasharray:
   <article class="questao cartao" id="C23-76" aria-labelledby="C23-76-tit">
     <div class="q-cab"><h3 id="C23-76-tit">Problema 23.76 <span class="tag-prova">parece prova</span></h3><span class="meta">Degrau 4 · "mostre que"</span></div>
     <div class="q-corpo">
-      <p class="enunciado">Um cilindro muito longo, de raio R, tem ρ uniforme. (a) Mostre que, para r &lt; R, E = ρr/(2ε₀). (b) Escreva E para r &gt; R.</p>
+      <p class="enunciado">Um cilindro muito longo, de raio R, possui uma distribuição volumétrica de carga uniforme. (a) Mostre que, a uma distância r &lt; R do eixo do cilindro, \(E = \dfrac{\rho r}{2\varepsilon_0}\), em que ρ é a densidade volumétrica de carga. (b) Escreva uma expressão para E do lado de fora do cilindro. <span class="pequeno">(Carga no volume: o cilindro é isolante.)</span></p>
       <div class="ajuda" data-q="C23-76">
         <p class="roteiro">É o exemplo resolvido do Degrau 4 com ρ constante.</p>
-        <section class="nivel" data-questao="C23-76" data-nivel="1" data-titulo="Dica 1" hidden><p>Degrau 4, lata coaxial; o widget, na opção "uniforme", mostra a forma de E(r).</p></section>
+        <section class="nivel" data-questao="C23-76" data-nivel="1" data-titulo="Dica 1" hidden><p>Degrau 4, lata coaxial; o widget, na opção "uniforme", mostra a forma de E(r).</p><figure class="fig fig-res">
+              <svg viewBox="0 0 220 220" role="img" aria-label="Corte do cilindro maciço de raio R, com duas latas gaussianas tracejadas: uma de raio r menor que R e outra de raio r maior que R.">
+                <circle cx="110" cy="110" r="60" class="cheio-p"/>
+                <circle cx="110" cy="110" r="35" class="gauss-l"/><circle cx="110" cy="110" r="95" class="gauss-l"/>
+                <text x="140" y="96" class="t-g t-s">r &lt; R</text><text x="170" y="40" class="t-g t-s">r &gt; R</text><text x="112" y="176" class="t-p t-s">R</text>
+              </svg>
+              <figcaption>As duas latas, vistas de frente.</figcaption>
+            </figure></section>
         <section class="nivel" data-questao="C23-76" data-nivel="2" data-titulo="Dica 2" hidden><p>Dentro: q<sub>env</sub> = ρπr²h. Fora: q<sub>env</sub> = ρπR²h. Fluxo: E·2πrh nos dois.</p></section>
         <section class="nivel" data-questao="C23-76" data-nivel="3" data-titulo="Resposta" hidden><p>(a) E = ρr/(2ε₀); (b) E = ρR²/(2ε₀r). <a class="link-antigo" href="../cap-23-lei-de-gauss/guia-v2.html#P76">Resolução completa no guia do cap. 23</a></p></section>
       </div>
